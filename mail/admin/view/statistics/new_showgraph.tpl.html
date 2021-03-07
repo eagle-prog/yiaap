@@ -1,0 +1,379 @@
+{showpage:include/header}
+<style>
+
+</style>
+ <!--<script language='javascript' src='graph/FusionCharts/FusionCharts.js'>
+FusionCharts.setCurrentRenderer('javascript');
+</script> -->
+
+ <script type="text/javascript">
+     
+     function plotchart(label_data,chart_data,chart_type)
+     {
+            
+            //console.log("Inside Plot Chart");
+            
+         if(chart_data!="")
+         {
+                $('#canvas_error').remove();
+                $('#canvas').remove(); // this is my <canvas> element
+                $('#parent').append('<canvas id="canvas" height="400" width="800"></canvas>');
+                if(chart_type=="month")
+                {
+                    var barChartData1 = {
+                        //{noescape:$daily}
+                        //labels : mnth,
+                        labels:label_data,
+                        datasets : [
+                            {
+                                label: "My First dataset",
+                                fillColor: "#0066cc", //rgba(151,187,205,0.5)
+                                strokeColor: "#0066cc", //rgba(151,187,205,0.8)
+                                highlightFill: "#718ca1", //rgba(151,187,205,0.75)
+                                highlightStroke: "#718ca1", //rgba(151,187,205,1)
+                                //{noescape:$totaldataday}
+                                //data: [0,0,0,0,0,50,50,10,27,0,91,0,0,97,0,0,]	
+                                data:chart_data
+                            } 
+                        ]
+                    }
+                }
+                else{
+                    var barChartData1 = {
+                        //{noescape:$daily}
+                        //labels : mnth,
+                        labels:label_data,
+                        datasets : [
+                            {
+                                label: "My First dataset",
+                                fillColor: "#3e1a57", //rgba(151,187,205,0.5)
+                                strokeColor: "#311f3e", //rgba(151,187,205,0.8)
+                                highlightFill: "#5f3080", //rgba(151,187,205,0.75)
+                                highlightStroke: "#522f6a", //rgba(151,187,205,1)
+                                //{noescape:$totaldataday}
+                                //data: [0,0,0,0,0,50,50,10,27,0,91,0,0,97,0,0,]	
+                                data:chart_data
+                            } 
+                        ]
+                    }
+                }
+
+                var ctx = document.getElementById("canvas").getContext("2d");
+                window.myLine = new Chart(ctx).Bar(barChartData1, {
+                barStrokeWidth : 30,barValueSpacing : 5,barShowStroke : false,barStrokeWidth :0,scaleLabel: "<%=value%>",
+                });
+         }
+         else{
+                //$('#canvas_error').remove();
+                $('#canvas').remove(); // this is my <canvas> element
+                $('#parent').append('<canvas id="canvas" height="400" width="800"></canvas>');
+                 var barChartData1 = {
+                        //{noescape:$daily}
+                        //labels : mnth,
+                        labels:label_data,
+                        datasets : [
+                            {
+                                label: "My First dataset",
+                                fillColor: "#3e1a57", //rgba(151,187,205,0.5)
+                                strokeColor: "#311f3e", //rgba(151,187,205,0.8)
+                                highlightFill: "#5f3080", //rgba(151,187,205,0.75)
+                                highlightStroke: "#522f6a", //rgba(151,187,205,1)
+                                //{noescape:$totaldataday}
+                                data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,]	
+                                
+                            } 
+                        ]
+                    }
+               
+                
+                var ctx = document.getElementById("canvas").getContext("2d");
+                window.myLine = new Chart(ctx).Bar(barChartData1, {
+                barStrokeWidth : 30,barValueSpacing : 5,barShowStroke : false,barStrokeWidth :0,scaleLabel: "<%=value%>",
+                });
+                
+                $('#chart_cover').append('<canvas id="canvas_error" height="400" width="800"></canvas>');
+                var cvs = document.getElementById("canvas_error");
+                var ctx = cvs.getContext("2d");
+
+                
+                ctx.font = "24px Verdana";
+                ctx.textAlign = "center"; 
+                // Create gradient
+                var gradient = ctx.createLinearGradient(0, 0, cvs.width, 0);
+                gradient.addColorStop("1", "#bbb");
+                var ww = cvs.width/2;
+                var hh = cvs.height/2;
+               
+                var txt="There is no data found!";
+                // Fill with gradient
+                ctx.fillStyle = gradient;
+                ctx.fillText(txt, ww, hh);
+             
+                
+         }
+     }
+    function getchartdata(month,year)
+    {
+        //console.log("getchardata :", month,"y:",year);
+        var month_name = new Array();
+            month_name[0] = "Jan";
+            month_name[1] = "Feb";
+            month_name[2] = "Mar";
+            month_name[3] = "Apr";
+            month_name[4] = "May";
+            month_name[5] = "Jun";
+            month_name[6] = "Jul";
+            month_name[7] = "Aug";
+            month_name[8] = "Sep";
+            month_name[9] = "Oct";
+            month_name[10] = "Nov";
+            month_name[11] = "Dec";
+        
+        var cur_month = new Array();
+            cur_month[0] = "January";
+            cur_month[1] = "February";
+            cur_month[2] = "March";
+            cur_month[3] = "April";
+            cur_month[4] = "May";
+            cur_month[5] = "June";
+            cur_month[6] = "July";
+            cur_month[7] = "August";
+            cur_month[8] = "September";
+            cur_month[9] = "October";
+            cur_month[10] = "November";
+            cur_month[11] = "December";
+        
+        if(month!=-1)
+        {            
+            
+            var label_data=[], chart_data=[];
+            var ndays = new Date(year,month,0).getDate();
+            //console.log("ndays:",ndays);
+            for(var i=0;i<ndays;i++)
+                {
+                    var dayy = i+1;
+                    label_data[i]=month_name[month-1]+" "+dayy;
+                    chart_data[i] = Math.floor((Math.random() * 100));
+                }
+            //console.log("Labels of Month :",label_data);
+            //console.log("Data of Month :",chart_data);
+            $('#xtext').html("Logins Summary for the Month<small> (Daily Logins till Today)</small>");
+            plotchart(label_data,chart_data,"month");
+        }
+        else if(month==-1){
+            // data for full year
+            
+            var label_data=[], chart_data=[];
+            for(var i=0;i<12;i++)
+                {
+                    var dayy = i+1;
+                    label_data[i]=month_name[i];
+                    chart_data[i] = Math.floor((Math.random() * 100));
+                }
+            //console.log("Labels of Month :",label_data);
+            //console.log("Data of Month :",chart_data);
+            $('#xtext').html("Logins Summary for the Year<small> (Daily Logins till Today)</small>");
+            //plotchart(label_data,chart_data,"year");
+            plotchart(label_data,"", "year");
+             
+        }
+        
+    }
+function showresult(id)
+{
+    //console.log("inside fnc");
+	if(id==0)
+	{
+       //console.log("inside 0");
+	   var flag="today";
+	   var url="{url:(statistics/showgraph/)}"+flag;
+	}
+	else if(id==2)
+	{
+       //console.log("inside 2");
+	   var month=parseInt(document.getElementById("month").value);
+	   var year=parseInt(document.getElementById("year").value);
+	   //console.log (" month :",month,"type :", typeof(month),"year :",year,"type :",typeof(year));
+	   if((month!=-1 && year!=-1))
+	    {
+            //console.log("inside month & year",month);
+             var flag="month";//current month
+             var url="{url:(statistics/showgraph/)}"+flag+"/"+month+"/"+year;
+           
+            getchartdata(month,year);
+        }  
+	   else if(month==-1 && year!=-1)
+	   {
+           //console.log("inside year",year);
+           var flag="year";//12 months
+           var url="{url:(statistics/showgraph/)}"+flag+"/"+month+"/"+year;           
+           getchartdata(month,year);
+       }
+	   else if(month==-1 && year==-1)
+       {
+          var flag="all";//yearwise
+	      //console.log("inside 2  all: ",month, "yr:",year);
+          var url="{url:(statistics/showgraph/)}"+flag;
+          getchartdata(month,year);
+       }
+       else
+           {
+               alert("Please choose a year");
+           }
+        
+	   //var url="{url:(statistics/showgraph/)}"+flag+"/"+month+"/"+year;
+        
+       
+	}
+	else
+	{
+       //console.log("inside all");
+	   var flag="all";
+	   var url="{url:(statistics/showgraph/)}"+flag;
+	}
+	 //window.location.href=url;
+    /*$.ajax({ type:"GET", cache: false,
+        url:"{url:(statistics/graph/)}"+flag,
+        success: function(data)
+        {
+            console.log(data);
+        }
+    });*/
+
+}
+</script> 
+<html><head>
+    <link rel="shortcut icon" type="image/x-icon" href="/mail/favicon.ico">
+</head>
+<body>
+
+
+<br>
+<table cellpadding="0" cellspacing="0" class="sublink_table">
+
+	 <tr align="center">
+
+    <td>	{showpage:include/statisticsheader}</td>
+
+  </tr>
+
+  </table>	
+  <br><br>
+<table cellpadding="0" cellspacing="0"  align="center" style="padding-left: 20px;padding-right:20px;padding-top: 0px;" width="98%" border="0">
+
+<tr><td align="center" class="page_title"><b>Logined User Statistics</b><br>
+    <br></td></tr>
+   
+<!--<tr>
+    <td ><div class="help_desc_cover   mgn15auto"><div class="help_desc">Page Help Text</div></div></td>
+    </tr>-->
+  <tr class="table_header mgnT15">
+<td height="20" align="left">
+<span style="padding-left: 50px"><a href="javascript:showresult(0)" style="color:#fff;" >Today</a></span>
+<span style="padding-left:20px"><a href="javascript:showresult(1)" style="color:#fff;">All Time</a></span>
+<!--<span align="left" style="padding-left:10px">Time Period
+
+  <select id="timeperiod" name="timeperiod" onChange="display(0)">
+
+      <option value="" selected>All Time</option>
+
+        <option value="today" {if($time=="today")} selected {endif}>Today</option>
+
+        <option value="lastweek"{if($time=="lastweek")} selected {endif}>Last 7 days</option>
+        
+           </select></span>
+           <span align="right"><a href="#" onClick="show()">show</a></span>-->
+       <span  align="center" style="padding-left: 100px;float: right; padding-right: 20px;">
+			<select name="month" id="month" >
+				<option value="-1" selected>Month</option>
+				{loopstart:month:100}
+				<option value="{$month[0]}" {if($setmonth==$month[0])} selected {endif}>{$month[1]}</option>
+				{loopend:month}
+			</select> 
+			
+			<select name="year" id="year" >
+				<option value="-1" selected>Year</option>
+				{loopstart:year:1000000}
+				<option value="{$year[0]}" {if($setyear==$year[0])} selected {endif}>{$year[0]}</option>
+				{loopend:year}
+			</select>
+			<input type="button" onclick="showresult(2)" value="show">
+			</span>
+		
+    
+       
+        
+</td>
+</tr>
+
+<tr><td>{showpage:statistics/graph/$show/$setmonth/$setyear}</td></tr>
+
+</table>
+<div class="chartbox_cover" id="chart_cover">
+     <div class="chart_ytitle">Count in Numbers</div>
+    <div class="chartbox" id="parent">
+        <canvas id="canvas" height="400" width="800"></canvas>    
+    </div>
+    <div class="chart_xtitle" id="bott_txt">Days</div>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#xtext').html("Logins Summary for Current Month<small> (Daily Logins till Today)</small>");
+
+        
+        var count = 30, mnth=[];
+        for($i=0;$i<count;$i++)
+        {
+            //console.log($i);
+            var dy = $i+1;
+            mnth[$i]="Sep "+dy ;
+        }
+        console.log(mnth);
+
+        var barChartData1 = {
+            //{noescape:$daily}
+            labels : mnth,
+            datasets : [
+                {
+                    label: "My First dataset",
+                    fillColor: "#0066cc", //rgba(151,187,205,0.5)
+                    strokeColor: "#0066cc", //rgba(151,187,205,0.8)
+                    highlightFill: "#718ca1", //rgba(151,187,205,0.75)
+                    highlightStroke: "#718ca1", //rgba(151,187,205,1)
+                    //{noescape:$totaldataday}
+                    data: [0,0,0,0,0,50,50,10,27,0,91,0,0,97,0,0,]	
+                } 
+            ]
+
+        }
+
+
+        var sigb='{fn:htmlspecialchars($currency_symbol)}';
+
+
+
+
+        var ctx = document.getElementById("canvas").getContext("2d");
+        window.myLine = new Chart(ctx).Bar(barChartData1, {
+            barStrokeWidth : 30,barValueSpacing : 5,barShowStroke : false,barStrokeWidth : 0,scaleLabel: "<%=value%>",
+        });
+
+
+ 
+
+
+        });
+
+
+
+
+
+
+
+
+	</script>
+<script src="js/chart/chart.min.js"></script>
+{showpage:include/footer}

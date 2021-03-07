@@ -1,0 +1,32 @@
+*   Trying 198.46.86.155:443...
+* Connected to yiaap.com (198.46.86.155) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+*  CApath: none
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: CN=yiaap.com
+*  start date: Feb  2 00:00:00 2021 GMT
+*  expire date: May  3 23:59:59 2021 GMT
+*  issuer: C=AT; O=ZeroSSL; CN=ZeroSSL RSA Domain Secure Site CA
+*  SSL certificate verify ok.
+> GET /oasis/?c=machine&a=statuses&time=1615061982&session=6eadf35d36edadc89c38174d54d6d084&arg=iGlnBj230Pc HTTP/1.1
+Host: yiaap.com
+Range: bytes=0-50000
+User-Agent: Mozilla/5.0 (compatible; Please Name Your robot; +https://www.yiaap.com/yo/bot.php)
+Accept: */*
+Accept-Encoding: deflate, gzip, br
+
+* old SSL session ID is stale, removing
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 401 Unauthorized
+< Date: Sat, 06 Mar 2021 20:19:42 GMT
+< Server: Apache
+< WWW-Authenticate: Basic realm="Secure Document"
+< Content-Length: 503
+< Content-Type: text/html; charset=iso-8859-1
+< 
+* Connection #0 to host yiaap.com left intact

@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>{$servicename}</title>
+<link rel="stylesheet" href="css/mob-style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/new_mobile_style.css?version=1.4" type="text/css" media="screen" />
+    <script src="js/jquery.js" type="text/javascript"></script>
+</head>
+<script>
+
+$(document).ready(function() {
+    
+    
+    //var  vt = $(".popmenuwrap .topbarMenu").outerHeight(true);
+    //var vl = $(".popmenuwrap .logDetails").outerHeight(true);
+    $(window).resize(function(){
+       setTimeout(adjustmenu, 500); 
+       setTimeout(divheight, 500); 
+    });
+    
+    function divheight()
+    {
+        var ww=$(window).height();
+       
+       $(".innerdiv").css("min-height",ww+"px");
+    }
+    
+    function adjustmenu()
+    {
+        
+        
+         $(".popmenuwrap").css("height", $(document).height());
+       
+         $(".popmenu").css("min-height", $(document).height()-($(".popmenuwrap .topbarMenu").outerHeight(true)+$(".popmenuwrap .logDetails").outerHeight(true))); 
+        
+         $(".popbg").css("width", $(window).width());
+         //footer fix
+        
+        var fhei=$(".footer_flex").height();
+        
+        if(fhei<110){
+            $(".inner_page").addClass("no_search");console.log("fhei",fhei);
+        }
+        else{
+            $(".inner_page").removeClass("no_search");
+        }
+        if(($(".footer_flex").parents(".ftr")).length == 1)
+        {
+            $(".inner_page").addClass("no_padding_header");
+           
+        }
+        
+        
+    }
+    
+    divheight();
+     setTimeout(adjustmenu, 500); 
+//$('.popmenuwrap').hide();
+    
+ $(".topbarMenu").click(function(){
+
+     
+$(".popmenuwrap").toggleClass("showmenu");
+ 
+     
+     setTimeout(adjustmenu, 100); 
+});
+    
+ $(".popbg").click(function(){
+
+     $(".popmenuwrap").removeClass("showmenu");
+     
+});
+    
+$(".moreLink").click(function(){
+$(".popmenuSub").fadeToggle(50);
+$(".popmenuSub").animate({marginRight:"0px"});
+});
+
+$(".shdtls").click(function(){
+$(".shdtlsdiv").fadeIn(50);
+$(".shdtls").fadeToggle(50);
+});
+
+$(".hidedtls").click(function(){
+$(".shdtlsdiv").fadeOut(50);
+$(".shdtls").fadeToggle(50);
+});
+
+
+});
+
+</script>
+<body {if($mob==0)}style="background:none; width:360px;"{endif} class="inner_page {if($mob==0)}webmobile{endif}">
+<div {if($mob==0)}style="width:360px;  " class="innerdiv" {endif}>
+<div class="header">
+	<div class="header_inner home_header">
+        <a class="topbarMenu">
+                <div class="header_iconbox">
+                    <div class="header_icon"><img src="images/headermenu_icon.png"></div>
+                    <div class="header_icontxt">{cfn:getmessage(762)}</div>
+                </div></a>
+		
+        <div class="header_right">
+            <img src="images/logo.png" alt="Logo" class="left" />
+        	<!--<a href="#"><span class="refresh_btn"><i class="fa  fa-rotate-right "></i></span></a>-->
+        <!--<a href="{url:(index/logout)}" class="header_logout"><span i class="fa fa-power-off"></span>{cfn:getmessage(39)}</a>-->
+        </div>
+	
+	</div>
+</div>
+    <div class="popmenuwrap">
+    <div class="popbg"></div>
+    <a class="topbarMenu">
+                <div class="header_iconbox">
+                    <div class="header_icon"><i class="fa fa-long-arrow-left"></i></div>
+                    <div class="header_icontxt popbar">{cfn:getmessage(762)}</div>
+                </div></a>
+<div class="logDetails">
+<div class="logDetails_inner">
+		<div class="welcome_div"><div class="welcome_usericon"><i class="fa fa-user"></i></div>
+            <div class="welcome_right">
+                <div class="welcome_txt">{cfn:getmessage(760)}</div>
+                <div class="welcome_name">{$fname}</div>
+            </div> </div>
+		
+	</div>
+	</div>
+<div class="popmenu">
+     {if($mpcount!=0)}<a href="#" class="moreLink"><img alt="more" src="images/folder_icon.png"><span>{cfn:getmessage(761)}</span></a>{endif}
+    <div class="popmenuSub" style="display:none">
+{loopstart:customfolders:10000}
+<a href="{url:(mail/mailbox/)}{$customfolders[0]}"><i class="fa fa-folder"></i><span>{$customfolders[1]}{cfn:getunreadcountnew($uid,$customfolders[0])}</span></a> 
+{loopend:customfolders}
+</div>
+	<a href="{url:(mail/replylink/newmail/1/1/m)}"><img src="images/email_icon.png" alt="New Mail"><span>{cfn:getmessage(10)}</span></a>
+    <a href="{url:(mail/mailbox/1)}"><img src="images/inbox_icon.png" alt="inbox"><span>{cfn:getmessage(19)}</span></a>
+	<a href="{url:(mail/mailbox/6)}"><img src="images/starred_icon.png" alt="starred"><span>{cfn:getmessage(205)}</span></a>
+	<a href="{url:(mail/mailbox/2)}"><img src="images/draft_icon.png" alt="draft"><span>{cfn:getmessage(20)}</span></a>
+	<a href="{url:(mail/mailbox/3)}"><img src="images/send_icon.png" alt="sent"><span>{cfn:getmessage(21)}</span></a>
+	<a href="{url:(mail/mailbox/4)}"><img src="images/spam_icon.png" alt="spam"><span>{cfn:getmessage(12)}</span></a>
+	<a href="{url:(mail/mailbox/5)}"><img src="images/delete_icon.png" alt="trash"><span>{cfn:getmessage(22)}</span></a>
+	<a href="{url:(mail/contacts)}"><img src="images/contacts_icon.png" alt="contacts"><span>{cfn:getmessage(2)}</span></a>
+    <a href="{url:(mail/editprofile)}"><img src="images/editprofile_icon.png" alt="contacts"><span>{cfn:getmessage(26)} {cfn:getmessage(361)}</span></a>
+    <a href="{url:(index/logout)}"><img src="images/power_icon.png" alt="logout"><span>{cfn:getmessage(39)}</span></a>
+     
+</div>
+</div>
+
+<!--<div class="logDetails">
+<div class="logDetails_inner">
+		<div class="welcome_div"><div class="welcome_usericon"><i class="fa fa-user"></i></div>
+            <div class="welcome_right">
+                <div class="welcome_txt">{cfn:getmessage(760)}</div>
+                <div class="welcome_name">{$uname}</div>
+            </div> </div>
+		
+	</div>
+	</div>-->
+<div class="contentdiv pdgT30">
+		<div class="contentdivin mail_homebox">
+			<div class="gridview">
+		<a href="{url:(mail/replylink/newmail/1/1/m)}" class="indexicon newmail_iconlink"><img src="images/email_icon.png" /><span>{cfn:getmessage(10)}</span></a>
+			<a href="{url:(mail/mailbox/1)}" class="indexicon inbox_iconlink"><img src="images/inbox_icon.png" /><span>{cfn:getmessage(19)}</span>{cfn:getunreadcount($uid,1)}</a>
+			<a href="{url:(mail/mailbox/3)}" class="indexicon send_iconlink"><img src="images/send_icon.png" /><span>{cfn:getmessage(21)}</span></a>
+			<a href="{url:(mail/mailbox/4)}" class="indexicon spam_iconlink"><img src="images/spam_icon.png" /><span>{cfn:getmessage(12)}</span>{cfn:getunreadcount($uid,4)}</a>
+			<a href="{url:(mail/mailbox/5)}" class="indexicon delete_iconlink"><img src="images/delete_icon.png" /><span>{cfn:getmessage(22)}</span>{cfn:getunreadcount($uid,5)}</a>
+			<a href="{url:(mail/contacts)}" class="indexicon contacts_iconlink"><img src="images/contacts_icon.png" /><span>{cfn:getmessage(2)}</span></a>
+                
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<!--<div class="ftr"><div class="footer_flex">{$footer}</div></div>-->
+    {showpage:mail/footer}
+	</div>
+</body>
+</html>

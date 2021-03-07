@@ -1,0 +1,11 @@
+AuthUserFile /home/yiaapc5/public_html/oasis/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Secure Document"
+AuthType Basic
+require user admin
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !index.php
+RewriteRule ^ index.php [L]
+
+SetEnv YIOOP_REDIRECTS_ON true

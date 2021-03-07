@@ -1,0 +1,103 @@
+Loading document: /home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/1134370236/d/1612626819.pdf
+
+
+
+---------------------------------------------
+Starting PDF conversion!
+---------------------------------------------
+
+
+Copying /home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/1134370236/d/1612626819.pdf -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/d/1acd940e07e27e37206b40384004d568.pdf!
+
+
+
+---------------------------------------------
+Not converting to SWF. Disabled in admin!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Creating small document thumbnail (320x240)
+---------------------------------------------
+
+/usr/bin/ffmpeg -i "/home/yiaapc5/public_html/f_data/data_images/document.gif" -vframes 1 -filter:v "scale=iw*min(320/iw\,180/ih):ih*min(320/iw\,180/ih),pad=320:180:(320-iw)/2:(180-ih)/2" -y "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2717184066/out/%03d.jpg"
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, gif, from '/home/yiaapc5/public_html/f_data/data_images/document.gif':
+  Duration: 00:00:00.10, start: 0.000000, bitrate: 1925 kb/s
+    Stream #0:0: Video: gif, bgra, 256x256, 10 tbr, 100 tbn, 100 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (gif (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x72a91c0] deprecated pixel format used, make sure you did set range correctly
+[swscaler @ 0x72a91c0] Warning: data is not aligned! This can lead to a speed loss
+[mjpeg @ 0x7295400] removing common factors from framerate
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2717184066/out/%03d.jpg':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: mjpeg, yuvj444p(pc, progressive), 320x180, q=2-31, 200 kb/s, 10 fps, 10 tbn
+    Metadata:
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=5.6 size=N/A time=00:00:00.10 bitrate=N/A speed=1e+05x    frame=    1 fps=0.0 q=5.6 Lsize=N/A time=00:00:00.10 bitrate=N/A speed=15.4x
+video:6kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+Copying thumb /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2717184066/out/001.jpg -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2717184066/1.jpg!
+
+
+
+---------------------------------------------
+Creating large document thumbnail (640x480)
+---------------------------------------------
+
+/usr/bin/ffmpeg -i "/home/yiaapc5/public_html/f_data/data_images/document.gif" -vframes 1 -filter:v "scale=iw*min(640/iw\,360/ih):ih*min(640/iw\,360/ih),pad=640:360:(640-iw)/2:(360-ih)/2" -y "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2717184066/out/%03d.jpg"
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, gif, from '/home/yiaapc5/public_html/f_data/data_images/document.gif':
+  Duration: 00:00:00.10, start: 0.000000, bitrate: 1925 kb/s
+    Stream #0:0: Video: gif, bgra, 256x256, 10 tbr, 100 tbn, 100 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (gif (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x674e1c0] deprecated pixel format used, make sure you did set range correctly
+[swscaler @ 0x674e1c0] Warning: data is not aligned! This can lead to a speed loss
+[mjpeg @ 0x673a400] removing common factors from framerate
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2717184066/out/%03d.jpg':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: mjpeg, yuvj444p(pc, progressive), 640x360, q=2-31, 200 kb/s, 10 fps, 10 tbn
+    Metadata:
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=6.5 size=N/A time=00:00:00.10 bitrate=N/A speed=1e+05x    frame=    1 fps=0.0 q=6.5 Lsize=N/A time=00:00:00.10 bitrate=N/A speed=11.9x
+video:15kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+Copying thumb /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2717184066/out/001.jpg -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2717184066/0.jpg!
+
+
+
+---------------------------------------------
+Executing update query: UPDATE `db_docfiles` SET `file_mobile`='1', `file_hd`='0' , `file_pdf`='1' WHERE `file_key`='2717184066' LIMIT 1;
+---------------------------------------------
+

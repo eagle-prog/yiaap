@@ -1,0 +1,75 @@
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/1134370236/v/1612631116.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isommp42
+    creation_time   : 2021-01-18T20:54:16.000000Z
+  Duration: 00:02:03.76, start: 0.000000, bitrate: 609 kb/s
+    Stream #0:0(und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709), 1280x720 [SAR 1:1 DAR 16:9], 478 kb/s, 24 fps, 24 tbr, 12288 tbn, 48 tbc (default)
+    Metadata:
+      creation_time   : 2021-01-18T20:54:16.000000Z
+      handler_name    : ISO Media file produced by Google Inc. Created on: 01/18/2021.
+      vendor_id       : [0][0][0][0]
+    Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+    Metadata:
+      creation_time   : 2021-01-18T20:54:16.000000Z
+      handler_name    : ISO Media file produced by Google Inc. Created on: 01/18/2021.
+      vendor_id       : [0][0][0][0]
+Codec AVOption rc_eq (Set rate control equation. When computing the expression, besides the standard functions defined in the section 'Expression Evaluation', the following functions are available: bits2qp(bits), qp2bits(qp). Also the following constants are available: iTex pTex tex mv fCode iCount mcVar var isI isP isB avgQP qComp avgIITex avgPITex avgPPTex avgBPTex avgTex.) specified for output file #0 (/home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/v/2b321389bfe7398123e6271d54ebf9ca.mob.nomob.mp4) has not been used for any stream. The most likely reason is either wrong type (e.g. a video option with no video streams) or that it is a private option of some encoder which was not actually used for any stream.
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x65e9b00] Application has requested 32 threads. Using a thread count greater than 16 is not recommended.
+[libx264 @ 0x65e9b00] using SAR=136/135
+[libx264 @ 0x65e9b00] frame MB size (30x17) > level limit (396)
+[libx264 @ 0x65e9b00] VBV bitrate (10000) > level limit (768)
+[libx264 @ 0x65e9b00] VBV buffer (10000) > level limit (2000)
+[libx264 @ 0x65e9b00] MB rate (12240) > level limit (11880)
+[libx264 @ 0x65e9b00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX
+[libx264 @ 0x65e9b00] profile Constrained Baseline, level 1.3, 4:2:0, 8-bit
+[libx264 @ 0x65e9b00] 264 - core 161 r3040 35417dc - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=0 ref=1 deblock=1:0:0 analyse=0x1:0 me=hex subme=1 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=32 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=0 weightp=0 keyint=300 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=30 rc=abr mbtree=1 bitrate=610 ratetol=1.0 qcomp=0.60 qpmin=10 qpmax=51 qpstep=4 vbv_maxrate=10000 vbv_bufsize=10000 nal_hrd=none filler=0 ip_ratio=1.41 aq=1:1.00
+Output #0, mp4, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/v/2b321389bfe7398123e6271d54ebf9ca.mob.nomob.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isommp42
+    encoder         : Lavf58.65.101
+    Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 480x272 [SAR 136:135 DAR 16:9], q=2-31, 610 kb/s, 24 fps, 12288 tbn (default)
+    Metadata:
+      creation_time   : 2021-01-18T20:54:16.000000Z
+      handler_name    : ISO Media file produced by Google Inc. Created on: 01/18/2021.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 10000000/0/610000 buffer size: 10000000 vbv_delay: N/A
+    Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+    Metadata:
+      creation_time   : 2021-01-18T20:54:16.000000Z
+      handler_name    : ISO Media file produced by Google Inc. Created on: 01/18/2021.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.41 bitrate=   0.9kbits/s speed= 8.8x    frame=  184 fps=0.0 q=30.0 size=     256kB time=00:00:07.94 bitrate= 264.1kbits/s speed=14.5x    frame=  374 fps=357 q=28.0 size=    1024kB time=00:00:15.88 bitrate= 528.2kbits/s speed=15.2x    frame=  575 fps=371 q=29.0 size=    1792kB time=00:00:24.45 bitrate= 600.4kbits/s speed=15.8x    frame=  787 fps=384 q=27.0 size=    2560kB time=00:00:33.15 bitrate= 632.5kbits/s speed=16.2x    frame= 1000 fps=392 q=26.0 size=    3328kB time=00:00:41.86 bitrate= 651.2kbits/s speed=16.4x    frame= 1213 fps=398 q=25.0 size=    3840kB time=00:00:51.03 bitrate= 616.4kbits/s speed=16.7x    frame= 1410 fps=397 q=25.0 size=    4608kB time=00:00:59.30 bitrate= 636.5kbits/s speed=16.7x    frame= 1603 fps=396 q=25.0 size=    5376kB time=00:01:07.12 bitrate= 656.1kbits/s speed=16.6x    frame= 1804 fps=396 q=25.0 size=    6144kB time=00:01:15.74 bitrate= 664.5kbits/s speed=16.6x    frame= 2016 fps=399 q=26.0 size=    7168kB time=00:01:24.54 bitrate= 694.6kbits/s speed=16.7x    frame= 2216 fps=399 q=26.0 size=    7936kB time=00:01:32.81 bitrate= 700.5kbits/s speed=16.7x    frame= 2413 fps=398 q=26.0 size=    8704kB time=00:01:41.05 bitrate= 705.6kbits/s speed=16.7x    frame= 2607 fps=398 q=25.0 size=    9216kB time=00:01:48.85 bitrate= 693.6kbits/s speed=16.6x    frame= 2807 fps=398 q=21.0 size=    9472kB time=00:01:57.53 bitrate= 660.2kbits/s speed=16.7x    frame= 2970 fps=398 q=-1.0 Lsize=    9796kB time=00:02:03.73 bitrate= 648.5kbits/s speed=16.6x    
+video:8024kB audio:1700kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.735971%
+[libx264 @ 0x65e9b00] frame I:35    Avg QP:17.83  size: 20329
+[libx264 @ 0x65e9b00] frame P:2935  Avg QP:20.35  size:  2557
+[libx264 @ 0x65e9b00] mb I  I16..4: 11.5%  0.0% 88.5%
+[libx264 @ 0x65e9b00] mb P  I16..4:  2.5%  0.0%  0.0%  P16..4: 50.2%  0.0%  0.0%  0.0%  0.0%    skip:47.2%
+[libx264 @ 0x65e9b00] final ratefactor: 19.70
+[libx264 @ 0x65e9b00] coded y,uvDC,uvAC intra: 58.6% 47.9% 19.8% inter: 20.6% 5.0% 0.2%
+[libx264 @ 0x65e9b00] i16 v,h,dc,p: 41% 28% 14% 17%
+[libx264 @ 0x65e9b00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 21%  9%  7%  7%  7%  9%  6%  9%
+[libx264 @ 0x65e9b00] i8c dc,h,v,p: 45% 25% 22%  9%
+[libx264 @ 0x65e9b00] kb/s:531.11
+[aac @ 0x664ebc0] Qavg: 8834.203

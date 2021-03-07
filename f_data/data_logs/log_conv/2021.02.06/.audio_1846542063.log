@@ -1,0 +1,67 @@
+Loading audio: /home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/1134370236/a/1612626423.mp3
+cmd => /usr/bin/ffmpeg -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/1134370236/a/1612626423.mp3"
+container => mp3
+duration_timecode => 00:01:39.11
+duration_seconds => 99.11
+start => 0.000000
+bitrate => 320
+audio => mp3
+audio_frequency => 44100
+audio_stereo => stereo
+audio_bitrate => 320
+
+
+
+
+---------------------------------------------
+Starting MP3 conversion!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Copying /home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/1134370236/a/1612626423.mp3 to /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/a/bb3aa32e14ac30a8e9898c28700cebc9.mp3
+---------------------------------------------
+
+
+
+---------------------------------------------
+Starting AAC conversion!
+---------------------------------------------
+
+/usr/bin/ffmpeg -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/1134370236/a/1612626423.mp3"  -vcodec copy -acodec copy /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/a/bb3aa32e14ac30a8e9898c28700cebc9.mp4 -y
+
+
+
+---------------------------------------------
+Creating large audio thumbnail (640x480)
+---------------------------------------------
+
+
+/home/yiaapc5/public_html/f_data/data_images/audio.png -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/1846542063/0.jpg
+
+
+---------------------------------------------
+Creating small audio thumbnail (320x240)
+---------------------------------------------
+
+
+/home/yiaapc5/public_html/f_data/data_images/audio.png -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/1846542063/1.jpg
+
+
+---------------------------------------------
+Executing update query: UPDATE `db_audiofiles` SET `has_preview`='0', `file_mobile`='1', `file_hd`='0', `file_duration`='99.11' WHERE `file_key`='1846542063' LIMIT 1;
+---------------------------------------------
+
+
+
+---------------------------------------------
+Database data updated!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Deleting source audio /home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/1134370236/a/1612626423.mp3
+---------------------------------------------
+

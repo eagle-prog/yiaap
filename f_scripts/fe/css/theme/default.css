@@ -1,0 +1,12 @@
+a.linkified, .p-d-txt a {
+    color: #06a2cb
+}
+
+#no-session-accordion2 li.menu-panel-entry-active a i,#session-accordion li.menu-panel-entry-active a i,#session-accordion li.main-menu-panel-entry-active a i {
+    color: #06a2cb
+}
+
+.content-filters a.active, a.filter-tag, .views-details li a {
+    color: #06a2cb
+}
+

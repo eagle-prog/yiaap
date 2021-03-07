@@ -1,0 +1,351 @@
+{showpage:include/header}
+<style>
+
+</style>
+<!--<script language='javascript' src='graph/FusionCharts/FusionCharts.js'>
+FusionCharts.setCurrentRenderer('javascript');
+</script>-->
+
+<script type="text/javascript">
+function showresult(id)
+{
+//alert(id);
+	if(id==0)
+	{
+	var flag="today";
+	var url="{url:(statistics/regshowgraph/)}"+flag;
+	}
+	else if(id==2)
+	{
+	var month=document.getElementById("month").value;
+	var year=document.getElementById("year").value;
+	
+	if((month!="" && year=="") || (month!="" && year!=""))
+	var flag="month";//current month
+	else if(month=="" && year!="")
+	var flag="year";//12 months
+	//else 
+	//var flag="all";//yearwise
+	
+	var url="{url:(statistics/regshowgraph/)}"+flag+"/"+month+"/"+year;
+	}
+	else
+	{
+	var flag="all";
+	var url="{url:(statistics/regshowgraph/)}"+flag;
+	}
+	window.location.href=url;
+	 //$.ajax({ type:"GET", cache: false,
+		        // url:"{url:(statistics/graph/)}"+flag,
+		        // success: function(data)
+		        //{
+		       //alert(data);  
+		        //}
+		        //});
+
+}
+</script>
+<html><head>
+    <link rel="shortcut icon" type="image/x-icon" href="/mail/favicon.ico">
+</head>
+<body>
+
+
+<br>
+<table cellpadding="0" cellspacing="0" class="sublink_table">
+
+	 <tr align="center">
+
+    <td>	{showpage:include/statisticsheader}</td>
+
+  </tr>
+
+  </table>	
+  <br><br>
+<table cellpadding="0" cellspacing="0"  align="center" style="padding-left: 20px;padding-right:20px;padding-top: 0px;" width="98%" border="0">
+
+<tr><td align="center" class="page_title"><b>Registered User Statistics</b><br><br></td></tr>
+   
+<tr>
+    <td ><div class="help_desc_cover   mgn15auto"><div class="help_desc">Here you can view the number of users registered in the site. You can view them on a daily basis by selecting the required month and year. By default count will be based on current month and year.</div></div></td>
+    </tr>
+  <tr class="table_header mgnT15">
+<td height="20" align="left">
+<!--<span style="padding-left: 50px"><a href="javascript:showresult(0)" >Today</a></span>
+<span style="padding-left:20px"><a href="javascript:showresult(1)">All Time</a></span>-->
+<!--<span align="left" style="padding-left:10px">Time Period
+
+  <select id="timeperiod" name="timeperiod" onChange="display(0)">
+
+      <option value="" selected>All Time</option>
+
+        <option value="today" {if($time=="today")} selected {endif}>Today</option>
+
+        <option value="lastweek"{if($time=="lastweek")} selected {endif}>Last 7 days</option>
+        
+           </select></span>
+           <span align="right"><a href="#" onClick="show()">show</a></span>-->
+       <span  align="center" style="padding-left: 100px;float: right; padding-right: 20px;">
+			<select name="month" id="month" >
+				<!--<option value="" selected>Month</option>-->
+				{loopstart:month:100}
+				<option value="{$month[0]}" {if($setmonth==$month[0])} selected {endif}>{$month[1]}</option>
+				{loopend:month}
+			</select> 
+			
+			<select name="year" id="year" >
+				<!--<option value="" selected>Year</option>-->
+				{loopstart:year:1000000}
+				<option value="{$year[0]}" {if($setyear==$year[0])} selected {endif}>{$year[0]}</option>
+				{loopend:year}
+			</select>
+			<input type="button" onclick="showresult(2)" value="show">
+			</span>
+		
+    
+       
+        
+</td>
+</tr>
+
+<tr><td>{showpage:statistics/graph/$show/$setmonth/$setyear}</td></tr>
+
+</table>
+    
+<div class="chartbox_cover" id="chart_cover"> 
+       <!--<div class="chart_title" id="xtext">Chart</div>-->
+       <div class="chart_ytitle">User Count</div>
+        <div class="chartbox" id="parent"> 
+            <canvas id="canvas" height="400" width="800"></canvas>
+        </div>
+        <div class="chart_xtitle" id="bott_txt">Days</div>
+    </div>
+    <div class="chartbox_error" id="nochart" style="display: none;">
+        <div class="nochart_txt">No user registrations have made on this particular date.</div>    
+    </div>
+</body>
+</html>
+<!--
+   <script type="text/javascript">
+        $(document).ready(function () {
+            
+$('#xtext').html("Logins Summary for Current Month<small> (Daily Logins till Today)</small>");
+
+            
+    var count = 30, mnth=[];
+for($i=0;$i<count;$i++)
+    {
+     //console.log($i);
+        var dy = $i+1;
+        mnth[$i]="Sep "+dy ;
+    }
+console.log(mnth);
+            
+		var barChartData1 = {
+            //{noescape:$daily}
+			labels : mnth,
+			datasets : [
+				{
+					label: "My First dataset",
+					fillColor: "#0066cc", //rgba(151,187,205,0.5)
+                    strokeColor: "#0066cc", //rgba(151,187,205,0.8)
+                    highlightFill: "#718ca1", //rgba(151,187,205,0.75)
+                    highlightStroke: "#718ca1", //rgba(151,187,205,1)
+					  //{noescape:$totaldataday}
+                    data: [0,0,0,0,0,50,50,10,27,0,91,0,0,97,0,0,]	
+				} 
+			]
+
+		}
+
+
+var sigb='{fn:htmlspecialchars($currency_symbol)}';
+
+
+
+
+var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Bar(barChartData1, {
+			 barStrokeWidth : 30,barValueSpacing : 5,barShowStroke : false,barStrokeWidth : 0,scaleLabel: "<%=value%>",
+		});
+
+
+
+
+
+$('#timechange').change(function(){
+
+
+var tim=1;
+
+//if($('#timechange').val()==1)
+    if(tim==1)
+{
+$('#xtext').html("Logins Summary for Current Month<small> (Daily Logins till Today)</small>");
+
+
+  $('#canvas').remove(); // this is my <canvas> element
+  //$('#parent').append('<canvas id="canvas" height="500" width="600"></canvas>');
+
+var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Bar(barChartData1, {
+			barStrokeWidth : 9,barValueSpacing : 1,barShowStroke : true,barStrokeWidth : 1,scaleLabel: "<%= '"+sigb+"' + value%>",
+		});
+
+}
+
+});
+
+
+
+        });
+
+
+
+
+
+
+
+
+	</script>-->
+<script type="text/javascript">
+        $(document).ready(function () {
+
+            
+        var graphtest="{$nograph}";
+       console.log(graphtest);
+        //console.log("chartdata", chartdata);
+            
+            
+        if(graphtest=='a')
+        {
+            // no graph data
+            $("#nochart").removeAttr("style");
+            
+            // to hide chart
+            $("#chart_cover").remove();
+
+        }
+
+		var barChartData1 = {
+			{noescape:$daily}
+			datasets : [
+				{
+					label: "My First dataset",
+					fillColor: "#004C99", //rgba(151,187,205,0.5)
+                    strokeColor: "#004C99", //rgba(151,187,205,0.8)
+                    highlightFill: "#0066CC", //rgba(151,187,205,0.75)
+                    highlightStroke: "#0066CC", //rgba(151,187,205,1)
+					  {noescape:$totaldataday}
+				}
+				
+			]
+
+		}
+
+
+
+
+/*var barChartData2 = {
+			{noescape:$monthly}
+			datasets : [
+				{
+					label: "My First dataset",
+					fillColor: "#004C99", //rgba(151,187,205,0.5)
+                    strokeColor: "#004C99", //rgba(151,187,205,0.8)
+                    highlightFill: "#0066CC", //rgba(151,187,205,0.75)
+                    highlightStroke: "#0066CC", //rgba(151,187,205,1)
+					{noescape:$totaldatamnth}
+				},
+				{
+					label: "My Second dataset",
+					fillColor: "#2E8B57", //rgba(220,220,220,0.5)
+                    strokeColor: "#2E8B57", //rgba(220,220,220,0.8)
+                    highlightFill: "#3CB371", //rgba(220,220,220,0.75)
+                    highlightStroke: "#3CB371", //rgba(220,220,220,1)
+					{noescape:$hsharedatamnth}
+				},{
+					label: "My Second dataset",
+					 fillColor: "#FF8000", //rgba(220,220,220,0.5)
+                    strokeColor: "#FF8000", //rgba(220,220,220,0.8)
+                    highlightFill: "#FF9933", //rgba(220,220,220,0.75)
+                    highlightStroke: "#FF9933", //rgba(220,220,220,1)
+					 {noescape:$mysharedatamnth}
+				}
+			]
+
+		}*/
+
+
+//var sigb='{fn:htmlspecialchars($currency_symbol)}';
+
+
+
+
+
+var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Bar(barChartData1, {
+			 barStrokeWidth : 30,barValueSpacing : 5,barShowStroke : false,barStrokeWidth : 0,scaleLabel: "<%=value%>",
+		});
+
+
+
+
+
+$('#timechange').change(function(){
+
+
+
+
+if($('#timechange').val()==1)
+{
+$('#xtext').html("Transaction Summary for Current Month<small> (Daily Progress till Today)</small>");
+
+
+  $('#canvas').remove(); // this is my <canvas> element
+  $('#parent').append('<canvas id="canvas" height="200" width="600"></canvas>');
+
+var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Bar(barChartData1, {
+			barStrokeWidth : 9,barValueSpacing : 1,barShowStroke : true,barStrokeWidth : 1,scaleLabel: "<%= '"+sigb+"' + value%>",
+		});
+
+}else if($('#timechange').val()==2)
+{
+$('#xtext').html("Transaction Summary for Current Year<small> (Monthly Progress till Current Month)</small>");
+  $('#canvas').remove(); // this is my <canvas> element
+  $('#parent').append('<canvas id="canvas" height="200" width="600"></canvas>');
+var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Bar(barChartData2, {
+			 barStrokeWidth : 9,barValueSpacing : 1,barShowStroke : true,barStrokeWidth : 1,scaleLabel: "<%= '"+sigb+"' + value%>",
+		});
+		
+
+
+
+}
+
+
+
+
+
+
+
+
+
+});
+
+
+
+        });
+
+
+
+
+
+
+
+
+	</script>
+<script src="js/chart/chart.min.js"></script>
+{showpage:include/footer}

@@ -1,0 +1,1 @@
+<?php $db = mysqli_connect("localhost","yiaapc5_video","F5EgzIUIGM^s","yiaapc5_contest"); ?>

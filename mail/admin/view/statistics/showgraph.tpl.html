@@ -1,0 +1,190 @@
+{showpage:include/header}
+<style>
+
+</style>
+<!--<script language='javascript' src='graph/FusionCharts/FusionCharts.js'>
+FusionCharts.setCurrentRenderer('javascript');
+</script>-->
+
+<script type="text/javascript">
+function showresult(id)
+{
+//alert(id);
+	if(id==0)
+	{
+	var flag="today";
+	var url="{url:(statistics/showgraph/)}"+flag;
+	}
+	else if(id==2)
+	{
+	var month=document.getElementById("month").value;
+	var year=document.getElementById("year").value;
+	
+	if((month!="" && year=="") || (month!="" && year!=""))
+	var flag="month";//current month
+	else if(month=="" && year!="")
+	var flag="year";//12 months
+	//else 
+	//var flag="all";//yearwise
+	
+	var url="{url:(statistics/showgraph/)}"+flag+"/"+month+"/"+year;
+	}
+	else
+	{
+	var flag="all";
+	var url="{url:(statistics/showgraph/)}"+flag;
+	}
+	window.location.href=url;
+	 //$.ajax({ type:"GET", cache: false,
+		        // url:"{url:(statistics/graph/)}"+flag,
+		        // success: function(data)
+		        //{
+		       //alert(data);  
+		        //}
+		        //});
+
+}
+</script>
+<html><head>
+    <link rel="shortcut icon" type="image/x-icon" href="/mail/favicon.ico">
+</head>
+<body>
+
+
+<br>
+<table cellpadding="0" cellspacing="0" class="sublink_table">
+
+	 <tr align="center">
+
+    <td>	{showpage:include/statisticsheader}</td>
+
+  </tr>
+
+  </table>	
+  <br><br>
+<table cellpadding="0" cellspacing="0"  align="center" style="padding-left: 20px;padding-right:20px;padding-top: 0px;" width="98%" border="0">
+
+<tr><td align="center" class="page_title"><b>Logined User Statistics</b><br><br></td></tr>
+   
+<tr>
+    <td ><div class="help_desc_cover   mgn15auto"><div class="help_desc">Here you can view the number of login attempts made by users in the site. You can view them on a daily basis by selecting the required month and year. By default count will be based on current month and year.</div></div></td>
+    </tr>
+  <tr class="table_header mgnT15">
+<td height="20" align="left">
+<!--<span style="padding-left: 50px"><a href="javascript:showresult(0)" >Today</a></span>
+<span style="padding-left:20px"><a href="javascript:showresult(1)">All Time</a></span>-->
+<!--<span align="left" style="padding-left:10px">Time Period
+
+  <select id="timeperiod" name="timeperiod" onChange="display(0)">
+
+      <option value="" selected>All Time</option>
+
+        <option value="today" {if($time=="today")} selected {endif}>Today</option>
+
+        <option value="lastweek"{if($time=="lastweek")} selected {endif}>Last 7 days</option>
+        
+           </select></span>
+           <span align="right"><a href="#" onClick="show()">show</a></span>-->
+       <span  align="center" style="padding-left: 100px;float: right; padding-right: 20px;">
+			<select name="month" id="month" >
+				<!--<option value="" selected>Month</option>-->
+				{loopstart:month:100}
+				<option value="{$month[0]}" {if($setmonth==$month[0])} selected {endif}>{$month[1]}</option>
+				{loopend:month}
+			</select> 
+			
+			<select name="year" id="year" >
+				<!--<option value="" selected>Year</option>-->
+				{loopstart:year:1000000}
+				<option value="{$year[0]}" {if($setyear==$year[0])} selected {endif}>{$year[0]}</option>
+				{loopend:year}
+			</select>
+			<input type="button" onclick="showresult(2)" value="show">
+			</span>
+		
+    
+       
+        
+</td>
+</tr>
+
+<tr><td>{showpage:statistics/graph/$show/$setmonth/$setyear}</td></tr>
+
+</table>
+<div class="chartbox_cover" id="chart_cover">
+    <!--<div class="chart_title" id="xtext">Chart</div>-->
+    <div class="chart_ytitle">Login Count</div>
+    <div class="chartbox" id="parent">    
+        <canvas id="canvas" height="400" width="800"></canvas>
+    </div>
+    <div class="chart_xtitle" id="bott_txt">Days</div>
+</div>
+<div class="chartbox_error" id="nochart" style="display: none;">
+    <div class="nochart_txt">No logins have made on this particular date.</div>    
+</div>
+</body>
+</html>
+ 
+ 
+<script type="text/javascript">
+        $(document).ready(function () {
+
+        
+        var graphtest="{$nograph}";
+       console.log(graphtest);
+        //console.log("chartdata", chartdata);
+            
+            
+        if(graphtest=='a')
+        {
+            // no graph data
+            $("#nochart").removeAttr("style");
+            
+            // to hide chart
+            $("#chart_cover").remove();
+
+        }
+         
+            var barChartData1 = {
+                {noescape:$daily}
+                datasets : [
+                    {
+                        label: "My First dataset",
+                        fillColor: "#004C99", //rgba(151,187,205,0.5)
+                        strokeColor: "#004C99", //rgba(151,187,205,0.8)
+                        highlightFill: "#0066CC", //rgba(151,187,205,0.75)
+                        highlightStroke: "#0066CC", //rgba(151,187,205,1)
+                        {noescape:$totaldataday}
+                    }
+
+                ]
+
+            }
+
+
+            var ctx = document.getElementById("canvas").getContext("2d");
+
+		      window.myLine = new Chart(ctx).Bar(barChartData1, {
+			 barStrokeWidth : 30,barValueSpacing : 5,barShowStroke : false,barStrokeWidth : 0,scaleLabel: "<%=value%>",
+		      });
+        
+        
+     
+
+
+
+ 
+
+
+ });
+
+
+
+
+
+
+
+
+	</script>
+<script src="js/chart/chart.min.js"></script>
+{showpage:include/footer}

@@ -1,0 +1,162 @@
+{showpage:mail/header/$fid/$search/$searchresult}
+	{if($msg!="")}<div class="warningTxt">{$msg}</div>{else}
+<span id="warningTxt"></span> {endif}
+<span id="mailboxdiv">
+
+	{if($number==0)}<div class="warningTxt">{cfn:getmessage(30)}</div> {elseif($number>=1)}
+	
+<div class="clear"></div>
+{loopstart:mail:100000}
+	<div class="twopaneMail1"> 
+		
+	<div id="div{$mail[0]}" class="twopaneMail">
+			
+			<div class="colFrom">
+				<span  {if($mail[10]==0)} class="unreadmail" {else} class="readmail" {endif}   id="mailsubject_td{$mail[0]}">{if($mail[6]=="")}<a href="{url:(mail/detailmail/{$mail[13]}/{$mail[0]}/p{$page})}"  style="text-decoration: none;">{cfn:getmessage(51)}</a>{else}{if($searchflag==0)}{if($fid==2)}
+					<a href="{url:(mail/detailmail/{$mail[13]}/{$mail[0]}/p{$page})}"  style="text-decoration: none;">
+					{else}
+					<a href="{url:(mail/detailmail/{$mail[13]}/{$mail[0]}/p{$page})}" style="text-decoration: none;">
+					{endif}{endif}
+					{if($searchflag==1)}{if($mail[13]==2)}
+					<a href="{url:(mail/detailmail/{$mail[13]}/{$mail[0]}/p{$page})}" style="text-decoration: none;">
+					{else}
+					<a href="{url:(mail/detailmail/{$mail[13]}/{$mail[0]}/p{$page})}"  style="text-decoration: none;">
+					{endif}{endif}
+					{cfn:briefmessage($mail[6],30)}
+					{cfn:gettolistnew($mail[0],$fid)}
+					&nbsp;&nbsp;{if($mail[16]!=0)}<img  src="images/attachment_icon.png" alt="" border="0" align="absmiddle"   height="30" >{else}&nbsp;{endif}
+					{endif}
+					</a>
+				</span>
+			</div>
+			<!--
+			{if($mail[6]=="")}
+			<div class="colContent">
+				<span {if($mail[10]==0)} class="unreadContent" {else} class="readContent" {endif}  id="mailcontent_td{$mail[0]}" >
+					{if($searchflag==0)}{if($fid==2)}
+					<a href="{url:(mail/detailmail/{$fid}/{$mail[0]}/p{$page})}" style="text-decoration: none;">{else}
+					<a href="{url:(mail/detailmail/{$fid}/{$mail[0]}/p{$page})}"  style="text-decoration: none;">
+					{endif}{endif}
+					{if($searchflag==1|| $fid==6)}{if($mail[13]==2)}
+					<a href="{url:(mail/detailmail/{$mail[13]}/{$mail[0]}/p{$page})}" style="text-decoration: none;">{else}
+					<a href="{url:(mail/detailmail/{$mail[13]}/{$mail[0]}/p{$page})}"   style="text-decoration: none;">
+					{endif}{endif}
+					{cfn:briefmessage($mail[7],35)}{if($mail[16]!=0)}<img  src="../images/attachment.png" alt="" border="0" align="absmiddle">{else}&nbsp;{endif}</a>
+				</span>
+			</div>
+			{endif}
+			
+			<div class="attachIcon" >{if($mail[16]!=0)}<img  src="../images/filler.gif" alt="" border="0" align="absmiddle" class="iconsCornner attach-a" >{else}&nbsp;{endif}</div>-->
+			<span class="quickactions">
+			<a  onclick="deletein({$mail[13]},{$mail[0]},{$page})" {if($fid==5)} class="trash" {else} class="delete" {endif}>&nbsp;</a>
+			{if($fid!=2 && $fid!=3 && $fid!=4 && $fid!=6)} 	
+			<a onclick="spamin({$mail[13]},{$mail[0]},{$page})"  class="spam">&nbsp;</a>
+			{endif}
+			</span>
+		</div>
+	</div>
+{loopend:mail}
+{if($show!=0)}
+<div class="pageWrapper">{noescape:$pagelink}</div>
+{endif}
+{endif}	
+
+</span>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+	
+	function spamin(id1,id2,page){
+
+$.ajax({
+
+		type: "POST",cache: false,
+
+		url: "{url:(mail/makespam1)}",
+
+		data: {'id1':id1,'id2':id2,'page':page},
+		
+		success: function(data) { 
+
+
+	var page = "{url:(mail/mailbox/"+id1+")}";
+
+
+
+  
+
+if(data=='demo')
+{
+$("#warningTxt").html("<div class='warningTxt'>{cfn:getmessage(340)}</div>");
+setTimeout(function(){ $("#warningTxt").html(""); $('body').load(page);}, 3000);
+}
+else
+{
+$("#warningTxt").html("<div class='warningTxt'>{cfn:getmessage(191)}</div>");
+setTimeout(function(){ $("#warningTxt").html(""); $('body').load(page);}, 3000);
+}
+
+
+		}
+	});
+
+
+	}
+
+
+
+
+	function deletein(id1,id2,page){
+
+$.ajax({
+
+		type: "POST",cache: false,
+
+		url: "{url:(mail/delete1)}",
+
+		data: {'id1':id1,'id2':id2,'page':page},
+		
+		success: function(data) { 
+
+
+
+	var page = "{url:(mail/mailbox/"+id1+")}";
+
+
+  
+
+if(data=='demo')
+{
+$("#warningTxt").html("<div class='warningTxt'>{cfn:getmessage(340)}</div>");
+setTimeout(function(){ $("#warningTxt").html(""); $('body').load(page);}, 3000);
+}
+else
+{
+
+if(id1==5){
+
+$("#warningTxt").html("<div class='warningTxt'>{cfn:getmessage(182)}</div>");
+setTimeout(function(){ $("#warningTxt").html(""); $('body').load(page);}, 3000);
+
+}else{
+	
+$("#warningTxt").html("<div class='warningTxt'>{cfn:getmessage(174)}</div>");
+setTimeout(function(){ $("#warningTxt").html(""); $('body').load(page);}, 3000);
+
+
+}
+}
+
+
+		}
+	});
+
+
+	}
+
+</script>
+
+
+
+
+{showpage:mail/footer/$fid/$page}

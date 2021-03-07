@@ -1,0 +1,146 @@
+{showpage:mail/innerheader}
+
+<style type="text/css">
+.textbox_border_style { border:1px solid #ccc !important; height:13px !important; width:150px !important;}
+.forgotpasswordtitle { font-size:18px !important; color:#333; padding-left:0 !important}
+</style>
+
+
+
+
+</head>
+
+<!-- <body {if($mob==0)}style="background:#e3e3e3"; width:360px; {endif} class="reg_page">
+<div {if($mob==0)}style="width:360px; background:url(../images/contentbg.gif) repeat scroll 0 0 #2A3848; overflow:hidden" {endif}> -->
+
+
+{formstart:editprofile:{url:(mail/editprofile)}:POST}
+
+
+<div class="contentdiv">
+<div class="registration">
+<div class="mobile_advanced_maintitletd" style="float:left">{cfn:getmessage(26)} {cfn:getmessage(361)}</div>
+{if($msg2!="")}<div class="clear"></div>
+{if($msg2=="success")}
+<div class="messageerrdisplayred" style="color: #557D2D !important;">{cfn:getmessage(362)}</div>
+
+{else}
+<div class="messageerrdisplayred">{fn:nl2br($msg2)}</div>
+
+{endif}
+
+{endif}
+<div class="clear"></div>
+<div class="registrationiinner">
+
+	{loopstart:profile:1}
+<table cellpadding="0" cellspacing="0" border="0" width="100%" > 
+
+
+<tr >
+		<td align="left"  class="mobile_advanced_texttd">{cfn:getmessage(752)}<span id="mob_mandatory" class="mandatory">*</span></td>
+    </tr><tr>
+		<td align="left"  class="mobile_advanced_feildtd"><input type="text" name="name" id="name"
+			value="{$profile[0]}"" autocomplete="off"></td>
+	</tr>
+
+<tr >
+		<td align="left"  class="mobile_advanced_texttd">{cfn:getmessage(122)}<span class="mandatory">*</span></td>
+     </tr><tr>
+		<td align="left" class="mobile_advanced_feildtd"><select name="gender" >
+			<option value="" selected="selected">{cfn:getmessage(136)}</option>
+			<option value="{$male}"  {if($profile[1]==$male)} selected="selected" {endif}>{cfn:getmessage(137)}</option>
+			<option value="{$female}"  {if($profile[1]==$female)} selected="selected" {endif}s>{cfn:getmessage(138)}</option>
+		</select></td>
+	</tr>
+
+<tr >
+		<td align="left"  class="mobile_advanced_texttd">{cfn:getmessage(43)}<span class="mandatory">*</span></td>
+     </tr><tr>
+		<td align="left" class="display_inline_flex dob_fields"  ><select name="day">
+			<option value="" selected="selected">{cfn:getmessage(133)}</option>
+			{loopstart:days:100000000}
+			<option value="{$days[0]}" {if($days[0]==$dd)} selected="selected" {endif} >{$days[0]}</option>
+			{loopend:days}
+		</select> 
+		
+		<select name="month" >
+			<option value="" selected="selected">{cfn:getmessage(134)}</option>
+			{loopstart:month:100}
+			<option value="{$month[0]}" {if($month[0]==$mn)} selected="selected" {endif} >{$month[1]}</option>
+			{loopend:month}
+		</select> 
+		
+		<select name="year" >
+			<option value="" selected="selected">{cfn:getmessage(135)}</option>
+			
+			{loopstart:yrs:100000000}
+			<option value="{$yrs[0]}" {if($yrs[0]==$yr123)} selected="selected" {endif}>{$yrs[0]}</option>
+			{loopend:yrs}
+
+
+		</select></td>
+	</tr>
+
+<tr >
+		<td align="left"  class="mobile_advanced_texttd">{cfn:getmessage(123)}<span class="mandatory">*</span></td>
+     </tr><tr>
+		<td align="left"  class="mobile_advanced_feildtd"><select name="country">
+			<option value="">{cfn:getmessage(139)}</option>
+			{loopstart:country:10000}
+			<option value="{$country[0]}" {if($country[0]==$profile[3])} selected="selected" {endif}>{$country[0]}</option>
+			{loopend:country}
+		</select></td>
+	</tr>
+
+
+
+
+<tr >
+
+		<td align="left"  class="mobile_advanced_texttd">{cfn:getmessage(272)}</td>
+    </tr><tr>
+		<td align="left"  class="mobile_advanced_feildtd"><input type="text" name="alternatemail" value="{$profile[4]}" id="alternatemail" autocomplete="off"></td>
+	</tr>
+
+<input type="hidden" name="uid" value="{$uid}" />
+<tr><td >&nbsp;</td></tr>
+<tr >
+		<td>&nbsp;</td>
+    </tr><tr>
+		<td align="left"  class=""><button type="submit" name="submit" value="{cfn:getmessage(610)}" class="blue_button cursor_select" >{cfn:getmessage(610)}<span><i class="fa fa-check"></i></span></button>
+		
+		 
+		</td>
+	</tr>
+
+
+</table>	
+{loopend:profile}
+</div>
+{validate:editprofile:isNotNull("name","{cfn:getmessage(753)}")}
+
+{validate:editprofile:isNotNull("gender","{cfn:getmessage(127)}")}
+{validate:editprofile:isNotNull("day","{cfn:getmessage(128)}")}
+{validate:editprofile:isNotNull("month","{cfn:getmessage(129)}")}
+{validate:editprofile:isNotNull("year","{cfn:getmessage(130)}")}
+{validate:editprofile:isNotNull("country","{cfn:getmessage(131)}")}
+
+{formend:editprofile}
+</div>
+<!--
+</table>
+<table width="100%" border="0" align="center"  >
+  <tr >
+    <td><div align="center"><span class="copyright">{$footer}</span></div></td>
+  </tr>
+</table>
+</div>
+</div>
+-->
+</div>
+<!-- 
+</div>
+</body>
+ -->
+{showpage:mail/innerfooter}

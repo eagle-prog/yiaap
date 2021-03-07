@@ -1,0 +1,368 @@
+{showpage:include/header}
+
+<table cellpadding="0" cellspacing="0" class="sublink_table">
+<tr align="center">
+
+   		 <td>
+		 		{showpage:include/settingsheader}
+		 </td>
+
+ 	 </tr>
+</table>	
+{formstart:edit:{url:(todolist/smtpconfigurations)}:POST}
+<table class="fullwidth" border="0" cellpadding="0" cellspacing="0">  
+	<tr>
+	<td> 
+	<div align="center"><span class="page_title">Manage SMTP Configurations</span></div>
+	</td>
+	</tr>
+    <tr>
+    <td ><div class="help_desc_cover width80p mgn15auto"><div class="help_desc">Here you may configure external SMTP settings which is used for sending emails as an alternative to server mailing system.</div></div></td>
+    </tr>
+
+<tr><td><table class="settings_table" cellpadding="0" cellspacing="0" align="center" border="0"><tr style="height: 2px;padding: 0px;margin: 0px;">
+	<td style="height: 2px;padding: 0px;margin: 0px;">&nbsp;</td>
+	<td style="height: 2px;padding: 0px;margin: 0px;">&nbsp;</td>
+	</tr>
+	<tr>
+	<td align="center" colspan="2"><b>Manage SMTP Configurations </b></td>
+	</tr>
+	<tr style="height: 2px;padding: 0px;margin: 0px;">
+	<td style="height: 2px;padding: 0px;margin: 0px;">&nbsp;</td>
+	<td style="height: 2px;padding: 0px;margin: 0px;">&nbsp;</td>
+	</tr>
+	<tr>
+	<td valign="top"><span class="mandatory">*</span>SMTP Host Name </td>
+	<td ><input style="width:380px" name="smtphostname" type="text" id="enginename" maxlength="200" value="{$smtphost_name}">
+	<input type="hidden" value="0" id="editdisplay" name="editdisplay"><span id="tip3" class="tip"  title="Enter the smtp host">
+						<img  src="../images/help-agent.png"  ></span>
+	</td>		
+	</tr>
+	<tr style="height: 2px;padding: 0px;margin: 0px;">
+	<td style="height: 2px;padding: 0px;margin: 0px;">&nbsp;</td>
+	<td style="height: 2px;padding: 0px;margin: 0px;">&nbsp;</td>
+	</tr>
+					
+					<tr>
+						<td valign="top"><span class="mandatory">*</span>SMTP Port Number </td>
+						<td ><input style="width:380px" name="smtpportno" type="text" id="affiliateid" maxlength="200" value="{$smtpportno}">
+					<span id="tip4" class="tip"  title="Enter the smtp port number">
+						<img  src="../images/help-agent.png"  ></span></td>		
+					</tr>
+					
+					 <tr style="height: 2px;padding: 0px;margin: 0px;">
+							<td style="height: 2px;padding: 0px;margin: 0px;">&nbsp;</td>
+							<td style="height: 2px;padding: 0px;margin: 0px;">&nbsp;</td>
+					</tr>
+					
+					<tr>
+						<td valign="top"><span class="mandatory">*</span>SMTP Username</td>
+						<td ><input style="width:380px" name="smtpusername"  id="adminemail" maxlength="200" value="{$smtpusername}"><span id="tip5" class="tip"  title="Enter the smtp username">
+						<img  src="../images/help-agent.png"  ></span>
+						</td>		
+					</tr>
+					
+					 <tr style="height: 2px;padding: 0px;margin: 0px;">
+							<td style="height: 2px;padding: 0px;margin: 0px;">&nbsp;</td>
+							<td style="height: 2px;padding: 0px;margin: 0px;">&nbsp;</td>
+					</tr>
+					
+					<tr>
+						<td valign="top"><span class="mandatory">*</span>SMTP Password</td>
+						<td ><input style="width:380px" name="smtppassword" type="password" id="charset" maxlength="200" value="{$smtppassword}"><span id="tip6" class="tip"  title="Enter the smtp password">
+						<img  src="../images/help-agent.png"  ></span>
+						</td>		
+					</tr>
+					
+					 <tr style="height: 2px;padding: 0px;margin: 0px;">
+							<td style="height: 2px;padding: 0px;margin: 0px;">&nbsp;</td>
+							<td style="height: 2px;padding: 0px;margin: 0px;">&nbsp;</td>
+					</tr>
+					
+					<tr>
+						<td valign="top"><span class="mandatory">*</span>SMTP Service</td>
+						<td ><input style="width:380px" name="smtpservice" type="text" id="smtpservice" maxlength="10" value="{$smtpservice}"><span id="tip6" class="tip"  title="Enter the smtp service(tls, notls, ssl, etc.), default is 'notls')">
+						<img  src="../images/help-agent.png"  ></span>
+						</td>		
+					</tr>
+					
+					 
+					
+					<tr style="height: 2px;padding: 0px;margin: 0px;">
+							<td style="height: 2px;padding: 0px;margin: 0px;">&nbsp;</td>
+							<td style="height: 2px;padding: 0px;margin: 0px;">&nbsp;</td>
+					</tr>
+			   
+	       	 <tr>
+				<td></td>
+				<td><input type="submit" name="Update" value="Update"></td>
+			</tr>
+				</td></tr></table>
+			</table>
+
+{formend:edit}	
+{validate:edit:isNotNull("smtphostname","SMTP Hostname can't be left blank")}
+{validate:edit:isNotNull("smtpportno","SMTP Port Number can't be left blank")}
+{validate:edit:isNotNull("smtpusername","SMTP Username can't be left blank")}
+{validate:edit:isNotNull("smtppassword","SMTP Password can't be left blank")}
+{validate:edit:isNotNull("smtpservice","SMTP Service Name can't be left blank")}
+<script language="javascript" type="text/javascript">
+$( document ).ready(function() {
+	$('.tip').miniTip();
+});
+
+ loading();
+
+ function loading()
+    { 
+
+    var s="{$catchall_mail}";
+    if(s==0)
+    { 
+ 
+      showicon();
+      document.getElementById("controlpanelview").style.display=""; 
+      document.getElementById("editlinkview").style.display="";  
+      document.getElementById("display_pop3details").style.display="none"; 
+      document.getElementById("display_automatic").style.display=""; 
+    }
+    else
+    {
+      document.getElementById("display_pop3details").style.display=""; 
+      document.getElementById("display_automatic").style.display="none"; 
+      }
+    var t="{$memoryusage_publicview}";
+        	if(t==1)
+        		{
+        
+        			 document.getElementById("memory_details").style.display="";
+         			document.getElementById("memoryusage_publicview_value").value=0;
+        		 }
+         else
+         		{
+         
+         			document.getElementById("memory_details").style.display="none";
+         			document.getElementById("memoryusage_publicview_value").value=1;
+         
+         		}
+		
+
+
+    
+    }
+    
+
+     
+function showicon()
+    { 
+     document.getElementById("display_pop3details").style.display="none"; 
+     document.getElementById("controlpanelview").style.display="";
+     document.getElementById("editlinkview").style.display="";  
+     document.getElementById("display_automatic").style.display="";    
+    }
+    function hideicon()
+    {
+        document.getElementById("display_pop3details").style.display=""; 
+	    document.getElementById("display_automatic").style.display="none"; 
+	    document.getElementById("controlpanelview").style.display="none";
+	    document.getElementById("Pleskview").style.display="none";
+	    document.getElementById("cPanelview").style.display="none";
+        document.getElementById("editlinkview").style.display="none";  
+    }
+    
+function showicon1()
+    { 
+    
+   var p="{$controlpanel}";
+   if(p!="")
+   {
+      if(p==2)
+          document.getElementById("editlinkview").style.display="";
+         else if(p==1)
+         document.getElementById("editlinkview").style.display="none";
+     
+     document.getElementById("cPanelview").style.display="none";
+     document.getElementById("Pleskview").style.display="";
+     
+    }
+    else
+    {
+  
+     document.getElementById("cPanelview").style.display="none";
+     document.getElementById("Pleskview").style.display="";
+    }
+    
+    }
+    
+    function hideicon1()
+    {  
+    var t="{$controlpanel}";
+    if(t!="")
+    {
+        if(t==1)
+         document.getElementById("editlinkview").style.display="";
+         else if(t==2)
+         document.getElementById("editlinkview").style.display="none";
+         
+	    document.getElementById("Pleskview").style.display="none";
+	    document.getElementById("cPanelview").style.display="";
+	    }
+	    else
+	    {
+	    	document.getElementById("Pleskview").style.display="none";
+	    	document.getElementById("cPanelview").style.display="";
+	    	    
+	    }
+    }
+    
+    
+    function hideicon2()
+    {  
+    
+	if(document.getElementById("memoryusage_publicview").checked==true)
+	  {
+		 document.getElementById("memory_details").style.display="";
+         document.getElementById("memoryusage_publicview_value").value=0;
+	  }
+	else
+	  {
+		 document.getElementById("memory_details").style.display="none";
+         document.getElementById("memoryusage_publicview_value").value=1;
+	  }
+        //var t="{$memoryusage_publicview}";
+    
+        //if(t==1)
+        //{
+        
+        // document.getElementById("memory_details").style.display="";
+         //document.getElementById("memoryusage_publicview_value").value=0;
+         //}
+         //else
+         //{
+         
+        // document.getElementById("memory_details").style.display="none";
+         //document.getElementById("memoryusage_publicview_value").value=1;
+         
+         //}
+	    
+    }
+    
+    
+    function editfn(execute)
+    {
+    
+   var editvalue=document.getElementById("editdisplay").value;
+   
+   if(editvalue==0)
+   {
+    document.getElementById("editdisplay").value=1;
+    
+    if(execute==1)
+    {
+        
+	    document.getElementById("Pleskview").style.display="none";
+	    document.getElementById("cPanelview").style.display="";
+    }
+	else if(execute==2)
+       {
+    	
+     	document.getElementById("cPanelview").style.display="none";
+    	 document.getElementById("Pleskview").style.display="";
+	    }
+   }
+   
+   else if(editvalue==1)
+   {
+    document.getElementById("editdisplay").value=0;
+    document.getElementById("Pleskview").style.display="none";
+    document.getElementById("cPanelview").style.display="none";
+   }
+   
+    
+    }
+    
+function showtimezone()
+    {  
+     document.getElementById("zone").style.display="";
+	 //alert(   document.getElementById("zone").checked);
+	 //document.getElementById("addc").style.display="none";
+    }
+    function hidetimezone()
+    {
+	    document.getElementById("zone").style.display="none";
+		// document.getElementById("addc").style.display="";
+    }
+    
+    
+    
+var xmlHttp8;
+  function changefn(value)
+    {
+       xmlHttp8=GetXmlHttpObject8();
+            if (xmlHttp8==null)
+              {
+              alert ("Your browser does not support AJAX!");
+              return;
+              } 
+              
+     	   if(value==0)
+    	      document.getElementById("public_page_logo_hide").style.display="none";
+     	  else if(value==1)
+     	     document.getElementById("user_page_logo_hide").style.display="none";
+     	 
+            var url1="{url:(settings/deletelogo/)}"+value;
+
+            xmlHttp8.onreadystatechange=countChanged8;
+            xmlHttp8.open("GET",url1,true);  
+            xmlHttp8.send(null);
+ 
+    } 
+
+function countChanged8() 
+{ 
+
+var t=xmlHttp8.readyState;
+        if (xmlHttp8.readyState==4)
+        { 
+    	  var p=xmlHttp8.responseText;//alert(p);
+     	if(p==0)
+    	  document.getElementById("public_page_logo_browse").style.display="";
+     	 else if(p==1)
+     	 document.getElementById("user_page_logo_browse").style.display="";
+      
+       }
+      
+}
+ 
+function GetXmlHttpObject8()
+{
+        var xmlHttp8=null;
+        try
+          {
+          // Firefox, Opera 8.0+, Safari
+          xmlHttp8=new XMLHttpRequest();
+          }
+        catch (e)
+          {
+          // Internet Explorer
+          try
+            {
+            xmlHttp8=new ActiveXObject("Msxml2.XMLHTTP");
+            }
+          catch (e)
+            {
+            xmlHttp8=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+          }
+        return xmlHttp8;
+}
+
+ 
+
+
+</script>
+
+
+{showpage:include/footer}
+
+

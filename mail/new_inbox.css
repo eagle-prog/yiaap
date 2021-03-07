@@ -1,0 +1,981 @@
+ @font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto/Roboto-Regular.eot');
+    src: local('Roboto'), local('Roboto-Regular'),
+        url('fonts/roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/roboto/Roboto-Regular.woff2') format('woff2'),
+        url('fonts/roboto/Roboto-Regular.woff') format('woff'),
+        url('fonts/roboto/Roboto-Regular.ttf') format('truetype'),
+        url('fonts/roboto/Roboto-Regular.svg#Roboto-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto/Roboto-MediumItalic.eot');
+    src: local('Roboto Medium Italic'), local('Roboto-MediumItalic'),
+        url('fonts/roboto/Roboto-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/roboto/Roboto-MediumItalic.woff2') format('woff2'),
+        url('fonts/roboto/Roboto-MediumItalic.woff') format('woff'),
+        url('fonts/roboto/Roboto-MediumItalic.ttf') format('truetype'),
+        url('fonts/roboto/Roboto-MediumItalic.svg#Roboto-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto/Roboto-Thin.eot');
+    src: local('Roboto Thin'), local('Roboto-Thin'),
+        url('fonts/roboto/Roboto-Thin.eot?#iefix') format('embedded-opentype'),
+        url('fonts/roboto/Roboto-Thin.woff2') format('woff2'),
+        url('fonts/roboto/Roboto-Thin.woff') format('woff'),
+        url('fonts/roboto/Roboto-Thin.ttf') format('truetype'),
+        url('fonts/roboto/Roboto-Thin.svg#Roboto-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto/Roboto-Bold.eot');
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+        url('fonts/roboto/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/roboto/Roboto-Bold.woff2') format('woff2'),
+        url('fonts/roboto/Roboto-Bold.woff') format('woff'),
+        url('fonts/roboto/Roboto-Bold.ttf') format('truetype'),
+        url('fonts/roboto/Roboto-Bold.svg#Roboto-Bold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto/Roboto-Medium.eot');
+    src: local('Roboto Medium'), local('Roboto-Medium'),
+        url('fonts/roboto/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/roboto/Roboto-Medium.woff2') format('woff2'),
+        url('fonts/roboto/Roboto-Medium.woff') format('woff'),
+        url('fonts/roboto/Roboto-Medium.ttf') format('truetype'),
+        url('fonts/roboto/Roboto-Medium.svg#Roboto-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto/Roboto-Light.eot');
+    src: local('Roboto Light'), local('Roboto-Light'),
+        url('fonts/roboto/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/roboto/Roboto-Light.woff2') format('woff2'),
+        url('fonts/roboto/Roboto-Light.woff') format('woff'),
+        url('fonts/roboto/Roboto-Light.ttf') format('truetype'),
+        url('fonts/roboto/Roboto-Light.svg#Roboto-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto/Roboto-ThinItalic.eot');
+    src: local('Roboto Thin Italic'), local('Roboto-ThinItalic'),
+        url('fonts/roboto/Roboto-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/roboto/Roboto-ThinItalic.woff2') format('woff2'),
+        url('fonts/roboto/Roboto-ThinItalic.woff') format('woff'),
+        url('fonts/roboto/Roboto-ThinItalic.ttf') format('truetype'),
+        url('fonts/roboto/Roboto-ThinItalic.svg#Roboto-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto/Roboto-LightItalic.eot');
+    src: local('Roboto Light Italic'), local('Roboto-LightItalic'),
+        url('fonts/roboto/Roboto-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/roboto/Roboto-LightItalic.woff2') format('woff2'),
+        url('fonts/roboto/Roboto-LightItalic.woff') format('woff'),
+        url('fonts/roboto/Roboto-LightItalic.ttf') format('truetype'),
+        url('fonts/roboto/Roboto-LightItalic.svg#Roboto-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');*/
+.bodyClass
+{
+    font-family: 'Roboto', sans-serif;
+}
+.logotopp
+{
+    padding: 7px 10px;
+   height: 65px;   
+}
+.logotopp a
+{
+    display: block;
+    height: 100%;
+    overflow: hidden;
+}
+.logotopp img
+{
+    display: inline-block;
+    max-height: 100%;
+}
+.left_mailsection
+{
+    background: rgba(255,255,255,0.90);
+}
+.leftunSelected, .leftSelected
+{
+    background: rgba(255,255,255,0.90);
+    font-family: "Roboto";
+    border-bottom: none!important;
+    height: 36px!important;
+    overflow: hidden;
+}
+.indexlogo.left
+{
+    max-width: 400px;
+}
+.indexlogo.left a
+{
+    display: block;
+}
+.indexlogo.left img
+{
+    display: inline-block;
+    max-width: 100%;
+}
+.leftSelected
+{
+    position: relative;
+} 
+.vertmenu  
+{
+    padding-top: 15px;
+    background:  rgba(255,255,255,0.90);
+}
+#getmailbtnid
+{
+    color: #00a7cc;
+}
+.sddmb
+{
+    display: block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;     
+    padding: 0px 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.getmailbtn
+{
+    box-sizing: border-box;
+}
+.getmailbtn .fa
+{
+    padding: 0px 10px;
+    float: left;
+}
+.newmailbtn
+{
+    width: 130px;
+    height: 35px;
+   position: relative;
+     white-space: nowrap;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    overflow: hidden;
+    text-overflow: ellipsis;    
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+
+}
+.newmailbtn span
+{
+   overflow: hidden;
+   text-overflow: ellipsis;     
+    float: right;
+    line-height: 35px;
+    padding-right: 10px;
+}
+.newmailbtn .fa
+{
+    padding: 0px 10px;
+    line-height: 35px;
+}
+.leftSelected:after
+{
+   content: "";
+    display: block;
+     background: rgba(182,227,82, .3)!important;
+    background: rgba(205,205,205,0.3)!important;
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px; 
+    border-radius: 0px 30px 30px 0px;
+}
+.leftunSelected a, .leftSelected a
+{
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+ 
+}
+.leftunSelected
+{    
+    overflow: hidden;
+}
+.vertmenu ul li a span, .vertmenu ul li a 
+{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    
+}
+.leftSelected
+{
+    background: none!important;
+}
+.abc
+{
+    font-size: 14px;
+}
+.vertmenu ul li a
+{
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px!important;
+     z-index: 100;
+    position: relative;    
+}
+li.leftSelected a
+{
+    font-weight: 500;
+}
+.vertmenu ul li
+{
+    border-bottom: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+.vertmenu ul li.leftSelected a:hover
+{
+    background: none!important;
+}
+.vertmenu
+{
+    border-right: none;
+}
+.folderHfirst
+{
+    background:rgba(255,255,255,0.90);
+}
+.folderMH
+{
+    
+   /* height: 50px;*/
+}
+.folderMH > table, .folderMH > table > tr 
+{
+    height: 50px;
+}
+.folderMH > table td:first-child
+{
+    height: 62px;
+    line-height: 62px;
+}
+.secondscroll
+{
+    /*top: 177px;*/
+    top:195px;
+}
+.splitmsg_list
+{
+    top:195px!important;
+}
+
+.twopaneMailRead
+{
+    background: rgba(255,255,255,0.90);
+}
+.readmail
+{
+    font-size: 15px;
+    font-weight: 400;
+}
+.unreadmail
+{
+    font-size: 15px;
+    font-weight: 500;
+}
+.twopaneMailRead, .mail-list-in
+{
+    /*height: 50px;   */ 
+}
+ .mailOver .mail-list-in
+{
+    /*height: 50px;*/
+}
+.body_light .leftunSelected, .body_light .footer_txt.leftSelected, .body_light #leftMenu
+{
+  background:none;
+}
+.vertmenu ul li
+{
+    font-family: "roboto";
+}
+.second_headr
+{
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-bottom: 1px solid #eee; 
+}
+.body_light .second_headr
+{
+    border-bottom: 0px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+.selectedMainMenu
+{
+    border-color: rgb(83,171,229);
+    background: -webkit-gradient(linear,left top, left bottom,from(rgb(128,212,245)), to(rgb(83,171,229)));
+    background: linear-gradient(to bottom,rgb(128,212,245) 0%, rgb(83,171,229) 100%);
+}
+.chatboxhead
+{
+    border-radius: 5px 5px 0px 0px;
+     background: -webkit-gradient(linear,left top, left bottom,from(rgb(128,212,245)), to(rgb(83,171,229)));
+     background: linear-gradient(to bottom,rgb(128,212,245) 0%, rgb(83,171,229) 100%);
+}
+.header
+{
+    border-color:  rgb(83,171,229);
+}
+.chatwrperdiv
+{
+    background: rgba(255,255,255,0.90);
+}
+#page, .minmax
+{
+    height: 30px;
+}
+.usernamedchat
+{
+    margin-left: 5px;
+}
+.usernameclas
+{
+    color: #777;
+    font-weight: 600;
+}
+ 
+#my_iframe
+{
+    height: 120px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+.chat_s_new
+{
+    top: 100%;
+}
+.butteniner, #custom16_name
+{
+    font-weight: 500;
+    font-size: 14px;
+    font-family: "roboto"!important;
+}
+ 
+.colFrom 
+{
+    position: relative;
+    z-index: 100;
+    padding-left: 5px;
+}
+.colFrom a:first-line
+{
+    color: transparent;
+}
+.colFrom a:first-letter
+{
+    color: red;
+    font-size: 1.2rem;
+    padding-left: 5px;
+}
+.colFrom:after{
+    content: "";
+    width: 30px;
+    height: 30px;
+   background: blue;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    left: 3px;
+    top: -3px;
+    z-index: -1;
+}
+/* demo */
+.header, .mailPageOuter
+{
+    background: #edeff3;
+}
+.body_light .header, .body_light .mailPageOuter
+{
+     background: rgba(237,240,243,.0);
+}
+.selectedMainMenu
+{
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 7px;
+}
+.unselectedMainMenu 
+{
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 7px;
+}
+.body_light .unselectedMainMenu
+{
+    margin-right: 7px;
+}
+.mailcounter
+{
+    padding: 0px 5px;  
+    margin-top: 7px;
+}
+.mailOver
+{
+   /* height: 50px;*/
+}
+.mailOver
+{
+    background: #efefef;
+}
+#rightads_td
+{
+       top: 208px;
+}
+.mailPageOuter
+{
+    background: #fff;
+}
+
+.mailBoxFooter .replyLink .fa
+{
+    line-height: 22px;
+    padding: 0px 5px;
+}
+.mailBoxFooter .replyLink  
+{
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0px 10px;
+   font-weight: 500;
+    margin-right: 3px
+}
+.loadingTxt .fa
+{
+    padding: 0px;
+}
+.vertmenu
+{
+    background: #fff;
+}
+.newcntctbtn
+{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+
+div#second_scroll {
+    margin-top: 0px !important;
+}
+
+
+.mailBoxFooter {
+    margin-bottom: 50px;
+}
+/*chat box*/
+.userpicimage {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+.usernamedchat {
+    margin-left: 15px;
+}
+.userpicc {
+    border-radius: 50%;
+}
+
+.chatboxhead {
+    height: 25px;
+    line-height: 25px;
+    background: #0e3251;
+    border-radius: 7px 7px 0 0;
+    border: 1px solid #0e3251;
+
+}
+.chatboxtitle,
+.chatboxoptions {
+
+    box-sizing: border-box;
+}
+
+.chatboxoptions a {
+    display: inline-block;
+    text-align: center;
+    width: 20px!important;
+    height: 20px;
+    border-radius: 9px;
+    border: 1px solid #729eb7;
+    line-height: 20px;
+    font-size: 1.2em;
+    margin: 0 2px;
+}
+.chatboxoptions a .fa {
+    line-height: 20px;
+}
+.chatboxoptions a:hover {
+    background: #65bbeb;
+    border-color: #65bbeb;
+}
+.chatboxalert {
+    height: 25px;
+    line-height: 25px;
+    background-color: #77c546;
+    border-radius: 7px 7px 0 0;
+    border: 1px solid #58992f;
+    border-bottom: 0;
+}
+.chatboxalert .chatboxoptions a {
+    border: 1px solid #66b038;
+}
+.chatboxcontent1,
+.chatboxcontent {
+    border: 1px solid #0e3251;
+    border-bottom: 0;
+    border-top: 0;
+}
+.chatboxcontent1 {
+    background: #fff;
+
+}
+.chatboxcontent {
+    box-shadow: inset 0 9px 5px -12px rgba(0,0,0,0.7)!important;
+    background: #e9eef3;
+}
+.chatboxinput {
+    border: 1px solid #0e3251;
+    border-top: 0;
+}
+.newsmi,
+.newsmir {
+    margin-bottom: 15px;
+}
+/*.new smi > #mediv , .ne wsmir #otherdiv
+{
+    border-radius: 5px!important;
+    border: 1px solid #b2b2b2;
+    box-shadow: 0px 5px 7px -2px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 30px!important;
+    height: 30px!important;
+    margin: 0px;
+    text-align: center;
+    position: relative;
+}
+.new smi > #mediv > img
+{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+ */
+#newdiv {
+    border-radius: 0 7px 7px 7px;
+}
+#newdiv:before {
+    right: -1px!important;
+}
+#newdiv_other {
+    border-radius: 7px 0 7px 7px;
+}
+.chatboxtextarea,
+.chatboxtextareaselected {
+    width: 255px;
+    padding: 10px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow: hidden;
+    overflow-y: auto;
+    padding-right: 50px;
+    font-size: 1.2em!important;
+}
+.chatboxinput {
+    position: relative;
+    border: 1px sol id red;
+}
+.smiley_btn a {
+    position: absolute;
+    top: -15px;
+    left: -16px;
+    width: 16px;
+    height: 16px;
+}
+.chat-sml {
+    width: 16px;
+    height: 16px;
+    background-position: -122px -127px;
+}
+/*chat box*/
+/*top menu correction*/
+.detailedList
+{
+    padding: 10px 0px;
+    background: #f0f0f0;
+}
+.detailedList .blackTxt
+{
+    color: #aaa;
+}
+.tip_of_day_cnew
+{
+    margin-top: 0px;
+}
+.headerD.left
+{
+    padding-left: 85px;
+    box-sizing: border-box;
+}
+.headerD
+{
+    top: 20px;
+}
+.headerD .selectedMainMenu
+{
+    border: none;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;  
+    background: rgb(127,166,179);
+    /*background:rgb(151,189,202);*/
+}
+.body_light .selectedMainMenu 
+{
+    background:rgba(151,189,202,.85);
+}
+.body_light .unselectedMainMenu
+{
+    margin-left: 0px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;    
+}
+.unselectedMainMenu a, .selectedMainMenu a
+{
+    font-weight: 500!important;
+    font-family: 'Roboto', sans-serif;
+}
+.morelist
+{
+    margin-left: 10px;
+   
+}
+.newmailbtn 
+{
+    height: 35px;
+}
+.left_mailsection .sddmb
+{
+    margin-top: 6px;
+}
+.mail_subheader
+{
+    margin-top: 8px;
+}
+.getmailbtn 
+{   
+    background: linear-gradient(to bottom, rgba(244,244,244,1) 0%, rgba(241,241,241,1) 100%);
+    height: 34px;  
+}
+.getmailbtn .fa
+{
+    color: #6d6d6d!important;
+    line-height: 32px;
+}
+.body_light .getmailbtn
+{
+     
+    background: rgba(244,244,244,0.85);
+}
+.getmailbtn:hover .fa
+{
+    color: #00a7cc!important;
+}
+.backmailbtn
+{
+    border-radius: 3px;
+}
+.body_light .backmailbtn
+{
+    background: rgba(244,244,244,0.85);
+}
+.userpriamge
+{
+    border: 1px solid #808384;
+}
+/*top menu correction*/
+.tickedselect1 .mail-list-in
+{
+    min-height: 100px;
+    padding-right: 10px;
+}
+.tickedselect .mail-list-in
+{
+    padding-right: 10px;
+}
+.threepaneMailRead, .mailOver1, .threepaneMailUnRead
+{
+    box-sizing: border-box;
+}
+.threepaneMailUnRead .mail-list-in
+{
+    padding-right: 10px;
+}
+.tickedselect1 .mail-list-tbl
+{
+  min-height: 100px!important;   
+}
+
+/*ads correction*/
+.vertmenu
+{
+    padding-top: 0px;
+}
+.vertmenu .mailLeft > ul > li:first-child
+{
+    
+    margin-top: 10px;
+}
+.vertmenu
+{
+    padding-top: 0px;
+}
+.vertmenu .mailLeft > ul > li:first-child
+{
+    margin-top: 10px;
+}
+.top_ads_desc
+{
+    margin-right: 10px;
+}
+.top_ads_desc iframe
+{
+    max-height: none!important;
+}
+.secondscroll
+{
+    top: 223px;
+}
+#rightads_td
+{
+    top: 223px!important;
+    padding-top: 8px!important;
+}
+.innerThemeiner
+{
+    margin-bottom: 0px;
+}
+.folderMH > table td:first-child
+{
+    height: 90px;
+line-height: 90px;
+}
+/*ads correction*/
+/* todo list*/
+.todolist_header
+{
+    display:block;
+    width: 100%;
+    height: 50px;
+    background: #0e3251;
+    line-height: 50px;
+    overflow: hidden;
+    color: #fff;
+}
+.todo_box_popup
+{
+    display: block;
+    position: fixed;
+    z-index: -99999;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+}
+.showtodo
+{
+    display: block;
+    z-index: 99999;
+    height: 100%;
+}
+.todo_box_bg
+{
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.todo_box
+{
+    display: block;
+    width: 70%;
+    height: 80%;
+    overflow: hidden;
+    background: #fff;
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    z-index: 100;
+    border-radius: 3px;
+    box-shadow: 0px 0px 22px -5px rgba(0,0,0,0.7);
+}
+.todo_header_action
+{
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+    height: 60px;
+    line-height: 60px;
+    z-index: 1000;
+    mix-blend-mode: difference;
+}
+.todo_minimise, .todo_close
+{
+    display: block;
+    width: 30px;
+    height: 30px;
+    float: left;
+    color: #fff;  
+   cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    margin: 15px 5px; 
+    border-radius: 3px;     
+}
+.todo_minimise .fa, .todo_close .fa
+{
+    
+    color: #fff;
+    line-height: 30px;
+    font-size: 1.4em;
+   
+}
+.todo_minimise:hover .fa, .todo_close:hover .fa
+{
+    color: #729eb7;
+}
+.todo_content
+{
+    display: block;
+    width: 100%;
+    height: 100%;    
+    overflow: hidden;
+    overflow-y: auto;
+    /*background: #729eb7;*/    
+    box-sizing: border-box;
+    position: relative;
+    z-index: 100;
+}
+.todo_box_iframe
+{
+    width: 100%;
+    height: 100%;
+}
+.todolist_header
+{
+    display:block;
+    width: 100%;
+    height: 50px!important;
+    background: #0e3251;
+    line-height: 50px;
+    overflow: hidden;
+    color: #fff;
+     border-radius: 0px!important;
+}
+.in_todobox
+{
+    border: none!important;
+}
+.todolist_header span
+{
+    font-size: 1.4em;
+    font-weight: 600px;
+    color: #fff;
+}
+.preloader_iframe
+{
+    display: block;
+    background: #fff;
+    border: 1px solid #D4DCE4;
+    overflow: hidden;
+    padding: 20px 0;
+    width: 200px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.todolistmenu ul
+{
+    margin: 15px!important;
+}
+.todolistmenu input[type="checkbox"] + input[type="text"] {
+    height: 30px !important;
+    line-height: 30px !important;
+    padding: 0px 10px !important;
+}
+
+
+/* todo list */

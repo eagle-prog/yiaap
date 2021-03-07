@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+.LoginleftBox{
+	width:50%;
+}
+.secondscroll{
+	background:#FFFFFF;
+}
+.body_light .unselectedMainMenu {
+	background:#FFFFFF;
+}
+.footer_txt{
+	color:#777777;
+}
+#_l{
+	z-index:100000;
+}
+#_d{
+	z-index:100001;
+}

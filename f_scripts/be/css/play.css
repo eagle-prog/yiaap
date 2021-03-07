@@ -1,0 +1,227 @@
+.vjs-has-started:not(.vjs-paused) #play, .vjs-big-play-button { display: none !important; }
+.play-btn {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient( #06a2cb 50%, rgba(255, 255, 255, 0.15) 52%);
+  border-radius: 50%;
+  display: inline-block;
+  margin: auto;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+
+/* triangle */
+
+.play-btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-40%) translateY(-50%);
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 15px solid #ffffff;
+  z-index: 100;
+  -webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+
+/* pulse wave */
+
+.play-btn:before {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate1 2s;
+  animation: pulsate1 2s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 9;
+  border-radius: 50%;
+  border: 2px solid #7abbec;
+  top: -10%;
+  left: -10%;
+  background: solid #7abbec;
+}
+
+
+/* scale the triangle */
+
+.play-btn:hover::after {
+  border-left: 15px solid #333333;
+  -webkit-transform: scale(20);
+  transform: scale(20);
+  }
+
+
+/* inherit triangle styles */
+
+.play-btn:hover::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-40%) translateY(-50%);
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 20px solid #06a2cb;
+  z-index: 200;
+  -webkit-animation: none;
+  animation: none;
+  border-radius: 0;
+}
+
+@-webkit-keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6, 0.6);
+    transform: scale(0.6, 0.6);
+    opacity: 1
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0
+  }
+}
+
+@keyframes pulsate1 {
+  0% {
+    -webkit-transform: scale(0.6, 0.6);
+    transform: scale(0.6, 0.6);
+    opacity: 1
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes pulsate2 {
+  0% {
+    -webkit-transform: scale(0.1, 0.1);
+    transform: scale(0.1, 0.1);
+    opacity: 1
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0
+  }
+}
+
+/* @keyframes pulsate2 {
+  0% {
+    -webkit-transform: scale(0.1, 0.1);
+    transform: scale(0.1, 0.1);
+    opacity: 1
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0
+  }
+} */
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+.stroke-dotted {
+  opacity: 0;
+  stroke-dasharray: 4,5;
+  stroke-width: 1px;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-animation: spin 4s infinite linear;
+          animation: spin 4s infinite linear;
+  -webkit-transition: opacity 1s ease,  stroke-width 1s ease;
+  transition: opacity 1s ease,  stroke-width 1s ease;
+}
+
+.stroke-solid {
+  stroke-dashoffset: 0;
+  stroke-dashArray: 300;
+  stroke-width: 4px;
+  -webkit-transition: stroke-dashoffset 1s ease,  opacity 1s ease;
+  transition: stroke-dashoffset 1s ease,  opacity 1s ease;
+}
+
+.icon {
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+
+#play:hover .stroke-dotted {
+  stroke-width: 4px;
+  opacity: 1;
+}
+#play:hover .stroke-solid {
+  opacity: 0;
+  stroke-dashoffset: 300;
+}
+#play:hover .icon {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+/*
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #000000;
+  background: -webkit-radial-gradient(#000000, #000000);
+  background: radial-gradient(#000000, #000000);
+}
+*/
+#play {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}

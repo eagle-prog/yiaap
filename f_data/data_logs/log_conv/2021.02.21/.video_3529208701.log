@@ -1,0 +1,811 @@
+Loading video: /home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4
+cmd => /usr/bin/ffprobe -print_format json -show_format -show_streams "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4"
+container => H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+duration_seconds => 22.466656
+start => 0.000000
+bitrate => 365
+audio => aac
+audio_frequency => 44100
+audio_stereo => stereo
+audio_bitrate => 95
+width => 480
+height => 360
+rotate => 
+dar => 4:3
+dar_float => 1.3333333333333
+
+
+
+
+---------------------------------------------
+Starting MP4/360p conversion!
+---------------------------------------------
+
+/usr/bin/ffmpeg -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4" -y -keyint_min 25 -vcodec libx264 -threads 32 -pix_fmt yuv420p -aspect 4:3 -s 480x360 -b:v 300k -acodec aac -strict 2 -ab 95k -ar 44100 -profile:v high -preset fast "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/v/189ff717214ef079c3dccd70fa457a30.360p.nomov.mp4" 1> /home/yiaapc5/public_html/f_data/data_logs/log_conv/2021.02.21/.video_3529208701.live.log 2>&1
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    creation_time   : 2021-02-21T21:49:48.000000Z
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    encoder         : vlc 3.0.11 stream output
+    encoder-eng     : vlc 3.0.11 stream output
+  Duration: 00:00:22.47, start: 0.000000, bitrate: 364 kb/s
+    Stream #0:0(eng): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p, 480x360 [SAR 1:1 DAR 4:3], 259 kb/s, 30 fps, 30 tbr, 90k tbn, 60 tbc (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 95 kb/s (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x6cc3680] Application has requested 32 threads. Using a thread count greater than 16 is not recommended.
+[libx264 @ 0x6cc3680] using SAR=1/1
+[libx264 @ 0x6cc3680] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX
+[libx264 @ 0x6cc3680] profile High, level 3.0, 4:2:0, 8-bit
+[libx264 @ 0x6cc3680] 264 - core 161 r3040 35417dc - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=2 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=6 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=32 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=30 rc=abr mbtree=1 bitrate=300 ratetol=1.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/v/189ff717214ef079c3dccd70fa457a30.360p.nomov.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    encoder         : Lavf58.65.101
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    Stream #0:0(eng): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 480x360 [SAR 1:1 DAR 4:3], q=2-31, 300 kb/s, 30 fps, 15360 tbn (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/300000 buffer size: 0 vbv_delay: N/A
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 95 kb/s (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.44 bitrate=   0.9kbits/s speed=9.53x    frame=  113 fps=0.0 q=25.0 size=       0kB time=00:00:04.18 bitrate=   0.1kbits/s speed=7.49x    frame=  374 fps=353 q=24.0 size=     256kB time=00:00:12.89 bitrate= 162.7kbits/s speed=12.2x    frame=  674 fps=424 q=-1.0 Lsize=    1131kB time=00:00:22.41 bitrate= 413.5kbits/s speed=14.1x    
+video:842kB audio:265kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 2.243394%
+[libx264 @ 0x6cc3680] frame I:6     Avg QP:15.47  size: 11638
+[libx264 @ 0x6cc3680] frame P:245   Avg QP:18.23  size:  2434
+[libx264 @ 0x6cc3680] frame B:423   Avg QP:21.49  size:   462
+[libx264 @ 0x6cc3680] consecutive B-frames:  9.9% 15.4% 11.1% 63.5%
+[libx264 @ 0x6cc3680] mb I  I16..4: 31.8% 23.7% 44.5%
+[libx264 @ 0x6cc3680] mb P  I16..4:  1.4%  1.5%  0.9%  P16..4: 23.4% 13.3%  6.2%  0.0%  0.0%    skip:53.3%
+[libx264 @ 0x6cc3680] mb B  I16..4:  0.3%  0.2%  0.1%  B16..8: 17.2%  4.7%  0.3%  direct: 2.6%  skip:74.6%  L0:52.4% L1:38.6% BI: 9.0%
+[libx264 @ 0x6cc3680] final ratefactor: 19.75
+[libx264 @ 0x6cc3680] 8x8 transform intra:32.8% inter:45.1%
+[libx264 @ 0x6cc3680] coded y,uvDC,uvAC intra: 51.1% 53.5% 18.7% inter: 6.8% 7.0% 0.1%
+[libx264 @ 0x6cc3680] i16 v,h,dc,p: 49% 32% 12%  7%
+[libx264 @ 0x6cc3680] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 22% 29%  4%  4%  4%  4%  4%  5%
+[libx264 @ 0x6cc3680] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 31% 10%  5%  5%  5%  6%  6%  5%
+[libx264 @ 0x6cc3680] i8c dc,h,v,p: 50% 27% 19%  4%
+[libx264 @ 0x6cc3680] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x6cc3680] ref P L0: 84.2% 15.8%
+[libx264 @ 0x6cc3680] ref B L0: 91.6%  8.4%
+[libx264 @ 0x6cc3680] ref B L1: 97.6%  2.4%
+[libx264 @ 0x6cc3680] kb/s:306.80
+[aac @ 0x6cfec00] Qavg: 250.592
+
+
+
+---------------------------------------------
+MP4/360p Processed! Relocating moov atom ...
+---------------------------------------------
+
+/usr/bin/qt-faststart /home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/v/189ff717214ef079c3dccd70fa457a30.360p.nomov.mp4 /home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/v/189ff717214ef079c3dccd70fa457a30.360p.mp4
+ftyp          0 32
+free         32 8
+mdat         40 1133158
+moov    1133198 25372
+ patching stco atom...
+ patching stco atom...
+ writing ftyp atom...
+ writing moov atom...
+ copying rest of file...
+
+
+---------------------------------------------
+Starting MP4/480p conversion!
+---------------------------------------------
+
+Not converting to H264 (:480x360)!
+
+
+---------------------------------------------
+Starting MP4/720p conversion!
+---------------------------------------------
+
+Not converting to H264 (:480x360)!
+
+
+---------------------------------------------
+Starting MP4/1080p conversion!
+---------------------------------------------
+
+Not converting to H264 (:480x360)!
+
+
+---------------------------------------------
+Starting mobile/ipad conversion!
+---------------------------------------------
+
+/usr/bin/ffmpeg -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4" -y -vcodec libx264 -threads 32 -pix_fmt yuv420p -aspect 4:3 -s 480x368 -flags +loop -cmp chroma -partitions 0 -subq 1 -trellis 0 -refs 1 -coder 0 -me_range 16 -g 300 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -maxrate 10M -bufsize 10M -rc_eq 'blurCplx^(1-qComp)' -qcomp 0.6 -qmin 10 -qmax 51 -qdiff 4 -f mp4 -b:v 365k -acodec aac -strict 2 -ac 2 -ab 95k -ar 44100 -profile:v baseline -level 1.3 -preset fast "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/v/189ff717214ef079c3dccd70fa457a30.mob.nomob.mp4" 1> /home/yiaapc5/public_html/f_data/data_logs/log_conv/2021.02.21/.video_3529208701.live.log 2>&1
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    creation_time   : 2021-02-21T21:49:48.000000Z
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    encoder         : vlc 3.0.11 stream output
+    encoder-eng     : vlc 3.0.11 stream output
+  Duration: 00:00:22.47, start: 0.000000, bitrate: 364 kb/s
+    Stream #0:0(eng): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p, 480x360 [SAR 1:1 DAR 4:3], 259 kb/s, 30 fps, 30 tbr, 90k tbn, 60 tbc (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 95 kb/s (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+Codec AVOption rc_eq (Set rate control equation. When computing the expression, besides the standard functions defined in the section 'Expression Evaluation', the following functions are available: bits2qp(bits), qp2bits(qp). Also the following constants are available: iTex pTex tex mv fCode iCount mcVar var isI isP isB avgQP qComp avgIITex avgPITex avgPPTex avgBPTex avgTex.) specified for output file #0 (/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/v/189ff717214ef079c3dccd70fa457a30.mob.nomob.mp4) has not been used for any stream. The most likely reason is either wrong type (e.g. a video option with no video streams) or that it is a private option of some encoder which was not actually used for any stream.
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x7198ec0] Application has requested 32 threads. Using a thread count greater than 16 is not recommended.
+[libx264 @ 0x7198ec0] using SAR=46/45
+[libx264 @ 0x7198ec0] frame MB size (30x23) > level limit (396)
+[libx264 @ 0x7198ec0] VBV bitrate (10000) > level limit (768)
+[libx264 @ 0x7198ec0] VBV buffer (10000) > level limit (2000)
+[libx264 @ 0x7198ec0] MB rate (20700) > level limit (11880)
+[libx264 @ 0x7198ec0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX
+[libx264 @ 0x7198ec0] profile Constrained Baseline, level 1.3, 4:2:0, 8-bit
+[libx264 @ 0x7198ec0] 264 - core 161 r3040 35417dc - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=0 ref=1 deblock=1:0:0 analyse=0x1:0 me=hex subme=1 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=32 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=0 weightp=0 keyint=300 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=30 rc=abr mbtree=1 bitrate=365 ratetol=1.0 qcomp=0.60 qpmin=10 qpmax=51 qpstep=4 vbv_maxrate=10000 vbv_bufsize=10000 nal_hrd=none filler=0 ip_ratio=1.41 aq=1:1.00
+Output #0, mp4, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/v/189ff717214ef079c3dccd70fa457a30.mob.nomob.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    encoder         : Lavf58.65.101
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    Stream #0:0(eng): Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 480x368 [SAR 46:45 DAR 4:3], q=2-31, 365 kb/s, 30 fps, 15360 tbn (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 10000000/0/365000 buffer size: 10000000 vbv_delay: N/A
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 95 kb/s (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 aac
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.44 bitrate=   0.9kbits/s speed=22.8x    frame=  387 fps=0.0 q=25.0 size=     512kB time=00:00:13.33 bitrate= 314.5kbits/s speed=25.6x    frame=  674 fps=0.0 q=-1.0 Lsize=    1312kB time=00:00:22.43 bitrate= 479.0kbits/s speed=25.9x    
+video:1027kB audio:265kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 1.543649%
+[libx264 @ 0x7198ec0] frame I:6     Avg QP:16.77  size: 13288
+[libx264 @ 0x7198ec0] frame P:668   Avg QP:18.99  size:  1454
+[libx264 @ 0x7198ec0] mb I  I16..4: 37.9%  0.0% 62.1%
+[libx264 @ 0x7198ec0] mb P  I16..4:  1.1%  0.0%  0.0%  P16..4: 31.1%  0.0%  0.0%  0.0%  0.0%    skip:67.8%
+[libx264 @ 0x7198ec0] final ratefactor: 20.58
+[libx264 @ 0x7198ec0] coded y,uvDC,uvAC intra: 42.2% 44.7% 19.0% inter: 10.7% 5.4% 0.1%
+[libx264 @ 0x7198ec0] i16 v,h,dc,p: 48% 33% 14%  5%
+[libx264 @ 0x7198ec0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 29% 26%  8%  7%  5%  5%  6%  6%  7%
+[libx264 @ 0x7198ec0] i8c dc,h,v,p: 44% 26% 22%  9%
+[libx264 @ 0x7198ec0] kb/s:374.28
+[aac @ 0x71e2000] Qavg: 250.592
+
+
+
+---------------------------------------------
+Mobile Processed! Relocating moov atom ...
+---------------------------------------------
+
+/usr/bin/qt-faststart /home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/v/189ff717214ef079c3dccd70fa457a30.mob.nomob.mp4 /home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/v/189ff717214ef079c3dccd70fa457a30.mob.mp4
+ftyp          0 32
+free         32 8
+mdat         40 1322654
+moov    1322694 20368
+ patching stco atom...
+ patching stco atom...
+ writing ftyp atom...
+ writing moov atom...
+ copying rest of file...
+
+
+---------------------------------------------
+Not converting to WEBM/360p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Not converting to WEBM/480p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Not converting to WEBM/720p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Not converting to WEBM/1080p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Not converting to OGV/360p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Not converting to OGV/480p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Not converting to OGV/720p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Not converting to OGV/1080p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Extracting large thumbnail (640x480)
+---------------------------------------------
+
+/usr/bin/ffmpeg -ss 10.488885333333 -itsoffset -1 -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4" -vframes 1  -filter:v "scale=iw*min(640/iw\,360/ih):ih*min(640/iw\,360/ih),pad=640:360:(640-iw)/2:(360-ih)/2" -y "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/out/%03d.jpg"
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    creation_time   : 2021-02-21T21:49:48.000000Z
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    encoder         : vlc 3.0.11 stream output
+    encoder-eng     : vlc 3.0.11 stream output
+  Duration: 00:00:22.47, start: 0.000000, bitrate: 364 kb/s
+    Stream #0:0(eng): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p, 480x360 [SAR 1:1 DAR 4:3], 259 kb/s, 30 fps, 30 tbr, 90k tbn, 60 tbc (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 95 kb/s (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x637ab40] deprecated pixel format used, make sure you did set range correctly
+[swscaler @ 0x637ab40] Warning: data is not aligned! This can lead to a speed loss
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/out/%03d.jpg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    encoder         : Lavf58.65.101
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    Stream #0:0(eng): Video: mjpeg, yuvj420p(pc, progressive), 640x360 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=5.0 size=N/A time=00:00:00.03 bitrate=N/A speed=1.41x    frame=    1 fps=0.0 q=5.0 Lsize=N/A time=00:00:00.03 bitrate=N/A speed=1.03x
+video:14kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+Copying thumb /home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/out/001.jpg -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/0.jpg!
+
+
+
+---------------------------------------------
+Extracting smaller thumbnails (320x240)
+---------------------------------------------
+
+/usr/bin/ffmpeg -ss 10.488885333333 -itsoffset -1 -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4" -vframes 1  -filter:v "scale=iw*min(320/iw\,180/ih):ih*min(320/iw\,180/ih),pad=320:180:(320-iw)/2:(180-ih)/2" -y "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/out/%03d.jpg"
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    creation_time   : 2021-02-21T21:49:48.000000Z
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    encoder         : vlc 3.0.11 stream output
+    encoder-eng     : vlc 3.0.11 stream output
+  Duration: 00:00:22.47, start: 0.000000, bitrate: 364 kb/s
+    Stream #0:0(eng): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p, 480x360 [SAR 1:1 DAR 4:3], 259 kb/s, 30 fps, 30 tbr, 90k tbn, 60 tbc (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 95 kb/s (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x7838b40] deprecated pixel format used, make sure you did set range correctly
+[swscaler @ 0x7838b40] Warning: data is not aligned! This can lead to a speed loss
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/out/%03d.jpg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    encoder         : Lavf58.65.101
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    Stream #0:0(eng): Video: mjpeg, yuvj420p(pc, progressive), 320x180 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=4.1 size=N/A time=00:00:00.03 bitrate=N/A speed=1.57x    frame=    1 fps=0.0 q=4.1 Lsize=N/A time=00:00:00.03 bitrate=N/A speed= 1.4x
+video:6kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+Copying thumb /home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/out/001.jpg -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/1.jpg!
+
+/usr/bin/ffmpeg -ss 13.488885333333 -itsoffset -1 -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4" -vframes 1  -filter:v "scale=iw*min(320/iw\,180/ih):ih*min(320/iw\,180/ih),pad=320:180:(320-iw)/2:(180-ih)/2" -y "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/out/%03d.jpg"
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    creation_time   : 2021-02-21T21:49:48.000000Z
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    encoder         : vlc 3.0.11 stream output
+    encoder-eng     : vlc 3.0.11 stream output
+  Duration: 00:00:22.47, start: 0.000000, bitrate: 364 kb/s
+    Stream #0:0(eng): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p, 480x360 [SAR 1:1 DAR 4:3], 259 kb/s, 30 fps, 30 tbr, 90k tbn, 60 tbc (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 95 kb/s (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x7838b40] deprecated pixel format used, make sure you did set range correctly
+[swscaler @ 0x7838b40] Warning: data is not aligned! This can lead to a speed loss
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/out/%03d.jpg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    encoder         : Lavf58.65.101
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    Stream #0:0(eng): Video: mjpeg, yuvj420p(pc, progressive), 320x180 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=4.1 size=N/A time=00:00:00.03 bitrate=N/A speed=1.57x    frame=    1 fps=0.0 q=4.1 Lsize=N/A time=00:00:00.03 bitrate=N/A speed= 1.4x
+video:6kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    creation_time   : 2021-02-21T21:49:48.000000Z
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    encoder         : vlc 3.0.11 stream output
+    encoder-eng     : vlc 3.0.11 stream output
+  Duration: 00:00:22.47, start: 0.000000, bitrate: 364 kb/s
+    Stream #0:0(eng): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p, 480x360 [SAR 1:1 DAR 4:3], 259 kb/s, 30 fps, 30 tbr, 90k tbn, 60 tbc (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 95 kb/s (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x5f7ab00] deprecated pixel format used, make sure you did set range correctly
+[swscaler @ 0x5f7ab00] Warning: data is not aligned! This can lead to a speed loss
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/out/%03d.jpg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    encoder         : Lavf58.65.101
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    Stream #0:0(eng): Video: mjpeg, yuvj420p(pc, progressive), 320x180 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=3.5 size=N/A time=00:00:00.03 bitrate=N/A speed=1.72x    frame=    1 fps=0.0 q=3.5 Lsize=N/A time=00:00:00.03 bitrate=N/A speed= 1.5x
+video:5kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+Copying thumb /home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/out/001.jpg -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/2.jpg!
+
+/usr/bin/ffmpeg -ss 16.488885333333 -itsoffset -1 -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4" -vframes 1  -filter:v "scale=iw*min(320/iw\,180/ih):ih*min(320/iw\,180/ih),pad=320:180:(320-iw)/2:(180-ih)/2" -y "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/out/%03d.jpg"
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    creation_time   : 2021-02-21T21:49:48.000000Z
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    encoder         : vlc 3.0.11 stream output
+    encoder-eng     : vlc 3.0.11 stream output
+  Duration: 00:00:22.47, start: 0.000000, bitrate: 364 kb/s
+    Stream #0:0(eng): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p, 480x360 [SAR 1:1 DAR 4:3], 259 kb/s, 30 fps, 30 tbr, 90k tbn, 60 tbc (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 95 kb/s (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x7838b40] deprecated pixel format used, make sure you did set range correctly
+[swscaler @ 0x7838b40] Warning: data is not aligned! This can lead to a speed loss
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/out/%03d.jpg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    encoder         : Lavf58.65.101
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    Stream #0:0(eng): Video: mjpeg, yuvj420p(pc, progressive), 320x180 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=4.1 size=N/A time=00:00:00.03 bitrate=N/A speed=1.57x    frame=    1 fps=0.0 q=4.1 Lsize=N/A time=00:00:00.03 bitrate=N/A speed= 1.4x
+video:6kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    creation_time   : 2021-02-21T21:49:48.000000Z
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    encoder         : vlc 3.0.11 stream output
+    encoder-eng     : vlc 3.0.11 stream output
+  Duration: 00:00:22.47, start: 0.000000, bitrate: 364 kb/s
+    Stream #0:0(eng): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p, 480x360 [SAR 1:1 DAR 4:3], 259 kb/s, 30 fps, 30 tbr, 90k tbn, 60 tbc (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 95 kb/s (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x5f7ab00] deprecated pixel format used, make sure you did set range correctly
+[swscaler @ 0x5f7ab00] Warning: data is not aligned! This can lead to a speed loss
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/out/%03d.jpg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    encoder         : Lavf58.65.101
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    Stream #0:0(eng): Video: mjpeg, yuvj420p(pc, progressive), 320x180 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=3.5 size=N/A time=00:00:00.03 bitrate=N/A speed=1.72x    frame=    1 fps=0.0 q=3.5 Lsize=N/A time=00:00:00.03 bitrate=N/A speed= 1.5x
+video:5kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    creation_time   : 2021-02-21T21:49:48.000000Z
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    encoder         : vlc 3.0.11 stream output
+    encoder-eng     : vlc 3.0.11 stream output
+  Duration: 00:00:22.47, start: 0.000000, bitrate: 364 kb/s
+    Stream #0:0(eng): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p, 480x360 [SAR 1:1 DAR 4:3], 259 kb/s, 30 fps, 30 tbr, 90k tbn, 60 tbc (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 95 kb/s (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x60443c0] deprecated pixel format used, make sure you did set range correctly
+[swscaler @ 0x60443c0] Warning: data is not aligned! This can lead to a speed loss
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/out/%03d.jpg':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 0
+    compatible_brands: mp41avc1
+    encoder         : Lavf58.65.101
+    playback_requirements: QuickTime 6.0 or greater
+    playback_requirements-eng: QuickTime 6.0 or greater
+    Stream #0:0(eng): Video: mjpeg, yuvj420p(pc, progressive), 320x180 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)
+    Metadata:
+      creation_time   : 2021-02-21T21:49:48.000000Z
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=3.4 size=N/A time=00:00:00.03 bitrate=N/A speed=1.87x    frame=    1 fps=0.0 q=3.4 Lsize=N/A time=00:00:00.03 bitrate=N/A speed=1.59x
+video:5kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+Copying thumb /home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/out/001.jpg -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/3.jpg!
+
+
+Generating thumbnail preview video
+
+
+/usr/bin/ffmpeg -ss 5 -t 3 -i /home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/v/189ff717214ef079c3dccd70fa457a30.360p.mp4 -y -an -filter_complex "scale=iw*min(640/iw\,360/ih):ih*min(640/iw\,360/ih),pad=640:360:(640-iw)/2:(360-ih)/2" /home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/v/8b281a840d82194879ed3e45e3d8d3df.mp4
+
+
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/v/189ff717214ef079c3dccd70fa457a30.360p.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.65.101
+  Duration: 00:00:22.47, start: 0.000000, bitrate: 412 kb/s
+    Stream #0:0(eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p, 480x360 [SAR 1:1 DAR 4:3], 307 kb/s, 30 fps, 30 tbr, 15360 tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 96 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 (h264) -> scale
+  pad -> Stream #0:0 (libx264)
+Press [q] to stop, [?] for help
+[libx264 @ 0x5c4f600] using SAR=1/1
+[libx264 @ 0x5c4f600] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX
+[libx264 @ 0x5c4f600] profile High, level 3.0, 4:2:0, 8-bit
+[libx264 @ 0x5c4f600] 264 - core 161 r3040 35417dc - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=11 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/v/8b281a840d82194879ed3e45e3d8d3df.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 640x360 [SAR 1:1 DAR 16:9], q=2-31, 30 fps, 15360 tbn (default)
+    Metadata:
+      encoder         : Lavc58.119.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   90 fps=0.0 q=-1.0 Lsize=      50kB time=00:00:02.90 bitrate= 141.9kbits/s speed=13.4x
+video:48kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 3.921529%
+[libx264 @ 0x5c4f600] frame I:1     Avg QP:15.91  size:  9185
+[libx264 @ 0x5c4f600] frame P:39    Avg QP:19.08  size:   872
+[libx264 @ 0x5c4f600] frame B:50    Avg QP:18.52  size:   112
+[libx264 @ 0x5c4f600] consecutive B-frames:  6.7% 55.6%  6.7% 31.1%
+[libx264 @ 0x5c4f600] mb I  I16..4: 51.0% 32.7% 16.3%
+[libx264 @ 0x5c4f600] mb P  I16..4:  0.4%  0.2%  0.0%  P16..4: 12.8%  4.6%  3.2%  0.0%  0.0%    skip:78.8%
+[libx264 @ 0x5c4f600] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  8.3%  0.2%  0.0%  direct: 0.0%  skip:91.4%  L0:33.2% L1:65.4% BI: 1.4%
+[libx264 @ 0x5c4f600] 8x8 transform intra:32.1% inter:71.2%
+[libx264 @ 0x5c4f600] coded y,uvDC,uvAC intra: 39.1% 42.4% 12.6% inter: 2.2% 3.3% 0.0%
+[libx264 @ 0x5c4f600] i16 v,h,dc,p: 73% 12% 11%  4%
+[libx264 @ 0x5c4f600] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 22% 26% 20%  6%  4%  5%  6%  7%  5%
+[libx264 @ 0x5c4f600] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 38%  9%  5%  4%  4%  5%  5%  4%
+[libx264 @ 0x5c4f600] i8c dc,h,v,p: 60% 21% 16%  3%
+[libx264 @ 0x5c4f600] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x5c4f600] ref P L0: 78.6%  9.1%  8.5%  3.7%
+[libx264 @ 0x5c4f600] ref B L0: 89.7%  8.8%  1.6%
+[libx264 @ 0x5c4f600] ref B L1: 98.5%  1.5%
+[libx264 @ 0x5c4f600] kb/s:130.15
+
+Generating player preview thumbnails
+
+
+/usr/local/bin/php /home/yiaapc5/public_html/f_modules/m_frontend/m_file/thumbnail_preview.php -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/v/189ff717214ef079c3dccd70fa457a30.360p.mp4" -o "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/p/189ff717214ef079c3dccd70fa457a30/" -t 3
+
+
+Process completed. Check the output directory '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/3631926655/t/3529208701/p/189ff717214ef079c3dccd70fa457a30' for VTT file and images
+
+
+---------------------------------------------
+Executing update query: UPDATE `db_videofiles` SET `has_preview`='0', `thumb_preview`='1', `file_mobile`='1', `file_hd`='0', `file_duration`='22.466656' WHERE `file_key`='3529208701' LIMIT 1;
+---------------------------------------------
+
+
+
+---------------------------------------------
+Database data updated!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Deleting source video /home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/3631926655/v/1613944320.mp4
+---------------------------------------------
+

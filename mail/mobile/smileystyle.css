@@ -1,0 +1,83 @@
+.smileyCornner {
+	background: url(../images/smilyeset.jpg) no-repeat 0 0;
+}
+.smiley-1 {
+	background-position: 0px 0px;
+	width: 21px;
+	height: 20px;
+}
+.smiley-2 {
+	background-position: -20px 0px;
+	width: 21px;
+	height: 20px;
+}
+.smiley-3 {
+	background-position: -40px 0px;
+	width: 21px;
+	height: 20px;
+}
+.smiley-4 {
+	background-position: -60px 0px;
+	width: 21px;
+	height: 20px;
+}
+.smiley-5 {
+	background-position: 0px -20px;
+	width: 21px;
+	height: 20px;
+}
+.smiley-6 {
+	background-position: -20px -20px;
+	width: 21px;
+	height: 20px;
+}
+.smiley-7 {
+	background-position: -40px -20px;
+	width: 21px;
+	height: 20px;
+}
+.smiley-8 {
+	background-position: -60px -20px;
+	width: 21px;
+	height: 20px;
+}
+.smiley-9 {
+	background-position: -79px 0px;
+	width: 21px;
+	height: 20px;
+}
+.smiley-10 {
+	background-position: -99px 0px;
+	width: 21px;
+	height: 20px;
+}
+.smiley-11 {
+	background-position: -119px 0px;
+	width: 21px;
+	height: 20px;
+}
+.smiley-12 {
+	background-position: -140px 0px;
+	width: 21px;
+	height: 20px;
+}
+.smiley-13 {
+	background-position: -79px -20px;
+	width: 21px;
+	height: 20px;
+}
+.smiley-14 {
+	background-position: -99px -20px;
+	width: 21px;
+	height: 20px;
+}
+.smiley-15 {
+	background-position: -119px -20px;
+	width: 21px;
+	height: 20px;
+}
+.smiley-16 {
+	background-position: -140px -20px;
+	width: 21px;
+	height: 20px;
+}

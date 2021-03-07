@@ -1,0 +1,72 @@
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/1525927209/v/1614658528.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.54.100
+  Duration: 00:02:59.17, start: 0.000000, bitrate: 3149 kb/s
+    Stream #0:0(und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv), 724x404 [SAR 1:1 DAR 181:101], 3032 kb/s, 22.13 fps, 100 tbr, 90k tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+    Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 112 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+Codec AVOption rc_eq (Set rate control equation. When computing the expression, besides the standard functions defined in the section 'Expression Evaluation', the following functions are available: bits2qp(bits), qp2bits(qp). Also the following constants are available: iTex pTex tex mv fCode iCount mcVar var isI isP isB avgQP qComp avgIITex avgPITex avgPPTex avgBPTex avgTex.) specified for output file #0 (/home/yiaapc5/public_html/f_data/data_userfiles/user_media/1525927209/v/2e69c6660033a2b31101fbeb20ec5085.mob.nomob.mp4) has not been used for any stream. The most likely reason is either wrong type (e.g. a video option with no video streams) or that it is a private option of some encoder which was not actually used for any stream.
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0x6656fc0] Application has requested 32 threads. Using a thread count greater than 16 is not recommended.
+[libx264 @ 0x6656fc0] using SAR=3077/3030
+[libx264 @ 0x6656fc0] frame MB size (30x17) > level limit (396)
+[libx264 @ 0x6656fc0] VBV bitrate (10000) > level limit (768)
+[libx264 @ 0x6656fc0] VBV buffer (10000) > level limit (2000)
+[libx264 @ 0x6656fc0] MB rate (15300) > level limit (11880)
+[libx264 @ 0x6656fc0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX
+[libx264 @ 0x6656fc0] profile Constrained Baseline, level 1.3, 4:2:0, 8-bit
+[libx264 @ 0x6656fc0] 264 - core 161 r3040 35417dc - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=0 ref=1 deblock=1:0:0 analyse=0x1:0 me=hex subme=1 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=32 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=0 weightp=0 keyint=300 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=30 rc=abr mbtree=1 bitrate=1000 ratetol=1.0 qcomp=0.60 qpmin=10 qpmax=51 qpstep=4 vbv_maxrate=10000 vbv_bufsize=10000 nal_hrd=none filler=0 ip_ratio=1.41 aq=1:1.00
+Output #0, mp4, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/1525927209/v/2e69c6660033a2b31101fbeb20ec5085.mob.nomob.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.65.101
+    Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 480x272 [SAR 3077:3030 DAR 181:101], q=2-31, 1000 kb/s, 30 fps, 15360 tbn (default)
+    Metadata:
+      handler_name    : VideoHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 10000000/0/1000000 buffer size: 10000000 vbv_delay: N/A
+    Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 112 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 aac
+frame=   58 fps=0.0 q=0.0 size=       0kB time=00:00:02.92 bitrate=   0.1kbits/s dup=57 drop=0 speed= 108x    frame=  303 fps=0.0 q=29.0 size=    1536kB time=00:00:10.63 bitrate=1183.2kbits/s dup=138 drop=0 speed=20.1x    frame=  607 fps=590 q=30.0 size=    2560kB time=00:00:20.89 bitrate=1003.5kbits/s dup=219 drop=0 speed=20.3x    frame=  894 fps=585 q=29.0 size=    3840kB time=00:00:30.34 bitrate=1036.5kbits/s dup=303 drop=0 speed=19.9x    frame= 1213 fps=598 q=28.0 size=    5120kB time=00:00:40.98 bitrate=1023.4kbits/s dup=374 drop=0 speed=20.2x    frame= 1530 fps=605 q=28.0 size=    6656kB time=00:00:51.50 bitrate=1058.7kbits/s dup=458 drop=0 speed=20.4x    frame= 1851 fps=611 q=29.0 size=    8192kB time=00:01:02.25 bitrate=1078.0kbits/s dup=544 drop=0 speed=20.5x    frame= 2220 fps=629 q=27.0 size=    9472kB time=00:01:14.53 bitrate=1041.0kbits/s dup=650 drop=0 speed=21.1x    frame= 2595 fps=644 q=26.0 size=   11008kB time=00:01:27.02 bitrate=1036.2kbits/s dup=734 drop=0 speed=21.6x    frame= 2947 fps=650 q=27.0 size=   12800kB time=00:01:38.75 bitrate=1061.8kbits/s dup=828 drop=0 speed=21.8x    frame= 3317 fps=659 q=26.0 size=   14336kB time=00:01:51.10 bitrate=1057.0kbits/s dup=914 drop=0 speed=22.1x    frame= 3652 fps=660 q=27.0 size=   16128kB time=00:02:02.29 bitrate=1080.3kbits/s dup=987 drop=0 speed=22.1x    More than 1000 frames duplicated
+frame= 3912 fps=648 q=28.0 size=   17408kB time=00:02:10.91 bitrate=1089.3kbits/s dup=1037 drop=0 speed=21.7x    frame= 4241 fps=649 q=26.0 size=   18432kB time=00:02:22.50 bitrate=1059.6kbits/s dup=1122 drop=0 speed=21.8x    frame= 4594 fps=653 q=25.0 size=   19968kB time=00:02:33.62 bitrate=1064.8kbits/s dup=1228 drop=0 speed=21.8x    frame= 4939 fps=656 q=27.0 size=   21760kB time=00:02:45.16 bitrate=1079.3kbits/s dup=1304 drop=0 speed=21.9x    frame= 5280 fps=657 q=27.0 size=   23552kB time=00:02:56.51 bitrate=1093.0kbits/s dup=1393 drop=0 speed=  22x    frame= 5374 fps=658 q=-1.0 Lsize=   24261kB time=00:02:59.10 bitrate=1109.7kbits/s dup=1410 drop=0 speed=21.9x    
+video:21695kB audio:2416kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.619928%
+[libx264 @ 0x6656fc0] frame I:34    Avg QP:21.31  size: 20630
+[libx264 @ 0x6656fc0] frame P:5340  Avg QP:23.20  size:  4029
+[libx264 @ 0x6656fc0] mb I  I16..4:  8.8%  0.0% 91.2%
+[libx264 @ 0x6656fc0] mb P  I16..4:  3.2%  0.0%  0.0%  P16..4: 57.7%  0.0%  0.0%  0.0%  0.0%    skip:39.1%
+[libx264 @ 0x6656fc0] final ratefactor: 20.85
+[libx264 @ 0x6656fc0] coded y,uvDC,uvAC intra: 64.4% 71.2% 44.4% inter: 28.3% 23.5% 7.7%
+[libx264 @ 0x6656fc0] i16 v,h,dc,p: 27% 45% 16% 13%
+[libx264 @ 0x6656fc0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 20% 30%  8%  7%  6%  6%  7%  5% 10%
+[libx264 @ 0x6656fc0] i8c dc,h,v,p: 33% 34% 23% 10%
+[libx264 @ 0x6656fc0] kb/s:992.11
+[aac @ 0x6696300] Qavg: 1489.747

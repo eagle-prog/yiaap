@@ -1,0 +1,60 @@
+ <div class="footer_flex">
+{if($dmail==1)}
+ <div class="searchDiv">
+{formstart:maila:{url:(mail/mailbox/)}{$fid}/{$page}:post}
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<input type="text" value="" name="search" class="searchBox"/>
+</td>
+<td>
+<select name="folder" class="searchSelect"><option value="0">{cfn:getmessage(164)} </option>
+				<option value="1">{cfn:getmessage(19)}</option>
+			<option value="6">{cfn:getmessage(205)}</option>
+			<option value="4">{cfn:getmessage(12)}</option>
+			<option value="3">{cfn:getmessage(21)}</option>
+		  <option value="2">{cfn:getmessage(20)}</option>
+			 {loopstart:customfolders:1000}
+			<option value="{$customfolders[0]}" >{$customfolders[1]}</option>
+			{loopend:customfolders} 
+			</select>
+</td>
+<td width="21px"> 
+
+<!--<div class="searchButton"><input type="submit" name="submit" id="submit" value=" "  class="sendButtn"/></div>-->
+    <button type="submit" name="submit" id="submit"   class="search_icon_btn"><img src="images/search_icon.png"></button>
+
+</td>
+</tr>
+</table>
+{formend:maila}
+</div>  
+{endif}
+
+
+<div class="mail_header_right footer_header"> <a href="{url:(mail/home)}" class="topbarHome">
+                <div class="header_iconbox">
+                    <div class="header_icon"><img src="images/home_icon.png"></div>
+                    <div class="header_icontxt">Home</div>
+                </div></a>  <a href="{url:(mail/replylink/newmail/1/1/m)}" class="topbarHome">
+                <div class="header_iconbox">
+                    <div class="header_icon"><img src="images/email_icon.png"></div>
+                    <div class="header_icontxt">{cfn:getmessage(764)}</div>
+                </div>
+            </a>
+    <a href="{url:(mail/mailbox/1)}" class="topbarHome">
+                <div class="header_iconbox">
+                    <div class="header_icon"><img src="images/inbox_icon.png"></div>
+                    <div class="header_icontxt">{cfn:getmessage(19)}</div>
+{if($unreadcount!=0)}
+                    <div class="header_iconcount"><span>{cfn:getunreadcountnew($uid,1)}</span></div>{endif}
+                </div>
+            </a>
+            <!--<a class="topbarMenu">
+                <div class="header_iconbox">
+                    <div class="header_icon"><img src="images/menu_icon.png"></div>
+                    <div class="header_icontxt">{cfn:getmessage(762)}</div>
+                </div></a>-->
+        </div>
+        </div>
+<!--<div class="ftr">{noescape:$footer}</div>-->

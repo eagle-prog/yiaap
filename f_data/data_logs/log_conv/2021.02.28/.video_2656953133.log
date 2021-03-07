@@ -1,0 +1,869 @@
+Loading video: /home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4
+cmd => /usr/bin/ffprobe -print_format json -show_format -show_streams "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4"
+container => Alliance for Open Media AV1
+duration_seconds => 368.480000
+start => 0.000000
+bitrate => 958
+audio => 
+audio_frequency => 44100
+audio_stereo => 
+audio_bitrate => 0
+width => 1280
+height => 720
+rotate => 
+dar => 16:9
+dar_float => 1.7777777777778
+
+
+
+
+---------------------------------------------
+Starting MP4/360p conversion!
+---------------------------------------------
+
+/usr/bin/ffmpeg -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4" -y -keyint_min 25 -vcodec libx264 -threads 32 -pix_fmt yuv420p -aspect 16:9 -s 640x360 -b:v 300k -acodec aac -strict 2 -ab 0k -ar 44100 -profile:v high -preset fast "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.360p.nomov.mp4" 1> /home/yiaapc5/public_html/f_data/data_logs/log_conv/2021.02.28/.video_2656953133.live.log 2>&1
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+[libdav1d @ 0x6adf6c0] libdav1d 0.8.1-29-gecb0074
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    creation_time   : 2020-10-13T10:11:43.000000Z
+  Duration: 00:06:08.48, start: 0.000000, bitrate: 958 kb/s
+    Stream #0:0(und): Video: av1 (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1280x720 [SAR 1:1 DAR 16:9], 18 kb/s, 25 fps, 25 tbr, 12800 tbn, 12800 tbc (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+[libdav1d @ 0x6b671c0] libdav1d 0.8.1-29-gecb0074
+Stream mapping:
+  Stream #0:0 -> #0:0 (av1 (libdav1d) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x6b69f80] Application has requested 32 threads. Using a thread count greater than 16 is not recommended.
+[libx264 @ 0x6b69f80] using SAR=1/1
+[libx264 @ 0x6b69f80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX
+[libx264 @ 0x6b69f80] profile High, level 3.0, 4:2:0, 8-bit
+[libx264 @ 0x6b69f80] 264 - core 161 r3040 35417dc - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=2 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=6 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=32 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=30 rc=abr mbtree=1 bitrate=300 ratetol=1.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.360p.nomov.mp4':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    encoder         : Lavf58.65.101
+    Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 640x360 [SAR 1:1 DAR 16:9], q=2-31, 300 kb/s, 25 fps, 12800 tbn (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/300000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   34 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   65 fps= 58 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   85 fps= 52 q=40.0 size=       0kB time=00:00:00.64 bitrate=   0.6kbits/s speed=0.395x    frame=  106 fps= 49 q=39.0 size=       0kB time=00:00:01.48 bitrate=   0.3kbits/s speed=0.685x    frame=  160 fps= 60 q=39.0 size=       0kB time=00:00:03.64 bitrate=   0.1kbits/s speed=1.36x    frame=  209 fps= 66 q=38.0 size=       0kB time=00:00:05.60 bitrate=   0.1kbits/s speed=1.76x    frame=  268 fps= 73 q=36.0 size=     256kB time=00:00:07.96 bitrate= 263.5kbits/s speed=2.16x    frame=  307 fps= 73 q=37.0 size=     256kB time=00:00:09.52 bitrate= 220.3kbits/s speed=2.26x    frame=  378 fps= 80 q=37.0 size=     256kB time=00:00:12.36 bitrate= 169.7kbits/s speed=2.62x    frame=  455 fps= 87 q=38.0 size=     512kB time=00:00:15.44 bitrate= 271.7kbits/s speed=2.96x    frame=  554 fps= 97 q=38.0 size=     512kB time=00:00:19.40 bitrate= 216.2kbits/s speed=3.39x    frame=  670 fps=108 q=37.0 size=     768kB time=00:00:24.04 bitrate= 261.7kbits/s speed=3.86x    frame=  816 fps=121 q=35.0 size=    1024kB time=00:00:29.88 bitrate= 280.8kbits/s speed=4.44x    frame=  954 fps=132 q=36.0 size=    1024kB time=00:00:35.40 bitrate= 237.0kbits/s speed= 4.9x    frame= 1084 fps=140 q=37.0 size=    1280kB time=00:00:40.60 bitrate= 258.3kbits/s speed=5.25x    frame= 1228 fps=149 q=36.0 size=    1536kB time=00:00:46.36 bitrate= 271.4kbits/s speed=5.63x    frame= 1383 fps=158 q=36.0 size=    1792kB time=00:00:52.56 bitrate= 279.3kbits/s speed=6.02x    frame= 1544 fps=167 q=35.0 size=    2048kB time=00:00:59.00 bitrate= 284.4kbits/s speed=6.38x    frame= 1683 fps=173 q=32.0 size=    2048kB time=00:01:04.56 bitrate= 259.9kbits/s speed=6.62x    frame= 1795 fps=175 q=33.0 size=    2304kB time=00:01:09.04 bitrate= 273.4kbits/s speed=6.73x    frame= 1897 fps=176 q=35.0 size=    2560kB time=00:01:13.12 bitrate= 286.8kbits/s speed= 6.8x    frame= 2011 fps=179 q=35.0 size=    2560kB time=00:01:17.68 bitrate= 270.0kbits/s speed= 6.9x    frame= 2131 fps=181 q=35.0 size=    2816kB time=00:01:22.48 bitrate= 279.7kbits/s speed=7.01x    frame= 2272 fps=185 q=33.0 size=    3072kB time=00:01:28.12 bitrate= 285.6kbits/s speed=7.18x    frame= 2391 fps=187 q=33.0 size=    3072kB time=00:01:32.88 bitrate= 271.0kbits/s speed=7.27x    frame= 2485 fps=186 q=32.0 size=    3328kB time=00:01:36.64 bitrate= 282.1kbits/s speed=7.22x    frame= 2525 fps=182 q=32.0 size=    3328kB time=00:01:38.24 bitrate= 277.5kbits/s speed=7.07x    frame= 2638 fps=183 q=33.0 size=    3584kB time=00:01:42.76 bitrate= 285.7kbits/s speed=7.14x    frame= 2782 fps=187 q=34.0 size=    3840kB time=00:01:48.52 bitrate= 289.9kbits/s speed=7.29x    frame= 2942 fps=191 q=34.0 size=    4096kB time=00:01:54.92 bitrate= 292.0kbits/s speed=7.46x    frame= 3079 fps=194 q=34.0 size=    4096kB time=00:02:00.40 bitrate= 278.7kbits/s speed=7.57x    frame= 3197 fps=195 q=34.0 size=    4352kB time=00:02:05.12 bitrate= 284.9kbits/s speed=7.63x    frame= 3308 fps=196 q=34.0 size=    4608kB time=00:02:09.56 bitrate= 291.4kbits/s speed=7.66x    frame= 3380 fps=194 q=35.0 size=    4608kB time=00:02:12.44 bitrate= 285.0kbits/s speed=7.61x    frame= 3472 fps=194 q=35.0 size=    4864kB time=00:02:16.12 bitrate= 292.7kbits/s speed= 7.6x    frame= 3575 fps=194 q=35.0 size=    5120kB time=00:02:20.24 bitrate= 299.1kbits/s speed=7.61x    frame= 3675 fps=194 q=35.0 size=    5120kB time=00:02:24.24 bitrate= 290.8kbits/s speed=7.62x    frame= 3792 fps=195 q=35.0 size=    5376kB time=00:02:28.92 bitrate= 295.7kbits/s speed=7.66x    frame= 3927 fps=197 q=36.0 size=    5632kB time=00:02:34.32 bitrate= 299.0kbits/s speed=7.74x    frame= 4033 fps=197 q=36.0 size=    5888kB time=00:02:38.56 bitrate= 304.2kbits/s speed=7.76x    frame= 4131 fps=197 q=37.0 size=    5888kB time=00:02:42.48 bitrate= 296.9kbits/s speed=7.76x    frame= 4232 fps=197 q=37.0 size=    6144kB time=00:02:46.52 bitrate= 302.3kbits/s speed=7.77x    frame= 4349 fps=198 q=38.0 size=    6400kB time=00:02:51.20 bitrate= 306.2kbits/s speed= 7.8x    frame= 4444 fps=198 q=39.0 size=    6656kB time=00:02:55.00 bitrate= 311.6kbits/s speed=7.79x    frame= 4586 fps=200 q=39.0 size=    6912kB time=00:03:00.68 bitrate= 313.4kbits/s speed=7.87x    frame= 4683 fps=200 q=39.0 size=    7168kB time=00:03:04.56 bitrate= 318.2kbits/s speed=7.87x    frame= 4807 fps=201 q=39.0 size=    7168kB time=00:03:09.52 bitrate= 309.8kbits/s speed=7.91x    frame= 4959 fps=203 q=38.0 size=    7424kB time=00:03:15.60 bitrate= 310.9kbits/s speed=7.99x    frame= 5107 fps=204 q=38.0 size=    7424kB time=00:03:21.52 bitrate= 301.8kbits/s speed=8.07x    frame= 5207 fps=204 q=37.0 size=    7424kB time=00:03:25.52 bitrate= 295.9kbits/s speed=8.07x    frame= 5298 fps=204 q=36.0 size=    7680kB time=00:03:29.16 bitrate= 300.8kbits/s speed=8.05x    frame= 5397 fps=204 q=36.0 size=    7680kB time=00:03:33.12 bitrate= 295.2kbits/s speed=8.05x    frame= 5522 fps=205 q=36.0 size=    7936kB time=00:03:38.12 bitrate= 298.1kbits/s speed=8.08x    frame= 5657 fps=206 q=35.0 size=    7936kB time=00:03:43.52 bitrate= 290.9kbits/s speed=8.13x    frame= 5767 fps=206 q=35.0 size=    8192kB time=00:03:47.92 bitrate= 294.4kbits/s speed=8.14x    frame= 5866 fps=206 q=35.0 size=    8192kB time=00:03:51.88 bitrate= 289.4kbits/s speed=8.14x    frame= 5949 fps=205 q=35.0 size=    8448kB time=00:03:55.20 bitrate= 294.2kbits/s speed=8.11x    frame= 6083 fps=206 q=35.0 size=    8704kB time=00:04:00.56 bitrate= 296.4kbits/s speed=8.15x    frame= 6203 fps=207 q=35.0 size=    8704kB time=00:04:05.36 bitrate= 290.6kbits/s speed=8.18x    frame= 6339 fps=208 q=36.0 size=    8960kB time=00:04:10.80 bitrate= 292.7kbits/s speed=8.22x    frame= 6467 fps=208 q=36.0 size=    9216kB time=00:04:15.92 bitrate= 295.0kbits/s speed=8.25x    frame= 6622 fps=210 q=35.0 size=    9472kB time=00:04:22.12 bitrate= 296.0kbits/s speed=8.32x    frame= 6772 fps=211 q=36.0 size=    9728kB time=00:04:28.12 bitrate= 297.2kbits/s speed=8.37x    frame= 6934 fps=213 q=35.0 size=    9728kB time=00:04:34.60 bitrate= 290.2kbits/s speed=8.44x    frame= 7109 fps=215 q=34.0 size=    9984kB time=00:04:41.60 bitrate= 290.4kbits/s speed=8.53x    frame= 7254 fps=216 q=33.0 size=   10240kB time=00:04:47.40 bitrate= 291.9kbits/s speed=8.57x    frame= 7359 fps=216 q=34.0 size=   10240kB time=00:04:51.60 bitrate= 287.7kbits/s speed=8.57x    frame= 7478 fps=216 q=34.0 size=   10496kB time=00:04:56.36 bitrate= 290.1kbits/s speed=8.58x    frame= 7636 fps=218 q=33.0 size=   10752kB time=00:05:02.68 bitrate= 291.0kbits/s speed=8.64x    frame= 7769 fps=219 q=35.0 size=   11008kB time=00:05:08.00 bitrate= 292.8kbits/s speed=8.66x    frame= 7907 fps=219 q=36.0 size=   11520kB time=00:05:13.52 bitrate= 301.0kbits/s speed= 8.7x    frame= 8064 fps=221 q=36.0 size=   11776kB time=00:05:19.80 bitrate= 301.7kbits/s speed=8.75x    frame= 8254 fps=223 q=35.0 size=   11776kB time=00:05:27.40 bitrate= 294.7kbits/s speed=8.84x    frame= 8426 fps=224 q=34.0 size=   12032kB time=00:05:34.28 bitrate= 294.9kbits/s speed= 8.9x    frame= 8617 fps=226 q=33.0 size=   12032kB time=00:05:41.92 bitrate= 288.3kbits/s speed=8.98x    frame= 8823 fps=229 q=32.0 size=   12288kB time=00:05:50.16 bitrate= 287.5kbits/s speed=9.08x    frame= 9018 fps=231 q=31.0 size=   12544kB time=00:05:57.96 bitrate= 287.1kbits/s speed=9.16x    frame= 9185 fps=232 q=29.0 size=   12544kB time=00:06:04.64 bitrate= 281.8kbits/s speed=9.22x    frame= 9212 fps=232 q=-1.0 Lsize=   12798kB time=00:06:08.36 bitrate= 284.6kbits/s speed=9.28x    
+video:12692kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.837666%
+[libx264 @ 0x6b69f80] frame I:63    Avg QP:26.85  size: 13228
+[libx264 @ 0x6b69f80] frame P:2716  Avg QP:30.28  size:  2754
+[libx264 @ 0x6b69f80] frame B:6433  Avg QP:33.71  size:   728
+[libx264 @ 0x6b69f80] consecutive B-frames:  4.0%  6.4%  6.5% 83.1%
+[libx264 @ 0x6b69f80] mb I  I16..4: 12.4% 62.1% 25.5%
+[libx264 @ 0x6b69f80] mb P  I16..4:  3.4%  6.9%  1.1%  P16..4: 33.8% 12.2%  5.3%  0.0%  0.0%    skip:37.4%
+[libx264 @ 0x6b69f80] mb B  I16..4:  1.3%  2.0%  0.1%  B16..8: 22.2%  4.3%  0.2%  direct: 3.3%  skip:66.7%  L0:40.1% L1:54.5% BI: 5.5%
+[libx264 @ 0x6b69f80] final ratefactor: 29.48
+[libx264 @ 0x6b69f80] 8x8 transform intra:60.0% inter:71.1%
+[libx264 @ 0x6b69f80] coded y,uvDC,uvAC intra: 36.1% 37.8% 8.0% inter: 5.9% 5.1% 0.1%
+[libx264 @ 0x6b69f80] i16 v,h,dc,p: 42% 28% 15% 16%
+[libx264 @ 0x6b69f80] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 18% 29%  4%  4%  5%  5%  5%  5%
+[libx264 @ 0x6b69f80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 32% 19% 17%  5%  6%  6%  6%  5%  4%
+[libx264 @ 0x6b69f80] i8c dc,h,v,p: 67% 13% 17%  3%
+[libx264 @ 0x6b69f80] Weighted P-Frames: Y:5.3% UV:3.2%
+[libx264 @ 0x6b69f80] ref P L0: 75.8% 24.2%
+[libx264 @ 0x6b69f80] ref B L0: 89.5% 10.5%
+[libx264 @ 0x6b69f80] ref B L1: 97.0%  3.0%
+[libx264 @ 0x6b69f80] kb/s:282.14
+
+
+
+---------------------------------------------
+MP4/360p Processed! Relocating moov atom ...
+---------------------------------------------
+
+/usr/bin/qt-faststart /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.360p.nomov.mp4 /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.360p.mp4
+ftyp          0 32
+free         32 8
+mdat         40 12996236
+moov   12996276 108816
+ patching stco atom...
+ writing ftyp atom...
+ writing moov atom...
+ copying rest of file...
+
+
+---------------------------------------------
+Starting MP4/480p conversion!
+---------------------------------------------
+
+/usr/bin/ffmpeg -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4" -y -keyint_min 25 -vcodec libx264 -threads 32 -pix_fmt yuv420p -aspect 16:9 -s 852x480 -b:v 900k -acodec aac -strict 2 -ab 0k -ar 44100 -profile:v high -preset fast "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.480p.nomov.mp4" 1> /home/yiaapc5/public_html/f_data/data_logs/log_conv/2021.02.28/.video_2656953133.live.log 2>&1
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+[libdav1d @ 0x6e7d6c0] libdav1d 0.8.1-29-gecb0074
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    creation_time   : 2020-10-13T10:11:43.000000Z
+  Duration: 00:06:08.48, start: 0.000000, bitrate: 958 kb/s
+    Stream #0:0(und): Video: av1 (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1280x720 [SAR 1:1 DAR 16:9], 18 kb/s, 25 fps, 25 tbr, 12800 tbn, 12800 tbc (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+[libdav1d @ 0x6f051c0] libdav1d 0.8.1-29-gecb0074
+Stream mapping:
+  Stream #0:0 -> #0:0 (av1 (libdav1d) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x6f07f80] Application has requested 32 threads. Using a thread count greater than 16 is not recommended.
+[libx264 @ 0x6f07f80] using SAR=640/639
+[libx264 @ 0x6f07f80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX
+[libx264 @ 0x6f07f80] profile High, level 3.0, 4:2:0, 8-bit
+[libx264 @ 0x6f07f80] 264 - core 161 r3040 35417dc - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=2 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=6 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=32 lookahead_threads=3 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=30 rc=abr mbtree=1 bitrate=900 ratetol=1.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.480p.nomov.mp4':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    encoder         : Lavf58.65.101
+    Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 852x480 [SAR 640:639 DAR 16:9], q=2-31, 900 kb/s, 25 fps, 12800 tbn (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/900000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   85 fps=0.0 q=33.0 size=       0kB time=00:00:00.64 bitrate=   0.6kbits/s speed=1.27x    frame=  193 fps=191 q=33.0 size=     512kB time=00:00:04.96 bitrate= 845.7kbits/s speed=4.92x    frame=  304 fps=200 q=31.0 size=     768kB time=00:00:09.40 bitrate= 669.3kbits/s speed=6.18x    frame=  395 fps=196 q=31.0 size=    1280kB time=00:00:13.04 bitrate= 804.1kbits/s speed=6.45x    frame=  467 fps=185 q=31.0 size=    1536kB time=00:00:15.92 bitrate= 790.4kbits/s speed=6.31x    frame=  532 fps=176 q=31.0 size=    1792kB time=00:00:18.52 bitrate= 792.7kbits/s speed=6.12x    frame=  614 fps=173 q=31.0 size=    2304kB time=00:00:21.80 bitrate= 865.8kbits/s speed=6.15x    frame=  685 fps=169 q=30.0 size=    2560kB time=00:00:24.64 bitrate= 851.1kbits/s speed=6.08x    frame=  770 fps=169 q=29.0 size=    2816kB time=00:00:28.04 bitrate= 822.7kbits/s speed=6.16x    frame=  832 fps=164 q=28.0 size=    3072kB time=00:00:30.52 bitrate= 824.6kbits/s speed=6.02x    frame=  907 fps=163 q=28.0 size=    3328kB time=00:00:33.52 bitrate= 813.3kbits/s speed=6.02x    frame=  978 fps=161 q=31.0 size=    3840kB time=00:00:36.36 bitrate= 865.2kbits/s speed=5.99x    frame= 1046 fps=159 q=32.0 size=    4352kB time=00:00:39.08 bitrate= 912.3kbits/s speed=5.94x    frame= 1142 fps=161 q=31.0 size=    4608kB time=00:00:42.92 bitrate= 879.5kbits/s speed=6.06x    frame= 1248 fps=165 q=30.0 size=    5120kB time=00:00:47.16 bitrate= 889.4kbits/s speed=6.22x    frame= 1350 fps=167 q=30.0 size=    5376kB time=00:00:51.24 bitrate= 859.5kbits/s speed=6.34x    frame= 1433 fps=167 q=30.0 size=    5632kB time=00:00:54.56 bitrate= 845.6kbits/s speed=6.36x    frame= 1529 fps=168 q=29.0 size=    6144kB time=00:00:58.40 bitrate= 861.8kbits/s speed=6.42x    frame= 1646 fps=172 q=27.0 size=    6400kB time=00:01:03.08 bitrate= 831.2kbits/s speed=6.58x    frame= 1768 fps=175 q=26.0 size=    6656kB time=00:01:07.96 bitrate= 802.3kbits/s speed=6.73x    frame= 1881 fps=177 q=28.0 size=    7424kB time=00:01:12.48 bitrate= 839.1kbits/s speed=6.84x    frame= 1977 fps=178 q=28.0 size=    7936kB time=00:01:16.32 bitrate= 851.8kbits/s speed=6.87x    frame= 2107 fps=182 q=28.0 size=    8448kB time=00:01:21.52 bitrate= 848.9kbits/s speed=7.03x    frame= 2245 fps=185 q=27.0 size=    9216kB time=00:01:27.04 bitrate= 867.4kbits/s speed=7.19x    frame= 2391 fps=190 q=27.0 size=    9472kB time=00:01:32.88 bitrate= 835.4kbits/s speed=7.37x    frame= 2524 fps=192 q=26.0 size=   10240kB time=00:01:38.20 bitrate= 854.2kbits/s speed=7.49x    frame= 2622 fps=192 q=27.0 size=   10496kB time=00:01:42.12 bitrate= 842.0kbits/s speed= 7.5x    frame= 2721 fps=193 q=27.0 size=   11008kB time=00:01:46.08 bitrate= 850.1kbits/s speed=7.51x    frame= 2813 fps=192 q=28.0 size=   11776kB time=00:01:49.76 bitrate= 878.9kbits/s speed= 7.5x    frame= 2901 fps=192 q=28.0 size=   12032kB time=00:01:53.28 bitrate= 870.1kbits/s speed=7.48x    frame= 3017 fps=193 q=28.0 size=   12544kB time=00:01:57.92 bitrate= 871.4kbits/s speed=7.54x    frame= 3098 fps=192 q=28.0 size=   13056kB time=00:02:01.16 bitrate= 882.8kbits/s speed=7.51x    frame= 3188 fps=192 q=28.0 size=   13312kB time=00:02:04.76 bitrate= 874.1kbits/s speed= 7.5x    frame= 3275 fps=191 q=28.0 size=   13824kB time=00:02:08.24 bitrate= 883.1kbits/s speed=7.48x    frame= 3344 fps=189 q=28.0 size=   14080kB time=00:02:11.00 bitrate= 880.5kbits/s speed=7.41x    frame= 3422 fps=188 q=29.0 size=   14592kB time=00:02:14.12 bitrate= 891.3kbits/s speed=7.37x    frame= 3487 fps=186 q=29.0 size=   14848kB time=00:02:16.72 bitrate= 889.7kbits/s speed=7.31x    frame= 3532 fps=184 q=29.0 size=   15104kB time=00:02:18.52 bitrate= 893.2kbits/s speed=7.21x    frame= 3577 fps=181 q=29.0 size=   15360kB time=00:02:20.32 bitrate= 896.7kbits/s speed= 7.1x    frame= 3604 fps=178 q=29.0 size=   15360kB time=00:02:21.40 bitrate= 889.9kbits/s speed=6.98x    frame= 3635 fps=175 q=29.0 size=   15616kB time=00:02:22.64 bitrate= 896.8kbits/s speed=6.86x    frame= 3732 fps=175 q=29.0 size=   15872kB time=00:02:26.52 bitrate= 887.4kbits/s speed=6.88x    frame= 3826 fps=176 q=29.0 size=   16384kB time=00:02:30.28 bitrate= 893.1kbits/s speed= 6.9x    frame= 3920 fps=176 q=30.0 size=   17152kB time=00:02:34.04 bitrate= 912.2kbits/s speed=6.91x    frame= 4033 fps=177 q=30.0 size=   17664kB time=00:02:38.56 bitrate= 912.6kbits/s speed=6.96x    frame= 4124 fps=177 q=30.0 size=   18176kB time=00:02:42.20 bitrate= 918.0kbits/s speed=6.96x    frame= 4200 fps=176 q=30.0 size=   18432kB time=00:02:45.24 bitrate= 913.8kbits/s speed=6.94x    frame= 4296 fps=177 q=31.0 size=   19200kB time=00:02:49.08 bitrate= 930.3kbits/s speed=6.95x    frame= 4418 fps=178 q=32.0 size=   19968kB time=00:02:53.96 bitrate= 940.3kbits/s speed=7.01x    frame= 4538 fps=179 q=32.0 size=   20736kB time=00:02:58.76 bitrate= 950.3kbits/s speed=7.06x    frame= 4666 fps=181 q=33.0 size=   21248kB time=00:03:03.88 bitrate= 946.6kbits/s speed=7.12x    frame= 4776 fps=181 q=33.0 size=   21760kB time=00:03:08.28 bitrate= 946.8kbits/s speed=7.15x    frame= 4926 fps=184 q=32.0 size=   22016kB time=00:03:14.28 bitrate= 928.3kbits/s speed=7.24x    frame= 5065 fps=185 q=31.0 size=   22272kB time=00:03:19.84 bitrate= 913.0kbits/s speed=7.31x    frame= 5208 fps=187 q=30.0 size=   22784kB time=00:03:25.56 bitrate= 908.0kbits/s speed=7.38x    frame= 5356 fps=189 q=29.0 size=   23040kB time=00:03:31.48 bitrate= 892.5kbits/s speed=7.46x    frame= 5474 fps=190 q=29.0 size=   23552kB time=00:03:36.20 bitrate= 892.4kbits/s speed=7.49x    frame= 5596 fps=191 q=29.0 size=   23808kB time=00:03:41.08 bitrate= 882.2kbits/s speed=7.53x    frame= 5707 fps=191 q=28.0 size=   24320kB time=00:03:45.52 bitrate= 883.4kbits/s speed=7.55x    frame= 5832 fps=192 q=28.0 size=   24832kB time=00:03:50.52 bitrate= 882.5kbits/s speed=7.59x    frame= 5937 fps=192 q=28.0 size=   25344kB time=00:03:54.72 bitrate= 884.5kbits/s speed= 7.6x    frame= 6037 fps=192 q=29.0 size=   25856kB time=00:03:58.72 bitrate= 887.3kbits/s speed= 7.6x    frame= 6119 fps=192 q=29.0 size=   26368kB time=00:04:02.00 bitrate= 892.6kbits/s speed=7.59x    frame= 6197 fps=191 q=29.0 size=   26624kB time=00:04:05.12 bitrate= 889.8kbits/s speed=7.56x    frame= 6262 fps=190 q=29.0 size=   26880kB time=00:04:07.72 bitrate= 888.9kbits/s speed=7.53x    frame= 6327 fps=189 q=30.0 size=   27392kB time=00:04:10.32 bitrate= 896.4kbits/s speed=7.49x    frame= 6428 fps=189 q=30.0 size=   27904kB time=00:04:14.36 bitrate= 898.7kbits/s speed= 7.5x    frame= 6537 fps=190 q=29.0 size=   28160kB time=00:04:18.72 bitrate= 891.6kbits/s speed=7.51x    frame= 6606 fps=189 q=29.0 size=   28416kB time=00:04:21.48 bitrate= 890.3kbits/s speed=7.48x    frame= 6675 fps=188 q=29.0 size=   28928kB time=00:04:24.24 bitrate= 896.8kbits/s speed=7.45x    frame= 6761 fps=188 q=29.0 size=   29184kB time=00:04:27.68 bitrate= 893.1kbits/s speed=7.44x    frame= 6843 fps=188 q=29.0 size=   29696kB time=00:04:30.96 bitrate= 897.8kbits/s speed=7.43x    frame= 6986 fps=189 q=29.0 size=   29952kB time=00:04:36.68 bitrate= 886.8kbits/s speed=7.48x    frame= 7116 fps=190 q=28.0 size=   30464kB time=00:04:41.88 bitrate= 885.3kbits/s speed=7.52x    frame= 7222 fps=190 q=28.0 size=   30720kB time=00:04:46.12 bitrate= 879.6kbits/s speed=7.53x    frame= 7301 fps=190 q=27.0 size=   30976kB time=00:04:49.28 bitrate= 877.2kbits/s speed=7.51x    frame= 7382 fps=189 q=28.0 size=   31488kB time=00:04:52.52 bitrate= 881.8kbits/s speed= 7.5x    frame= 7455 fps=189 q=28.0 size=   31744kB time=00:04:55.44 bitrate= 880.2kbits/s speed=7.47x    frame= 7565 fps=189 q=28.0 size=   32256kB time=00:04:59.84 bitrate= 881.3kbits/s speed=7.49x    frame= 7675 fps=189 q=27.0 size=   32512kB time=00:05:04.24 bitrate= 875.4kbits/s speed= 7.5x    frame= 7733 fps=188 q=28.0 size=   33024kB time=00:05:06.56 bitrate= 882.5kbits/s speed=7.47x    frame= 7802 fps=188 q=29.0 size=   33536kB time=00:05:09.32 bitrate= 888.2kbits/s speed=7.45x    frame= 7877 fps=187 q=29.0 size=   34304kB time=00:05:12.32 bitrate= 899.8kbits/s speed=7.43x    frame= 7961 fps=187 q=30.0 size=   34816kB time=00:05:15.68 bitrate= 903.5kbits/s speed=7.42x    frame= 8077 fps=188 q=30.0 size=   35328kB time=00:05:20.32 bitrate= 903.5kbits/s speed=7.44x    frame= 8193 fps=188 q=29.0 size=   35584kB time=00:05:24.96 bitrate= 897.0kbits/s speed=7.46x    frame= 8319 fps=189 q=29.0 size=   36096kB time=00:05:30.00 bitrate= 896.1kbits/s speed=7.49x    frame= 8426 fps=189 q=28.0 size=   36352kB time=00:05:34.28 bitrate= 890.9kbits/s speed= 7.5x    frame= 8530 fps=189 q=28.0 size=   36608kB time=00:05:38.44 bitrate= 886.1kbits/s speed=7.51x    frame= 8662 fps=190 q=27.0 size=   36864kB time=00:05:43.72 bitrate= 878.6kbits/s speed=7.54x    frame= 8823 fps=191 q=26.0 size=   37376kB time=00:05:50.16 bitrate= 874.4kbits/s speed=7.59x    frame= 8991 fps=193 q=25.0 size=   37632kB time=00:05:56.88 bitrate= 863.8kbits/s speed=7.66x    frame= 9168 fps=195 q=23.0 size=   37888kB time=00:06:03.96 bitrate= 852.8kbits/s speed=7.72x    frame= 9212 fps=195 q=-1.0 Lsize=   38368kB time=00:06:08.36 bitrate= 853.3kbits/s speed=7.79x    
+video:38262kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.278522%
+[libx264 @ 0x6f07f80] frame I:63    Avg QP:20.21  size: 30680
+[libx264 @ 0x6f07f80] frame P:2724  Avg QP:23.64  size:  8310
+[libx264 @ 0x6f07f80] frame B:6425  Avg QP:26.73  size:  2274
+[libx264 @ 0x6f07f80] consecutive B-frames:  3.9%  6.6%  7.8% 81.6%
+[libx264 @ 0x6f07f80] mb I  I16..4:  9.2% 65.8% 25.1%
+[libx264 @ 0x6f07f80] mb P  I16..4:  3.7% 10.8%  1.9%  P16..4: 32.7% 17.6%  8.6%  0.0%  0.0%    skip:24.7%
+[libx264 @ 0x6f07f80] mb B  I16..4:  1.9%  3.1%  0.3%  B16..8: 26.2%  7.2%  0.5%  direct: 6.9%  skip:53.9%  L0:40.2% L1:49.4% BI:10.5%
+[libx264 @ 0x6f07f80] final ratefactor: 23.15
+[libx264 @ 0x6f07f80] 8x8 transform intra:62.9% inter:65.9%
+[libx264 @ 0x6f07f80] coded y,uvDC,uvAC intra: 45.0% 47.7% 13.2% inter: 11.3% 11.3% 0.3%
+[libx264 @ 0x6f07f80] i16 v,h,dc,p: 40% 29% 12% 19%
+[libx264 @ 0x6f07f80] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 25% 20%  4%  5%  5%  6%  5%  5%
+[libx264 @ 0x6f07f80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 27% 13%  4%  6%  6%  7%  5%  4%
+[libx264 @ 0x6f07f80] i8c dc,h,v,p: 57% 18% 20%  5%
+[libx264 @ 0x6f07f80] Weighted P-Frames: Y:4.6% UV:2.9%
+[libx264 @ 0x6f07f80] ref P L0: 77.5% 22.5%
+[libx264 @ 0x6f07f80] ref B L0: 90.4%  9.6%
+[libx264 @ 0x6f07f80] ref B L1: 97.3%  2.7%
+[libx264 @ 0x6f07f80] kb/s:850.62
+
+
+
+---------------------------------------------
+MP4/480p Processed! Relocating moov atom ...
+---------------------------------------------
+
+/usr/bin/qt-faststart /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.480p.nomov.mp4 /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.480p.mp4
+ftyp          0 32
+free         32 8
+mdat         40 39180107
+moov   39180147 109076
+ patching stco atom...
+ writing ftyp atom...
+ writing moov atom...
+ copying rest of file...
+
+
+---------------------------------------------
+Starting MP4/720p conversion!
+---------------------------------------------
+
+/usr/bin/ffmpeg -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4" -y -keyint_min 25 -vcodec libx264 -threads 32 -pix_fmt yuv420p -aspect 16:9 -s 1280x720 -b:v 958k -acodec aac -strict 2 -ab 0k -ar 44100 -profile:v high -preset fast "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.720p.nomov.mp4" 1> /home/yiaapc5/public_html/f_data/data_logs/log_conv/2021.02.28/.video_2656953133.live.log 2>&1
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+[libdav1d @ 0x60466c0] libdav1d 0.8.1-29-gecb0074
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    creation_time   : 2020-10-13T10:11:43.000000Z
+  Duration: 00:06:08.48, start: 0.000000, bitrate: 958 kb/s
+    Stream #0:0(und): Video: av1 (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1280x720 [SAR 1:1 DAR 16:9], 18 kb/s, 25 fps, 25 tbr, 12800 tbn, 12800 tbc (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+[libdav1d @ 0x60ce1c0] libdav1d 0.8.1-29-gecb0074
+Stream mapping:
+  Stream #0:0 -> #0:0 (av1 (libdav1d) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x60d0f80] Application has requested 32 threads. Using a thread count greater than 16 is not recommended.
+[libx264 @ 0x60d0f80] using SAR=1/1
+[libx264 @ 0x60d0f80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX
+[libx264 @ 0x60d0f80] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0x60d0f80] 264 - core 161 r3040 35417dc - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=2 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=6 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=32 lookahead_threads=5 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=30 rc=abr mbtree=1 bitrate=958 ratetol=1.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.720p.nomov.mp4':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    encoder         : Lavf58.65.101
+    Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1280x720 [SAR 1:1 DAR 16:9], q=2-31, 958 kb/s, 25 fps, 12800 tbn (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/958000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   73 fps=0.0 q=39.0 size=       0kB time=00:00:00.16 bitrate=   2.4kbits/s speed=0.307x    frame=  143 fps=136 q=39.0 size=     256kB time=00:00:02.96 bitrate= 708.6kbits/s speed=2.83x    frame=  207 fps=133 q=38.0 size=     512kB time=00:00:05.52 bitrate= 759.9kbits/s speed=3.54x    frame=  296 fps=143 q=36.0 size=     768kB time=00:00:09.08 bitrate= 692.9kbits/s speed= 4.4x    frame=  362 fps=141 q=37.0 size=    1280kB time=00:00:11.72 bitrate= 894.7kbits/s speed=4.55x    frame=  405 fps=131 q=37.0 size=    1536kB time=00:00:13.44 bitrate= 936.3kbits/s speed=4.34x    frame=  467 fps=130 q=36.0 size=    1792kB time=00:00:15.92 bitrate= 922.1kbits/s speed=4.41x    frame=  516 fps=125 q=33.0 size=    1792kB time=00:00:17.88 bitrate= 821.1kbits/s speed=4.33x    frame=  594 fps=128 q=36.0 size=    2304kB time=00:00:21.00 bitrate= 898.8kbits/s speed=4.54x    frame=  674 fps=131 q=35.0 size=    2560kB time=00:00:24.20 bitrate= 866.6kbits/s speed=4.71x    frame=  754 fps=134 q=34.0 size=    2816kB time=00:00:27.40 bitrate= 841.9kbits/s speed=4.85x    frame=  837 fps=136 q=33.0 size=    3072kB time=00:00:30.72 bitrate= 819.2kbits/s speed=4.98x    frame=  903 fps=133 q=30.0 size=    3584kB time=00:00:33.36 bitrate= 880.1kbits/s speed=4.93x    frame=  950 fps=130 q=35.0 size=    3840kB time=00:00:35.24 bitrate= 892.7kbits/s speed=4.84x    frame=  994 fps=128 q=37.0 size=    4352kB time=00:00:37.00 bitrate= 963.6kbits/s speed=4.75x    frame= 1062 fps=128 q=36.0 size=    4608kB time=00:00:39.72 bitrate= 950.4kbits/s speed=4.79x    frame= 1138 fps=129 q=36.0 size=    4864kB time=00:00:42.76 bitrate= 931.9kbits/s speed=4.86x    frame= 1236 fps=133 q=36.0 size=    5376kB time=00:00:46.68 bitrate= 943.5kbits/s speed=5.02x    frame= 1322 fps=135 q=36.0 size=    5632kB time=00:00:50.12 bitrate= 920.5kbits/s speed=5.11x    frame= 1395 fps=135 q=35.0 size=    5888kB time=00:00:53.04 bitrate= 909.4kbits/s speed=5.13x    frame= 1447 fps=133 q=35.0 size=    6144kB time=00:00:55.12 bitrate= 913.1kbits/s speed=5.07x    frame= 1544 fps=136 q=33.0 size=    6400kB time=00:00:59.00 bitrate= 888.6kbits/s speed=5.19x    frame= 1624 fps=137 q=32.0 size=    6656kB time=00:01:02.20 bitrate= 876.6kbits/s speed=5.24x    frame= 1698 fps=137 q=31.0 size=    6912kB time=00:01:05.16 bitrate= 869.0kbits/s speed=5.26x    frame= 1780 fps=138 q=31.0 size=    7168kB time=00:01:08.44 bitrate= 858.0kbits/s speed=5.31x    frame= 1838 fps=137 q=32.0 size=    7680kB time=00:01:10.76 bitrate= 889.1kbits/s speed=5.28x    frame= 1890 fps=136 q=33.0 size=    7936kB time=00:01:12.84 bitrate= 892.5kbits/s speed=5.22x    frame= 1958 fps=136 q=33.0 size=    8448kB time=00:01:15.56 bitrate= 915.9kbits/s speed=5.23x    frame= 2041 fps=136 q=33.0 size=    8704kB time=00:01:18.88 bitrate= 903.9kbits/s speed=5.27x    frame= 2120 fps=137 q=33.0 size=    9216kB time=00:01:22.04 bitrate= 920.3kbits/s speed= 5.3x    frame= 2180 fps=136 q=33.0 size=    9472kB time=00:01:24.44 bitrate= 918.9kbits/s speed=5.28x    frame= 2276 fps=138 q=32.0 size=    9728kB time=00:01:28.28 bitrate= 902.7kbits/s speed=5.35x    frame= 2374 fps=139 q=32.0 size=    9984kB time=00:01:32.20 bitrate= 887.1kbits/s speed=5.41x    frame= 2454 fps=140 q=31.0 size=   10496kB time=00:01:35.40 bitrate= 901.3kbits/s speed=5.44x    frame= 2545 fps=141 q=31.0 size=   10752kB time=00:01:39.04 bitrate= 889.3kbits/s speed=5.49x    frame= 2622 fps=141 q=32.0 size=   11264kB time=00:01:42.12 bitrate= 903.6kbits/s speed= 5.5x    frame= 2682 fps=141 q=32.0 size=   11520kB time=00:01:44.52 bitrate= 902.9kbits/s speed=5.48x    frame= 2752 fps=140 q=33.0 size=   12032kB time=00:01:47.32 bitrate= 918.4kbits/s speed=5.48x    frame= 2800 fps=139 q=33.0 size=   12288kB time=00:01:49.24 bitrate= 921.5kbits/s speed=5.43x    frame= 2874 fps=139 q=33.0 size=   12800kB time=00:01:52.20 bitrate= 934.6kbits/s speed=5.44x    frame= 2938 fps=139 q=33.0 size=   13056kB time=00:01:54.76 bitrate= 932.0kbits/s speed=5.43x    frame= 2989 fps=138 q=33.0 size=   13312kB time=00:01:56.80 bitrate= 933.7kbits/s speed=5.39x    frame= 3033 fps=137 q=33.0 size=   13312kB time=00:01:58.56 bitrate= 919.8kbits/s speed=5.35x    frame= 3083 fps=136 q=33.0 size=   13568kB time=00:02:00.56 bitrate= 921.9kbits/s speed=5.32x    frame= 3133 fps=135 q=33.0 size=   13824kB time=00:02:02.56 bitrate= 924.0kbits/s speed=5.28x    frame= 3217 fps=136 q=33.0 size=   14336kB time=00:02:05.92 bitrate= 932.7kbits/s speed=5.31x    frame= 3298 fps=136 q=33.0 size=   14592kB time=00:02:09.16 bitrate= 925.5kbits/s speed=5.33x    frame= 3380 fps=137 q=33.0 size=   15104kB time=00:02:12.44 bitrate= 934.3kbits/s speed=5.35x    frame= 3452 fps=137 q=33.0 size=   15616kB time=00:02:15.32 bitrate= 945.4kbits/s speed=5.36x    frame= 3536 fps=137 q=33.0 size=   15872kB time=00:02:18.68 bitrate= 937.6kbits/s speed=5.38x    frame= 3609 fps=137 q=34.0 size=   16384kB time=00:02:21.60 bitrate= 947.9kbits/s speed=5.39x    frame= 3679 fps=137 q=34.0 size=   16640kB time=00:02:24.40 bitrate= 944.0kbits/s speed=5.39x    frame= 3742 fps=137 q=34.0 size=   16896kB time=00:02:26.92 bitrate= 942.1kbits/s speed=5.38x    frame= 3800 fps=137 q=34.0 size=   17152kB time=00:02:29.24 bitrate= 941.5kbits/s speed=5.37x    frame= 3857 fps=136 q=34.0 size=   17664kB time=00:02:31.52 bitrate= 955.0kbits/s speed=5.35x    frame= 3921 fps=136 q=35.0 size=   17920kB time=00:02:34.08 bitrate= 952.8kbits/s speed=5.35x    frame= 3963 fps=135 q=35.0 size=   18176kB time=00:02:35.76 bitrate= 955.9kbits/s speed=5.31x    frame= 4011 fps=134 q=35.0 size=   18432kB time=00:02:37.68 bitrate= 957.6kbits/s speed=5.27x    frame= 4061 fps=133 q=35.0 size=   18944kB time=00:02:39.68 bitrate= 971.9kbits/s speed=5.25x    frame= 4109 fps=133 q=35.0 size=   19200kB time=00:02:41.60 bitrate= 973.3kbits/s speed=5.22x    frame= 4148 fps=132 q=35.0 size=   19200kB time=00:02:43.16 bitrate= 964.0kbits/s speed=5.18x    frame= 4188 fps=131 q=35.0 size=   19456kB time=00:02:44.76 bitrate= 967.4kbits/s speed=5.15x    frame= 4216 fps=130 q=35.0 size=   19712kB time=00:02:45.88 bitrate= 973.5kbits/s speed= 5.1x    frame= 4228 fps=128 q=35.0 size=   19712kB time=00:02:46.36 bitrate= 970.7kbits/s speed=5.04x    frame= 4258 fps=127 q=36.0 size=   19968kB time=00:02:47.56 bitrate= 976.2kbits/s speed=   5x    frame= 4292 fps=126 q=36.0 size=   20224kB time=00:02:48.92 bitrate= 980.8kbits/s speed=4.96x    frame= 4341 fps=126 q=36.0 size=   20736kB time=00:02:50.88 bitrate= 994.1kbits/s speed=4.95x    frame= 4393 fps=125 q=37.0 size=   20992kB time=00:02:52.96 bitrate= 994.3kbits/s speed=4.94x    frame= 4457 fps=125 q=37.0 size=   21504kB time=00:02:55.52 bitrate=1003.7kbits/s speed=4.93x    frame= 4529 fps=126 q=38.0 size=   22016kB time=00:02:58.40 bitrate=1011.0kbits/s speed=4.94x    frame= 4617 fps=126 q=38.0 size=   22528kB time=00:03:01.92 bitrate=1014.5kbits/s speed=4.97x    frame= 4687 fps=126 q=38.0 size=   22784kB time=00:03:04.72 bitrate=1010.4kbits/s speed=4.98x    frame= 4750 fps=126 q=38.0 size=   23296kB time=00:03:07.24 bitrate=1019.2kbits/s speed=4.97x    frame= 4839 fps=127 q=38.0 size=   23552kB time=00:03:10.80 bitrate=1011.2kbits/s speed=   5x    frame= 4948 fps=128 q=37.0 size=   23808kB time=00:03:15.16 bitrate= 999.4kbits/s speed=5.05x    frame= 5043 fps=129 q=37.0 size=   23808kB time=00:03:18.96 bitrate= 980.3kbits/s speed=5.08x    frame= 5125 fps=129 q=36.0 size=   24064kB time=00:03:22.24 bitrate= 974.7kbits/s speed= 5.1x    frame= 5213 fps=130 q=36.0 size=   24320kB time=00:03:25.76 bitrate= 968.3kbits/s speed=5.12x    frame= 5288 fps=130 q=35.0 size=   24576kB time=00:03:28.76 bitrate= 964.4kbits/s speed=5.13x    frame= 5368 fps=130 q=35.0 size=   24832kB time=00:03:31.96 bitrate= 959.7kbits/s speed=5.14x    frame= 5450 fps=131 q=35.0 size=   25088kB time=00:03:35.24 bitrate= 954.8kbits/s speed=5.16x    frame= 5522 fps=131 q=35.0 size=   25344kB time=00:03:38.12 bitrate= 951.9kbits/s speed=5.17x    frame= 5606 fps=131 q=34.0 size=   25600kB time=00:03:41.48 bitrate= 946.9kbits/s speed=5.18x    frame= 5691 fps=132 q=34.0 size=   26112kB time=00:03:44.88 bitrate= 951.2kbits/s speed= 5.2x    frame= 5773 fps=132 q=34.0 size=   26368kB time=00:03:48.16 bitrate= 946.7kbits/s speed=5.21x    frame= 5866 fps=133 q=34.0 size=   26624kB time=00:03:51.88 bitrate= 940.6kbits/s speed=5.24x    frame= 5937 fps=133 q=34.0 size=   26880kB time=00:03:54.72 bitrate= 938.1kbits/s speed=5.24x    frame= 6007 fps=133 q=34.0 size=   27392kB time=00:03:57.52 bitrate= 944.7kbits/s speed=5.24x    frame= 6061 fps=132 q=35.0 size=   27904kB time=00:03:59.68 bitrate= 953.7kbits/s speed=5.23x    frame= 6125 fps=132 q=34.0 size=   28160kB time=00:04:02.24 bitrate= 952.3kbits/s speed=5.23x    frame= 6186 fps=132 q=34.0 size=   28416kB time=00:04:04.68 bitrate= 951.4kbits/s speed=5.23x    frame= 6244 fps=132 q=34.0 size=   28672kB time=00:04:07.00 bitrate= 950.9kbits/s speed=5.22x    frame= 6289 fps=131 q=35.0 size=   28928kB time=00:04:08.80 bitrate= 952.5kbits/s speed= 5.2x    frame= 6335 fps=131 q=35.0 size=   29440kB time=00:04:10.64 bitrate= 962.2kbits/s speed=5.19x    frame= 6391 fps=131 q=35.0 size=   29696kB time=00:04:12.88 bitrate= 962.0kbits/s speed=5.18x    frame= 6442 fps=131 q=35.0 size=   29952kB time=00:04:14.92 bitrate= 962.5kbits/s speed=5.17x    frame= 6522 fps=131 q=35.0 size=   30208kB time=00:04:18.12 bitrate= 958.7kbits/s speed=5.18x    frame= 6590 fps=131 q=35.0 size=   30464kB time=00:04:20.84 bitrate= 956.8kbits/s speed=5.18x    frame= 6654 fps=131 q=34.0 size=   30720kB time=00:04:23.40 bitrate= 955.4kbits/s speed=5.18x    frame= 6707 fps=131 q=35.0 size=   30976kB time=00:04:25.52 bitrate= 955.7kbits/s speed=5.17x    frame= 6759 fps=130 q=35.0 size=   31232kB time=00:04:27.60 bitrate= 956.1kbits/s speed=5.16x    frame= 6807 fps=130 q=35.0 size=   31488kB time=00:04:29.52 bitrate= 957.1kbits/s speed=5.14x    frame= 6895 fps=130 q=35.0 size=   31744kB time=00:04:33.04 bitrate= 952.4kbits/s speed=5.16x    frame= 6962 fps=130 q=34.0 size=   32000kB time=00:04:35.72 bitrate= 950.8kbits/s speed=5.16x    frame= 7021 fps=130 q=34.0 size=   32000kB time=00:04:38.08 bitrate= 942.7kbits/s speed=5.16x    frame= 7083 fps=130 q=33.0 size=   32256kB time=00:04:40.56 bitrate= 941.8kbits/s speed=5.16x    frame= 7131 fps=130 q=34.0 size=   32512kB time=00:04:42.48 bitrate= 942.9kbits/s speed=5.14x    frame= 7184 fps=130 q=33.0 size=   32768kB time=00:04:44.60 bitrate= 943.2kbits/s speed=5.14x    frame= 7240 fps=129 q=33.0 size=   32768kB time=00:04:46.84 bitrate= 935.8kbits/s speed=5.13x    frame= 7292 fps=129 q=33.0 size=   33024kB time=00:04:48.92 bitrate= 936.4kbits/s speed=5.12x    frame= 7339 fps=129 q=33.0 size=   33280kB time=00:04:50.80 bitrate= 937.5kbits/s speed= 5.1x    frame= 7387 fps=128 q=33.0 size=   33536kB time=00:04:52.72 bitrate= 938.5kbits/s speed=5.09x    frame= 7433 fps=128 q=33.0 size=   33792kB time=00:04:54.56 bitrate= 939.8kbits/s speed=5.08x    frame= 7494 fps=128 q=34.0 size=   34304kB time=00:04:57.00 bitrate= 946.2kbits/s speed=5.08x    frame= 7573 fps=128 q=33.0 size=   34304kB time=00:05:00.16 bitrate= 936.2kbits/s speed=5.09x    frame= 7633 fps=128 q=33.0 size=   34560kB time=00:05:02.56 bitrate= 935.7kbits/s speed=5.08x    frame= 7693 fps=128 q=33.0 size=   34816kB time=00:05:04.96 bitrate= 935.2kbits/s speed=5.08x    frame= 7749 fps=128 q=33.0 size=   35328kB time=00:05:07.20 bitrate= 942.1kbits/s speed=5.07x    frame= 7807 fps=128 q=34.0 size=   35840kB time=00:05:09.52 bitrate= 948.6kbits/s speed=5.06x    frame= 7860 fps=128 q=35.0 size=   36352kB time=00:05:11.64 bitrate= 955.6kbits/s speed=5.06x    frame= 7901 fps=127 q=35.0 size=   36608kB time=00:05:13.28 bitrate= 957.3kbits/s speed=5.04x    frame= 7966 fps=127 q=35.0 size=   37120kB time=00:05:15.88 bitrate= 962.7kbits/s speed=5.04x    frame= 8036 fps=127 q=35.0 size=   37376kB time=00:05:18.68 bitrate= 960.8kbits/s speed=5.04x    frame= 8124 fps=128 q=35.0 size=   37632kB time=00:05:22.20 bitrate= 956.8kbits/s speed=5.06x    frame= 8205 fps=128 q=34.0 size=   37888kB time=00:05:25.44 bitrate= 953.7kbits/s speed=5.07x    frame= 8300 fps=128 q=34.0 size=   38144kB time=00:05:29.24 bitrate= 949.1kbits/s speed=5.09x    frame= 8394 fps=129 q=33.0 size=   38400kB time=00:05:33.00 bitrate= 944.7kbits/s speed=5.11x    frame= 8502 fps=129 q=33.0 size=   38656kB time=00:05:37.32 bitrate= 938.8kbits/s speed=5.13x    frame= 8589 fps=130 q=32.0 size=   38912kB time=00:05:40.80 bitrate= 935.4kbits/s speed=5.15x    frame= 8685 fps=130 q=32.0 size=   39168kB time=00:05:44.64 bitrate= 931.0kbits/s speed=5.17x    frame= 8799 fps=131 q=31.0 size=   39424kB time=00:05:49.20 bitrate= 924.9kbits/s speed= 5.2x    frame= 8939 fps=132 q=31.0 size=   39936kB time=00:05:54.80 bitrate= 922.1kbits/s speed=5.24x    frame= 9083 fps=133 q=29.0 size=   40192kB time=00:06:00.56 bitrate= 913.2kbits/s speed=5.29x    frame= 9212 fps=134 q=-1.0 Lsize=   40658kB time=00:06:08.36 bitrate= 904.2kbits/s speed=5.35x    
+video:40551kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.262116%
+[libx264 @ 0x60d0f80] frame I:63    Avg QP:24.64  size: 30544
+[libx264 @ 0x60d0f80] frame P:2920  Avg QP:28.36  size:  8117
+[libx264 @ 0x60d0f80] frame B:6229  Avg QP:30.89  size:  2552
+[libx264 @ 0x60d0f80] consecutive B-frames:  4.9% 12.5%  7.4% 75.2%
+[libx264 @ 0x60d0f80] mb I  I16..4: 18.7% 71.1% 10.2%
+[libx264 @ 0x60d0f80] mb P  I16..4:  6.7% 10.6%  0.5%  P16..4: 34.6%  7.4%  2.5%  0.0%  0.0%    skip:37.6%
+[libx264 @ 0x60d0f80] mb B  I16..4:  2.5%  2.5%  0.0%  B16..8: 21.5%  2.3%  0.1%  direct: 4.9%  skip:66.1%  L0:42.5% L1:54.0% BI: 3.5%
+[libx264 @ 0x60d0f80] final ratefactor: 28.40
+[libx264 @ 0x60d0f80] 8x8 transform intra:56.8% inter:85.9%
+[libx264 @ 0x60d0f80] coded y,uvDC,uvAC intra: 24.5% 30.6% 3.3% inter: 5.2% 5.7% 0.0%
+[libx264 @ 0x60d0f80] i16 v,h,dc,p: 40% 28% 13% 19%
+[libx264 @ 0x60d0f80] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 20% 30%  3%  4%  4%  5%  4%  4%
+[libx264 @ 0x60d0f80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 21% 15%  4%  7%  7%  7%  5%  3%
+[libx264 @ 0x60d0f80] i8c dc,h,v,p: 66% 14% 16%  3%
+[libx264 @ 0x60d0f80] Weighted P-Frames: Y:3.5% UV:2.3%
+[libx264 @ 0x60d0f80] ref P L0: 75.4% 24.6%
+[libx264 @ 0x60d0f80] ref B L0: 88.5% 11.5%
+[libx264 @ 0x60d0f80] ref B L1: 97.1%  2.9%
+[libx264 @ 0x60d0f80] kb/s:901.52
+
+
+
+---------------------------------------------
+MP4/720p Processed! Relocating moov atom ...
+---------------------------------------------
+
+/usr/bin/qt-faststart /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.720p.nomov.mp4 /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.720p.mp4
+ftyp          0 32
+free         32 8
+mdat         40 41524739
+moov   41524779 108794
+ patching stco atom...
+ writing ftyp atom...
+ writing moov atom...
+ copying rest of file...
+
+
+---------------------------------------------
+Starting MP4/1080p conversion!
+---------------------------------------------
+
+Not converting to H264 (:1280x720)!
+
+
+---------------------------------------------
+Starting mobile/ipad conversion!
+---------------------------------------------
+
+/usr/bin/ffmpeg -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4" -y -vcodec libx264 -threads 32 -pix_fmt yuv420p -aspect 16:9 -s 480x272 -flags +loop -cmp chroma -partitions 0 -subq 1 -trellis 0 -refs 1 -coder 0 -me_range 16 -g 300 -keyint_min 25 -sc_threshold 40 -i_qfactor 0.71 -maxrate 10M -bufsize 10M -rc_eq 'blurCplx^(1-qComp)' -qcomp 0.6 -qmin 10 -qmax 51 -qdiff 4 -f mp4 -b:v 958k -acodec aac -strict 2 -ac 2 -ab 0k -ar 44100 -profile:v baseline -level 1.3 -preset fast "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.mob.nomob.mp4" 1> /home/yiaapc5/public_html/f_data/data_logs/log_conv/2021.02.28/.video_2656953133.live.log 2>&1
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+[libdav1d @ 0x6a4ea80] libdav1d 0.8.1-29-gecb0074
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    creation_time   : 2020-10-13T10:11:43.000000Z
+  Duration: 00:06:08.48, start: 0.000000, bitrate: 958 kb/s
+    Stream #0:0(und): Video: av1 (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1280x720 [SAR 1:1 DAR 16:9], 18 kb/s, 25 fps, 25 tbr, 12800 tbn, 12800 tbc (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+Codec AVOption rc_eq (Set rate control equation. When computing the expression, besides the standard functions defined in the section 'Expression Evaluation', the following functions are available: bits2qp(bits), qp2bits(qp). Also the following constants are available: iTex pTex tex mv fCode iCount mcVar var isI isP isB avgQP qComp avgIITex avgPITex avgPPTex avgBPTex avgTex.) specified for output file #0 (/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.mob.nomob.mp4) has not been used for any stream. The most likely reason is either wrong type (e.g. a video option with no video streams) or that it is a private option of some encoder which was not actually used for any stream.
+[libdav1d @ 0x6a7d180] libdav1d 0.8.1-29-gecb0074
+Stream mapping:
+  Stream #0:0 -> #0:0 (av1 (libdav1d) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x6a77480] Application has requested 32 threads. Using a thread count greater than 16 is not recommended.
+[libx264 @ 0x6a77480] using SAR=136/135
+[libx264 @ 0x6a77480] frame MB size (30x17) > level limit (396)
+[libx264 @ 0x6a77480] VBV bitrate (10000) > level limit (768)
+[libx264 @ 0x6a77480] VBV buffer (10000) > level limit (2000)
+[libx264 @ 0x6a77480] MB rate (12750) > level limit (11880)
+[libx264 @ 0x6a77480] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX
+[libx264 @ 0x6a77480] profile Constrained Baseline, level 1.3, 4:2:0, 8-bit
+[libx264 @ 0x6a77480] 264 - core 161 r3040 35417dc - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=0 ref=1 deblock=1:0:0 analyse=0x1:0 me=hex subme=1 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=32 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=0 weightp=0 keyint=300 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=30 rc=abr mbtree=1 bitrate=958 ratetol=1.0 qcomp=0.60 qpmin=10 qpmax=51 qpstep=4 vbv_maxrate=10000 vbv_bufsize=10000 nal_hrd=none filler=0 ip_ratio=1.41 aq=1:1.00
+Output #0, mp4, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.mob.nomob.mp4':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    encoder         : Lavf58.65.101
+    Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 480x272 [SAR 136:135 DAR 16:9], q=2-31, 958 kb/s, 25 fps, 12800 tbn (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 10000000/0/958000 buffer size: 10000000 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=  125 fps=0.0 q=28.0 size=     256kB time=00:00:02.44 bitrate= 859.6kbits/s speed=4.86x    frame=  258 fps=257 q=27.0 size=     768kB time=00:00:07.76 bitrate= 810.8kbits/s speed=7.74x    frame=  396 fps=263 q=26.0 size=    1280kB time=00:00:13.28 bitrate= 789.6kbits/s speed=8.83x    frame=  546 fps=272 q=26.0 size=    2048kB time=00:00:19.28 bitrate= 870.2kbits/s speed=9.61x    frame=  678 fps=270 q=26.0 size=    2816kB time=00:00:24.56 bitrate= 939.3kbits/s speed=9.77x    frame=  806 fps=267 q=24.0 size=    3072kB time=00:00:29.68 bitrate= 847.9kbits/s speed=9.84x    frame=  950 fps=270 q=25.0 size=    3840kB time=00:00:35.44 bitrate= 887.6kbits/s speed=10.1x    frame= 1084 fps=269 q=26.0 size=    4608kB time=00:00:40.80 bitrate= 925.2kbits/s speed=10.1x    frame= 1244 fps=275 q=25.0 size=    5376kB time=00:00:47.20 bitrate= 933.1kbits/s speed=10.4x    frame= 1370 fps=272 q=26.0 size=    5888kB time=00:00:52.24 bitrate= 923.3kbits/s speed=10.4x    frame= 1515 fps=274 q=25.0 size=    6656kB time=00:00:58.04 bitrate= 939.5kbits/s speed=10.5x    frame= 1698 fps=281 q=24.0 size=    7168kB time=00:01:05.36 bitrate= 898.4kbits/s speed=10.8x    frame= 1834 fps=280 q=25.0 size=    7936kB time=00:01:10.80 bitrate= 918.2kbits/s speed=10.8x    frame= 1991 fps=283 q=25.0 size=    8960kB time=00:01:17.08 bitrate= 952.3kbits/s speed=10.9x    frame= 2168 fps=287 q=25.0 size=    9728kB time=00:01:24.16 bitrate= 946.9kbits/s speed=11.2x    frame= 2352 fps=292 q=24.0 size=   10240kB time=00:01:31.52 bitrate= 916.6kbits/s speed=11.4x    frame= 2455 fps=287 q=24.0 size=   10752kB time=00:01:35.64 bitrate= 921.0kbits/s speed=11.2x    frame= 2606 fps=288 q=24.0 size=   11520kB time=00:01:41.68 bitrate= 928.1kbits/s speed=11.2x    frame= 2788 fps=291 q=25.0 size=   12288kB time=00:01:48.96 bitrate= 923.9kbits/s speed=11.4x    frame= 2971 fps=295 q=25.0 size=   13312kB time=00:01:56.28 bitrate= 937.8kbits/s speed=11.5x    frame= 3133 fps=296 q=22.0 size=   14336kB time=00:02:02.76 bitrate= 956.7kbits/s speed=11.6x    frame= 3300 fps=298 q=25.0 size=   15104kB time=00:02:09.44 bitrate= 955.9kbits/s speed=11.7x    frame= 3460 fps=299 q=26.0 size=   16128kB time=00:02:15.84 bitrate= 972.6kbits/s speed=11.7x    frame= 3633 fps=301 q=26.0 size=   16640kB time=00:02:22.76 bitrate= 954.9kbits/s speed=11.8x    frame= 3823 fps=304 q=27.0 size=   17920kB time=00:02:30.36 bitrate= 976.3kbits/s speed=  12x    frame= 3975 fps=304 q=27.0 size=   18944kB time=00:02:36.44 bitrate= 992.0kbits/s speed=  12x    frame= 4126 fps=304 q=27.0 size=   19456kB time=00:02:42.48 bitrate= 980.9kbits/s speed=  12x    frame= 4289 fps=304 q=28.0 size=   20480kB time=00:02:49.00 bitrate= 992.7kbits/s speed=  12x    frame= 4460 fps=306 q=28.0 size=   21504kB time=00:02:55.84 bitrate=1001.8kbits/s speed=  12x    frame= 4630 fps=307 q=28.0 size=   22272kB time=00:03:02.64 bitrate= 999.0kbits/s speed=12.1x    frame= 4819 fps=309 q=28.0 size=   23040kB time=00:03:10.20 bitrate= 992.3kbits/s speed=12.2x    frame= 5028 fps=312 q=26.0 size=   23296kB time=00:03:18.56 bitrate= 961.1kbits/s speed=12.3x    frame= 5239 fps=315 q=25.0 size=   23808kB time=00:03:27.00 bitrate= 942.2kbits/s speed=12.5x    frame= 5424 fps=317 q=24.0 size=   24320kB time=00:03:34.40 bitrate= 929.2kbits/s speed=12.5x    frame= 5607 fps=318 q=24.0 size=   25344kB time=00:03:41.72 bitrate= 936.4kbits/s speed=12.6x    frame= 5796 fps=320 q=25.0 size=   26368kB time=00:03:49.28 bitrate= 942.1kbits/s speed=12.7x    frame= 5961 fps=320 q=25.0 size=   27136kB time=00:03:55.88 bitrate= 942.4kbits/s speed=12.7x    frame= 6119 fps=320 q=25.0 size=   27904kB time=00:04:02.20 bitrate= 943.8kbits/s speed=12.7x    frame= 6268 fps=319 q=25.0 size=   28672kB time=00:04:08.16 bitrate= 946.5kbits/s speed=12.6x    frame= 6450 fps=320 q=26.0 size=   29696kB time=00:04:15.44 bitrate= 952.4kbits/s speed=12.7x    frame= 6623 fps=321 q=25.0 size=   30208kB time=00:04:22.36 bitrate= 943.2kbits/s speed=12.7x    frame= 6807 fps=322 q=26.0 size=   31488kB time=00:04:29.72 bitrate= 956.4kbits/s speed=12.8x    frame= 7016 fps=324 q=25.0 size=   32000kB time=00:04:38.08 bitrate= 942.7kbits/s speed=12.9x    frame= 7170 fps=324 q=24.0 size=   32512kB time=00:04:44.24 bitrate= 937.0kbits/s speed=12.8x    frame= 7303 fps=322 q=24.0 size=   33024kB time=00:04:49.56 bitrate= 934.3kbits/s speed=12.8x    frame= 7437 fps=321 q=24.0 size=   33792kB time=00:04:54.92 bitrate= 938.6kbits/s speed=12.7x    frame= 7561 fps=320 q=21.0 size=   34304kB time=00:04:59.88 bitrate= 937.1kbits/s speed=12.7x    frame= 7653 fps=317 q=23.0 size=   34560kB time=00:05:03.56 bitrate= 932.7kbits/s speed=12.6x    frame= 7741 fps=314 q=24.0 size=   35072kB time=00:05:07.08 bitrate= 935.6kbits/s speed=12.5x    frame= 7861 fps=312 q=25.0 size=   36096kB time=00:05:11.88 bitrate= 948.1kbits/s speed=12.4x    frame= 8014 fps=312 q=25.0 size=   37120kB time=00:05:18.00 bitrate= 956.2kbits/s speed=12.4x    frame= 8185 fps=313 q=25.0 size=   37632kB time=00:05:24.84 bitrate= 949.0kbits/s speed=12.4x    frame= 8373 fps=314 q=24.0 size=   38144kB time=00:05:32.36 bitrate= 940.2kbits/s speed=12.5x    frame= 8571 fps=315 q=23.0 size=   38912kB time=00:05:40.28 bitrate= 936.8kbits/s speed=12.5x    frame= 8769 fps=317 q=22.0 size=   39424kB time=00:05:48.20 bitrate= 927.5kbits/s speed=12.6x    frame= 8973 fps=318 q=21.0 size=   39936kB time=00:05:56.36 bitrate= 918.0kbits/s speed=12.6x    frame= 9174 fps=320 q=19.0 size=   40192kB time=00:06:04.40 bitrate= 903.5kbits/s speed=12.7x    frame= 9212 fps=319 q=-1.0 Lsize=   40555kB time=00:06:08.44 bitrate= 901.7kbits/s speed=12.8x    
+video:40517kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.092988%
+[libx264 @ 0x6a77480] frame I:54    Avg QP:17.76  size: 20516
+[libx264 @ 0x6a77480] frame P:9158  Avg QP:21.06  size:  4409
+[libx264 @ 0x6a77480] mb I  I16..4:  9.9%  0.0% 90.1%
+[libx264 @ 0x6a77480] mb P  I16..4:  3.9%  0.0%  0.0%  P16..4: 72.7%  0.0%  0.0%  0.0%  0.0%    skip:23.4%
+[libx264 @ 0x6a77480] final ratefactor: 19.33
+[libx264 @ 0x6a77480] coded y,uvDC,uvAC intra: 54.9% 52.3% 26.3% inter: 37.1% 21.7% 3.2%
+[libx264 @ 0x6a77480] i16 v,h,dc,p: 47% 25% 15% 12%
+[libx264 @ 0x6a77480] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 24%  8%  7%  6%  6%  7%  6%  8%
+[libx264 @ 0x6a77480] i8c dc,h,v,p: 42% 22% 28%  9%
+[libx264 @ 0x6a77480] kb/s:900.75
+
+
+
+---------------------------------------------
+Mobile Processed! Relocating moov atom ...
+---------------------------------------------
+
+/usr/bin/qt-faststart /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.mob.nomob.mp4 /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.mob.mp4
+ftyp          0 32
+free         32 8
+mdat         40 41489267
+moov   41489307 38531
+ patching stco atom...
+ writing ftyp atom...
+ writing moov atom...
+ copying rest of file...
+
+
+---------------------------------------------
+Not converting to WEBM/360p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Not converting to WEBM/480p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Not converting to WEBM/720p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Not converting to WEBM/1080p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Not converting to OGV/360p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Not converting to OGV/480p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Not converting to OGV/720p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Not converting to OGV/1080p (disabled in admin)!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Extracting large thumbnail (640x480)
+---------------------------------------------
+
+/usr/bin/ffmpeg -ss 63 -itsoffset -1 -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4" -vframes 1  -filter:v "scale=iw*min(640/iw\,360/ih):ih*min(640/iw\,360/ih),pad=640:360:(640-iw)/2:(360-ih)/2" -y "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/out/%03d.jpg"
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+[libdav1d @ 0x5ba6140] libdav1d 0.8.1-29-gecb0074
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    creation_time   : 2020-10-13T10:11:43.000000Z
+  Duration: 00:06:08.48, start: 0.000000, bitrate: 958 kb/s
+    Stream #0:0(und): Video: av1 (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1280x720 [SAR 1:1 DAR 16:9], 18 kb/s, 25 fps, 25 tbr, 12800 tbn, 12800 tbc (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+[libdav1d @ 0x5bccd40] libdav1d 0.8.1-29-gecb0074
+Stream mapping:
+  Stream #0:0 -> #0:0 (av1 (libdav1d) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x682a780] deprecated pixel format used, make sure you did set range correctly
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/out/%03d.jpg':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    encoder         : Lavf58.65.101
+    Stream #0:0(und): Video: mjpeg, yuvj420p(pc, bt709, progressive), 640x360 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 25 fps, 25 tbn (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=5.6 size=N/A time=00:00:00.04 bitrate=N/A speed=0.32x    frame=    1 fps=0.0 q=5.6 Lsize=N/A time=00:00:00.04 bitrate=N/A speed=0.295x
+video:20kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+Copying thumb /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/out/001.jpg -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/0.jpg!
+
+
+
+---------------------------------------------
+Extracting smaller thumbnails (320x240)
+---------------------------------------------
+
+/usr/bin/ffmpeg -ss 63 -itsoffset -1 -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4" -vframes 1  -filter:v "scale=iw*min(320/iw\,180/ih):ih*min(320/iw\,180/ih),pad=320:180:(320-iw)/2:(180-ih)/2" -y "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/out/%03d.jpg"
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+[libdav1d @ 0x5bbc140] libdav1d 0.8.1-29-gecb0074
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    creation_time   : 2020-10-13T10:11:43.000000Z
+  Duration: 00:06:08.48, start: 0.000000, bitrate: 958 kb/s
+    Stream #0:0(und): Video: av1 (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1280x720 [SAR 1:1 DAR 16:9], 18 kb/s, 25 fps, 25 tbr, 12800 tbn, 12800 tbc (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+[libdav1d @ 0x5be2d40] libdav1d 0.8.1-29-gecb0074
+Stream mapping:
+  Stream #0:0 -> #0:0 (av1 (libdav1d) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x6840780] deprecated pixel format used, make sure you did set range correctly
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/out/%03d.jpg':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    encoder         : Lavf58.65.101
+    Stream #0:0(und): Video: mjpeg, yuvj420p(pc, bt709, progressive), 320x180 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 25 fps, 25 tbn (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=4.4 size=N/A time=00:00:00.04 bitrate=N/A speed=0.362x    frame=    1 fps=0.0 q=4.4 Lsize=N/A time=00:00:00.04 bitrate=N/A speed=0.334x
+video:10kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+Copying thumb /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/out/001.jpg -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/1.jpg!
+
+/usr/bin/ffmpeg -ss 64 -itsoffset -1 -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4" -vframes 1  -filter:v "scale=iw*min(320/iw\,180/ih):ih*min(320/iw\,180/ih),pad=320:180:(320-iw)/2:(180-ih)/2" -y "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/out/%03d.jpg"
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+[libdav1d @ 0x5bbc140] libdav1d 0.8.1-29-gecb0074
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    creation_time   : 2020-10-13T10:11:43.000000Z
+  Duration: 00:06:08.48, start: 0.000000, bitrate: 958 kb/s
+    Stream #0:0(und): Video: av1 (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1280x720 [SAR 1:1 DAR 16:9], 18 kb/s, 25 fps, 25 tbr, 12800 tbn, 12800 tbc (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+[libdav1d @ 0x5be2d40] libdav1d 0.8.1-29-gecb0074
+Stream mapping:
+  Stream #0:0 -> #0:0 (av1 (libdav1d) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x6840780] deprecated pixel format used, make sure you did set range correctly
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/out/%03d.jpg':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    encoder         : Lavf58.65.101
+    Stream #0:0(und): Video: mjpeg, yuvj420p(pc, bt709, progressive), 320x180 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 25 fps, 25 tbn (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=4.4 size=N/A time=00:00:00.04 bitrate=N/A speed=0.362x    frame=    1 fps=0.0 q=4.4 Lsize=N/A time=00:00:00.04 bitrate=N/A speed=0.334x
+video:10kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+[libdav1d @ 0x6697140] libdav1d 0.8.1-29-gecb0074
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    creation_time   : 2020-10-13T10:11:43.000000Z
+  Duration: 00:06:08.48, start: 0.000000, bitrate: 958 kb/s
+    Stream #0:0(und): Video: av1 (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1280x720 [SAR 1:1 DAR 16:9], 18 kb/s, 25 fps, 25 tbr, 12800 tbn, 12800 tbc (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+[libdav1d @ 0x66bdd40] libdav1d 0.8.1-29-gecb0074
+Stream mapping:
+  Stream #0:0 -> #0:0 (av1 (libdav1d) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x731b780] deprecated pixel format used, make sure you did set range correctly
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/out/%03d.jpg':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    encoder         : Lavf58.65.101
+    Stream #0:0(und): Video: mjpeg, yuvj420p(pc, bt709, progressive), 320x180 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 25 fps, 25 tbn (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=4.4 size=N/A time=00:00:00.04 bitrate=N/A dup=0 drop=1 speed=0.236x    frame=    1 fps=0.0 q=4.4 Lsize=N/A time=00:00:00.04 bitrate=N/A dup=0 drop=2 speed=0.224x
+video:10kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+Copying thumb /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/out/001.jpg -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/2.jpg!
+
+/usr/bin/ffmpeg -ss 66 -itsoffset -1 -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4" -vframes 1  -filter:v "scale=iw*min(320/iw\,180/ih):ih*min(320/iw\,180/ih),pad=320:180:(320-iw)/2:(180-ih)/2" -y "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/out/%03d.jpg"
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+[libdav1d @ 0x5bbc140] libdav1d 0.8.1-29-gecb0074
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    creation_time   : 2020-10-13T10:11:43.000000Z
+  Duration: 00:06:08.48, start: 0.000000, bitrate: 958 kb/s
+    Stream #0:0(und): Video: av1 (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1280x720 [SAR 1:1 DAR 16:9], 18 kb/s, 25 fps, 25 tbr, 12800 tbn, 12800 tbc (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+[libdav1d @ 0x5be2d40] libdav1d 0.8.1-29-gecb0074
+Stream mapping:
+  Stream #0:0 -> #0:0 (av1 (libdav1d) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x6840780] deprecated pixel format used, make sure you did set range correctly
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/out/%03d.jpg':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    encoder         : Lavf58.65.101
+    Stream #0:0(und): Video: mjpeg, yuvj420p(pc, bt709, progressive), 320x180 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 25 fps, 25 tbn (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=4.4 size=N/A time=00:00:00.04 bitrate=N/A speed=0.362x    frame=    1 fps=0.0 q=4.4 Lsize=N/A time=00:00:00.04 bitrate=N/A speed=0.334x
+video:10kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+[libdav1d @ 0x6697140] libdav1d 0.8.1-29-gecb0074
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    creation_time   : 2020-10-13T10:11:43.000000Z
+  Duration: 00:06:08.48, start: 0.000000, bitrate: 958 kb/s
+    Stream #0:0(und): Video: av1 (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1280x720 [SAR 1:1 DAR 16:9], 18 kb/s, 25 fps, 25 tbr, 12800 tbn, 12800 tbc (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+[libdav1d @ 0x66bdd40] libdav1d 0.8.1-29-gecb0074
+Stream mapping:
+  Stream #0:0 -> #0:0 (av1 (libdav1d) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x731b780] deprecated pixel format used, make sure you did set range correctly
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/out/%03d.jpg':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    encoder         : Lavf58.65.101
+    Stream #0:0(und): Video: mjpeg, yuvj420p(pc, bt709, progressive), 320x180 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 25 fps, 25 tbn (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=4.4 size=N/A time=00:00:00.04 bitrate=N/A dup=0 drop=1 speed=0.236x    frame=    1 fps=0.0 q=4.4 Lsize=N/A time=00:00:00.04 bitrate=N/A dup=0 drop=2 speed=0.224x
+video:10kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+[libdav1d @ 0x608d140] libdav1d 0.8.1-29-gecb0074
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    creation_time   : 2020-10-13T10:11:43.000000Z
+  Duration: 00:06:08.48, start: 0.000000, bitrate: 958 kb/s
+    Stream #0:0(und): Video: av1 (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1280x720 [SAR 1:1 DAR 16:9], 18 kb/s, 25 fps, 25 tbr, 12800 tbn, 12800 tbc (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+[libdav1d @ 0x60b3d40] libdav1d 0.8.1-29-gecb0074
+Stream mapping:
+  Stream #0:0 -> #0:0 (av1 (libdav1d) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x6d11780] deprecated pixel format used, make sure you did set range correctly
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/out/%03d.jpg':
+  Metadata:
+    major_brand     : dash
+    minor_version   : 0
+    compatible_brands: iso6av01mp41
+    encoder         : Lavf58.65.101
+    Stream #0:0(und): Video: mjpeg, yuvj420p(pc, bt709, progressive), 320x180 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 25 fps, 25 tbn (default)
+    Metadata:
+      creation_time   : 2020-10-13T10:11:43.000000Z
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+      encoder         : Lavc58.119.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=4.2 size=N/A time=00:00:00.04 bitrate=N/A speed=0.145x    frame=    1 fps=0.0 q=4.2 Lsize=N/A time=00:00:00.04 bitrate=N/A speed=0.142x
+video:10kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+Copying thumb /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/out/001.jpg -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/3.jpg!
+
+
+Generating thumbnail preview video
+
+
+/usr/bin/ffmpeg -ss 5 -t 3 -i /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.360p.mp4 -y -an -filter_complex "scale=iw*min(640/iw\,360/ih):ih*min(640/iw\,360/ih),pad=640:360:(640-iw)/2:(360-ih)/2" /home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/ece3ab18a8a35d2e8ad389714e08ff28.mp4
+
+
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.360p.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.65.101
+  Duration: 00:06:08.48, start: 0.000000, bitrate: 284 kb/s
+    Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709), 640x360 [SAR 1:1 DAR 16:9], 282 kb/s, 25 fps, 25 tbr, 12800 tbn, 50 tbc (default)
+    Metadata:
+      handler_name    : ISO Media file produced by Google Inc.
+      vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 (h264) -> scale
+  pad -> Stream #0:0 (libx264)
+Press [q] to stop, [?] for help
+[libx264 @ 0x65bc340] using SAR=1/1
+[libx264 @ 0x65bc340] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX
+[libx264 @ 0x65bc340] profile High, level 3.0, 4:2:0, 8-bit
+[libx264 @ 0x65bc340] 264 - core 161 r3040 35417dc - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=11 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/ece3ab18a8a35d2e8ad389714e08ff28.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 640x360 [SAR 1:1 DAR 16:9], q=2-31, 25 fps, 12800 tbn (default)
+    Metadata:
+      encoder         : Lavc58.119.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=    1 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A speed=   0x    frame=   75 fps=0.0 q=-1.0 Lsize=     144kB time=00:00:02.88 bitrate= 408.6kbits/s speed=7.18x
+video:142kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 1.221971%
+[libx264 @ 0x65bc340] frame I:2     Avg QP:21.44  size: 21208
+[libx264 @ 0x65bc340] frame P:19    Avg QP:23.59  size:  3430
+[libx264 @ 0x65bc340] frame B:54    Avg QP:28.07  size:   686
+[libx264 @ 0x65bc340] consecutive B-frames:  2.7%  0.0% 12.0% 85.3%
+[libx264 @ 0x65bc340] mb I  I16..4:  5.9% 62.8% 31.4%
+[libx264 @ 0x65bc340] mb P  I16..4:  1.1%  4.0%  1.0%  P16..4: 39.7% 13.8%  5.5%  0.0%  0.0%    skip:34.8%
+[libx264 @ 0x65bc340] mb B  I16..4:  0.2%  0.4%  0.0%  B16..8: 26.1%  3.4%  0.3%  direct: 0.9%  skip:68.7%  L0:40.1% L1:53.0% BI: 6.9%
+[libx264 @ 0x65bc340] 8x8 transform intra:63.5% inter:74.1%
+[libx264 @ 0x65bc340] coded y,uvDC,uvAC intra: 68.0% 60.4% 27.4% inter: 5.3% 4.7% 0.2%
+[libx264 @ 0x65bc340] i16 v,h,dc,p: 24% 36% 14% 25%
+[libx264 @ 0x65bc340] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 19% 18%  6%  6%  7%  7%  6%  8%
+[libx264 @ 0x65bc340] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 35% 19% 11%  5%  6%  8%  5%  6%  5%
+[libx264 @ 0x65bc340] i8c dc,h,v,p: 53% 19% 22%  5%
+[libx264 @ 0x65bc340] Weighted P-Frames: Y:21.1% UV:5.3%
+[libx264 @ 0x65bc340] ref P L0: 70.0%  8.0% 17.9%  3.8%  0.2%
+[libx264 @ 0x65bc340] ref B L0: 91.1%  8.5%  0.4%
+[libx264 @ 0x65bc340] ref B L1: 98.5%  1.5%
+[libx264 @ 0x65bc340] kb/s:385.73
+
+Generating player preview thumbnails
+
+
+/usr/local/bin/php /home/yiaapc5/public_html/f_modules/m_frontend/m_file/thumbnail_preview.php -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/v/7f5968243f63d293c6d55725ea8be027.360p.mp4" -o "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/p/7f5968243f63d293c6d55725ea8be027/" -t 3
+
+
+Process completed. Check the output directory '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/2410868389/t/2656953133/p/7f5968243f63d293c6d55725ea8be027' for VTT file and images
+
+
+---------------------------------------------
+Executing update query: UPDATE `db_videofiles` SET `has_preview`='0', `thumb_preview`='1', `file_mobile`='1', `file_hd`='1', `file_duration`='368.48' WHERE `file_key`='2656953133' LIMIT 1;
+---------------------------------------------
+
+
+
+---------------------------------------------
+Database data updated!
+---------------------------------------------
+
+
+
+---------------------------------------------
+Deleting source video /home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/2410868389/v/1614549761.mp4
+---------------------------------------------
+

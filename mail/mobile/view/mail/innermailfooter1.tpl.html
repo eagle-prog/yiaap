@@ -1,0 +1,30 @@
+ <div class="footer_flex">
+
+
+
+<div class="mail_header_right footer_header"> <a href="{url:(mail/home)}" class="topbarHome">
+                <div class="header_iconbox">
+                    <div class="header_icon"><img src="images/home_icon.png"></div>
+                    <div class="header_icontxt">Home</div>
+                </div></a>  <a href="{url:(mail/replylink/newmail/1/1/m)}" class="topbarHome">
+                <div class="header_iconbox">
+                    <div class="header_icon"><img src="images/email_icon.png"></div>
+                    <div class="header_icontxt">{cfn:getmessage(764)}</div>
+                </div>
+            </a>
+    <a href="{url:(mail/mailbox/1)}" class="topbarHome">
+                <div class="header_iconbox">
+                    <div class="header_icon"><img src="images/inbox_icon.png"></div>
+                    <div class="header_icontxt">{cfn:getmessage(19)}</div>
+{if($unreadcount!=0)}
+                    <div class="header_iconcount"><span>{cfn:getunreadcountnew($uid,1)}</span></div>{endif}
+                </div>
+            </a>
+            <!--<a class="topbarMenu">
+                <div class="header_iconbox">
+                    <div class="header_icon"><img src="images/menu_icon.png"></div>
+                    <div class="header_icontxt">{cfn:getmessage(762)}</div>
+                </div></a>-->
+        </div>
+        </div>
+<!--<div class="ftr">{noescape:$footer}</div>-->

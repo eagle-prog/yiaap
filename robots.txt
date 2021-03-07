@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /f_core/
+
+# Sitemap: http://www.yourdomain.com/f_data/data_sitemaps/sm_global/sitemap.xml
+# Sitemap: http://www.yourdomain.com/f_data/data_sitemaps/sm_video/sitemap-video.xml
+# Sitemap: http://www.yourdomain.com/f_data/data_sitemaps/sm_image/sitemap-image.xml

@@ -1,0 +1,66 @@
+#channel-mod-tabs .switch-slide {
+	margin: 0;
+}
+#channel-mod-tabs .responsive-accordion-head > div.place-left {
+	line-height: 30px;
+}
+#cb-response {
+	margin-bottom: 20px;
+}
+#channel-own-photos {
+	margin-top: 10px;
+}
+#channel-own-photos li {
+	float: left;
+	diplay: inline-block;
+}
+#channel-own-photos li img {
+	border: 1px solid #ccc;
+	width: 100%;
+}
+#channel-own-photos li img.own {
+	border: 1px solid red;
+}
+#channel-crop-actions {
+	float: left;
+	margin: 0px 0 10px 10px;
+}
+.crop-upload {
+	margin-right: 0px;
+}
+.crop-upload::before, .crop-upload:hover::before {
+	content: "\e60a";
+}
+.crop-default::before,  .crop-default:hover::before {
+	content: "\f03a";
+}
+.inline_button {
+    position: relative;
+    display: inline-block;
+    color: #505050;
+    font-size: 12px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+    padding: 0px 16px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    line-height: 23px;
+    margin-left: 10px;
+}
+.inline_button:hover, .inline_button:hover i {
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+    color: #7abbec;
+}
+.inline_button a {
+    margin-left: 23px;
+    color: #505050;
+}
+.inline_button i {
+    font-size: 16px;
+    position: absolute;
+    top: 3px;
+    left: 14px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}

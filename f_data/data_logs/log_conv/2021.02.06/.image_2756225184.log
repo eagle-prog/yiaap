@@ -1,0 +1,78 @@
+Input image: /home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/1134370236/i/1612626719.jpg
+
+Output location: /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/i/
+
+Transparent PNG detected!
+
+Copying image /home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/1134370236/i/1612626719.jpg -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/i/656d74c0dc12bbf6aeba2a34afdfd2eb.png
+
+
+Creating symlink /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/i/656d74c0dc12bbf6aeba2a34afdfd2eb.png -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/i/656d74c0dc12bbf6aeba2a34afdfd2eb.jpg
+
+
+Generating thumbnails...
+
+/usr/bin/ffmpeg -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/1134370236/i/1612626719.jpg" -vframes 1 -filter:v "scale=iw*min(320/iw\,180/ih):ih*min(320/iw\,180/ih),pad=320:180:(320-iw)/2:(180-ih)/2" -y "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2756225184/out/%03d.png"
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, image2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/1134370236/i/1612626719.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 29376 kb/s
+    Stream #0:0: Video: mjpeg (Baseline), yuvj420p(pc, bt470bg/unknown/unknown), 1280x720 [SAR 1:1 DAR 16:9], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (mjpeg (native) -> png (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x643c5c0] deprecated pixel format used, make sure you did set range correctly
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2756225184/out/%03d.png':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: png, rgb24(pc, bt470bg/unknown/unknown, progressive), 320x180 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 25 fps, 25 tbn
+    Metadata:
+      encoder         : Lavc58.119.100 png
+frame=    1 fps=0.0 q=0.0 size=N/A time=00:00:00.00 bitrate=N/A speed=   0x    frame=    1 fps=0.0 q=-0.0 Lsize=N/A time=00:00:00.04 bitrate=N/A speed=1.21x
+video:100kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+Copying thumb /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2756225184/out/001.png -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2756225184/1.png
+
+Creating thumbnail symlink /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2756225184/1.png -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2756225184/1.jpg
+
+/usr/bin/ffmpeg -i "/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/1134370236/i/1612626719.jpg" -vframes 1 -filter:v "scale=iw*min(640/iw\,360/ih):ih*min(640/iw\,360/ih),pad=640:360:(640-iw)/2:(360-ih)/2" -y "/home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2756225184/out/%03d.png"
+ffmpeg version N-55863-g9f38fac053-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 8 (Debian 8.3.0-6)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-debug --disable-ffplay --disable-indev=sndio --disable-outdev=sndio --cc=gcc --enable-fontconfig --enable-frei0r --enable-gnutls --enable-gmp --enable-libgme --enable-gray --enable-libaom --enable-libfribidi --enable-libass --enable-libvmaf --enable-libfreetype --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg --enable-librubberband --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libvorbis --enable-libopus --enable-libtheora --enable-libvidstab --enable-libvo-amrwbenc --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libdav1d --enable-libxvid --enable-libzvbi --enable-libzimg
+  libavutil      56. 64.100 / 56. 64.100
+  libavcodec     58.119.100 / 58.119.100
+  libavformat    58. 65.101 / 58. 65.101
+  libavdevice    58. 11.103 / 58. 11.103
+  libavfilter     7.100.100 /  7.100.100
+  libswscale      5.  8.100 /  5.  8.100
+  libswresample   3.  8.100 /  3.  8.100
+  libpostproc    55.  8.100 / 55.  8.100
+Input #0, image2, from '/home/yiaapc5/public_html/f_data/data_userfiles/user_uploads/1134370236/i/1612626719.jpg':
+  Duration: 00:00:00.04, start: 0.000000, bitrate: 29376 kb/s
+    Stream #0:0: Video: mjpeg (Baseline), yuvj420p(pc, bt470bg/unknown/unknown), 1280x720 [SAR 1:1 DAR 16:9], 25 fps, 25 tbr, 25 tbn, 25 tbc
+Stream mapping:
+  Stream #0:0 -> #0:0 (mjpeg (native) -> png (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x6b835c0] deprecated pixel format used, make sure you did set range correctly
+Output #0, image2, to '/home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2756225184/out/%03d.png':
+  Metadata:
+    encoder         : Lavf58.65.101
+    Stream #0:0: Video: png, rgb24(pc, bt470bg/unknown/unknown, progressive), 640x360 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 25 fps, 25 tbn
+    Metadata:
+      encoder         : Lavc58.119.100 png
+frame=    1 fps=0.0 q=0.0 size=N/A time=00:00:00.00 bitrate=N/A speed=N/A    frame=    1 fps=0.0 q=-0.0 Lsize=N/A time=00:00:00.04 bitrate=N/A speed=0.722x
+video:356kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+Copying thumb /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2756225184/out/001.png -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2756225184/0.png
+
+Creating thumbnail symlink /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2756225184/0.png -> /home/yiaapc5/public_html/f_data/data_userfiles/user_media/1134370236/t/2756225184/0.jpg
+

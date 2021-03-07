@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>{cfn:getmessage(308)}</title>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="css/mob-style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/new_mobile_style.css" type="text/css" media="screen" />
+
+<style type="text/css">
+.textbox_border_style { border:1px solid #ccc !important; height:13px !important; width:150px !important;}
+.forgotpasswordtitle { font-size:18px !important; color:#333; padding-left:0 !important}
+</style>
+
+
+
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script type="text/javascript">
+
+  var onloadCallback = function() {
+
+   
+
+  };
+
+</script>
+
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+
+    async defer>
+
+</script>
+
+
+<script language="javascript" type="text/javascript">
+function getlower_count(password)
+{
+if ( password.match(/[a-z]/))
+return 1;
+else
+return 0;
+}
+function getupper_count(password)
+{
+if (password.match(/[A-Z]/) )
+return 1;
+else
+return 0;
+}
+function getnumber_count(password)
+{
+ 
+
+var numbers = new  Array()
+
+ var l=0;
+for(var x = 0,length = password.length; x < length; x++)
+ {
+    var s = password.charAt(x);
+//alert(s);
+    var flag=0;
+    if (isInteger(s))
+    {
+   //alert("cvvv");
+    for(var j=0;j<numbers.length;j++)
+    {
+   
+    if(s==numbers[j])
+    {
+    flag=1;
+   
+   
+    }
+   
+   
+    }
+    if(flag==0)
+    {
+   
+    numbers[l]=s;l++;
+    }
+   
+   
+}
+var t=numbers[l];
+
+}
+var v=numbers.length;
+//alert(v);
+if(v>=3)
+return 2;
+else if(v==2)
+return 1;
+else if(v==1)
+return 1;
+else
+return 0;
+}
+
+function getspecialch_count(password)
+{
+ 
+
+var special = new  Array()
+
+ var l=0;
+for(var x = 0,length = password.length; x < length; x++)
+ {
+    var s = password.charAt(x);
+    var flag=0;
+    if (isSpclChar(s) )
+    {
+
+    for(var j=0;j<special.length;j++)
+    {
+   
+    if(s==special[j])
+    {
+    flag=1;
+   
+   
+    }
+   
+   
+    }
+    if(flag==0)
+    {
+   
+    special[l]=s;l++;
+    }
+   
+   
+}
+
+
+}
+var v=special.length;
+
+return v;
+}
+
+
+
+function isSpclChar(s){
+var iChars = "!@#$%^&*()+=-[]\\\';,./{}|\":<>?";
+                for (var i = 0; i < s.length; i++) {
+                                if (iChars.indexOf(s.charAt(i)) != -1) {
+                              
+                                return true;
+                }
+                else
+                return false;
+                                }
+}
+
+
+
+
+function isInteger(val)
+                {
+                  //alert(val.length);
+                  if(val==null)
+                    {
+                    //alert(val);
+                    return false;
+                    }
+                if (val.length==0)
+                    {
+                   // alert(val);
+                    return false;
+                    }
+                 if (val.length == 0)
+                     {
+                     return false;
+                     }
+                for (var i = 0; i < val.length; i++)
+                    {
+                    var ch = val.charAt(i)
+//alert(ch);
+                    if (i == 0 && ch == "-")
+                        {
+                        continue
+                        }
+                    if (ch < "0" || ch > "9")
+                        {
+                        return false
+                        }
+                    }
+                return true
+            }
+
+
+function echeck(str) {
+
+		var at="@"
+		var dot="."
+		var lat=str.indexOf(at)
+		var lstr=str.length
+		var ldot=str.indexOf(dot)
+		if (str.indexOf(at)==-1){
+		   alert("{cfn:getmessage(334)}")
+		   return false
+		}
+
+		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
+		   alert("{cfn:getmessage(334)}")
+		   return false
+		}
+
+		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
+		    alert("{cfn:getmessage(334)}")
+		    return false
+		}
+
+		 if (str.indexOf(at,(lat+1))!=-1){
+		    alert("{cfn:getmessage(334)}")
+		    return false
+		 }
+
+		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
+		    alert("{cfn:getmessage(334)}")
+		    return false
+		 }
+
+		 if (str.indexOf(dot,(lat+2))==-1){
+		    alert("{cfn:getmessage(334)}")
+		    return false
+		 }
+		
+		 if (str.indexOf(" ")!=-1){
+		    alert("{cfn:getmessage(334)}")
+		    return false
+		 }
+
+ 		 return true					
+	}
+   
+function checkpasswordStrength()
+{
+var password=document.getElementById("password").value;
+var lower=getlower_count(password);
+var upper=getupper_count(password); 
+var num_count=getnumber_count(password);
+var special=getspecialch_count(password);
+//alert(num_count);
+//var total=lower+upper+num_count+special;
+var length=password.length;
+//alert(length);
+if(length<8)
+	checkscore=0;
+	else if(length>=8)
+	{
+	    //if(lower==0 || upper==0 || num_count==0 || special==0 )
+	    //checkscore=0;
+	    //else
+	    checkscore=4;
+	}
+	else
+	{
+	}
+    //alert("ssss");
+//var checkscore=document.getElementById("pwdcnt").value;
+//alert(checkscore);
+if(checkscore==0)
+{
+    //alert("Password must contain a minimum of  8 characters and must include alteast  1 special character,1 numeric,1 uppercase,1 lowercase.Please re-enter password again");
+alert("Password must contain a minimum of  8 characters. Please re-enter password again");
+ document.getElementById("password").value='';  
+ document.getElementById("cpassword").value='';
+ var f=document.getElementById("password");
+ f.focus();
+}
+}
+</script>
+</head>
+
+<body {if($mob==0)}style="background:#e3e3e3"; width:360px; {endif} class="reg_page">
+<div {if($mob==0)}style="width:360px; background:url(../images/contentbg.gif) repeat scroll 0 0 #2A3848; overflow:hidden" {endif}>
+<div class="header">
+	<div class="header_inner">
+		<img src="images/logo.png" alt="Logo" class="left" />
+<a href="{url:(index/index)}" title="{cfn:getmessage(309)}"  class="darkSignup right">{cfn:getmessage(309)}</a>
+	</div>
+</div>
+
+{formstart:registration:{url:(index/registration)}:POST}
+
+
+<div class="contentdiv">
+<div class="registration">
+<div class="mobile_advanced_maintitletd" style="float:left">{cfn:getmessage(308)}</div>
+{if($msg2!="")}<div class="clear"></div>
+<div class="messageerrdisplayred">{fn:nl2br($msg2)}</div>{endif}
+<div class="clear"></div>
+<div class="registrationiinner">
+<table cellpadding="0" cellspacing="0" border="0" width="100%" > 
+
+
+<tr >
+		<td align="left"  class="mobile_advanced_texttd">{cfn:getmessage(752)}<span id="mob_mandatory" class="mandatory">*</span></td>
+    </tr><tr>
+		<td align="left"  class="mobile_advanced_feildtd"><input type="text" name="name" id="name"
+			value="{$name}" autocomplete="off"></td>
+	</tr>
+
+<tr >
+		<td align="left"  class="mobile_advanced_texttd">{cfn:getmessage(122)}<span class="mandatory">*</span></td>
+     </tr><tr>
+		<td align="left" class="mobile_advanced_feildtd"><select name="gender" >
+			<option value="" selected="selected">{cfn:getmessage(136)}</option>
+			<option value="{cfn:getmessage(137)}" {if($gr==$m)} selected="selected" {endif}>{cfn:getmessage(137)}</option>
+			<option value="{cfn:getmessage(138)}" {if($gr==$f)} selected="selected" {endif}>{cfn:getmessage(138)}</option>
+		</select></td>
+	</tr>
+
+<tr >
+		<td align="left"  class="mobile_advanced_texttd">{cfn:getmessage(43)}<span class="mandatory">*</span></td>
+     </tr><tr>
+		<td align="left" class="display_inline_flex dob_fields"  ><select name="day">
+			<option value="" selected="selected">{cfn:getmessage(133)}</option>
+			{loopstart:DD:1000000}
+			<option value="{$DD[0]}" {if($day==$DD[0])} selected="selected" {endif}>{$DD[0]}</option>
+			{loopend:DD}
+		</select> 
+		
+		<select name="month" >
+			<option value="" selected="selected">{cfn:getmessage(134)}</option>
+			{loopstart:kkk:100}
+			<option value="{$kkk[0]}" {if($tt===$kkk[0])} selected="selected" {endif}>{$kkk[1]}</option>
+			{loopend:kkk}
+		</select> 
+		
+		<select name="year" >
+			<option value="" selected="selected">{cfn:getmessage(135)}</option>
+			
+			{loopstart:YY:1000000}
+			<option value="{$YY[0]}" {if($yr==$YY[0])} selected="selected" {endif}>{$YY[0]}</option>
+			{loopend:YY}
+
+
+		</select></td>
+	</tr>
+
+<tr >
+		<td align="left"  class="mobile_advanced_texttd">{cfn:getmessage(123)}<span class="mandatory">*</span></td>
+     </tr><tr>
+		<td align="left"  class="mobile_advanced_feildtd"><select name="country">
+			<option value="">{cfn:getmessage(139)}</option>
+			{loopstart:country:10000}
+			<option value="{$country[0]}"  {if($cntr==$country[0])} selected="selected" {endif}>{$country[0]}</option>
+			{loopend:country}
+		</select></td>
+	</tr>
+
+<tr >
+		<td align="left"  class="mobile_advanced_texttd">{cfn:getmessage(232)}<span class="mandatory">*</span></td>
+     </tr><tr>
+		<td align="left"  class="mobile_advanced_feildtd">
+		<select name="time_zone" >
+			<option value="">{cfn:getmessage(233)}</option>
+			{loopstart:timezone:10000}
+			<option value="{$timezone[0]}" {if($tzone==$timezone[0])} selected="selected" {endif}>&nbsp;({cfn:getmessage(353)}&nbsp;{$timezone[2]})&nbsp;{$timezone[1]}</option>
+			{loopend:timezone}
+		</select></td>
+	</tr>
+
+<tr>
+		<td align="left"  class="mobile_advanced_texttd">{cfn:getmessage(6)}<span
+			class="mandatory">*</span></td>
+     </tr><tr>
+		<td align="left"  class="mobile_advanced_feildtd"><input type="text" name="loginname" id="loginname"
+			value="{$loginname}" maxlength="32" autocomplete='off'></td>
+	</tr>
+
+<tr>
+		
+		<td align="left"  class="mobile_advanced_texttd blue_txt">{$emailextension}&nbsp;</td>
+    <td align="left"  class="mobile_advanced_texttd">&nbsp;</td>
+	</tr>
+
+
+<tr>
+<td  align="left"  class="mobile_advanced_texttd">{cfn:getmessage(7)}<span
+			class="mandatory">*</span></td>
+     </tr><tr>
+<td  align="left"  class="mobile_advanced_feildtd"> <input type="password" name="password" id="password" value="" maxlength="32" > 
+</td></tr>
+<tr >
+		<td align="left"  class="mobile_advanced_texttd">{cfn:getmessage(117)}<span class="mandatory">*</span></td>
+     </tr><tr>
+		<td align="left"  class="mobile_advanced_feildtd"><input type="password" name="cpassword" id="cpassword"
+			onKeyUp="checkpasswordStrength();" value="" maxlength="32"></td>
+	</tr>
+
+{if($msg1!="")}	
+	<tr >
+		<td></td>
+		<td><span>{$msg1}</span></td>
+	</tr>
+{endif}
+
+<tr >
+		<td align="left"  class="mobile_advanced_texttd">{cfn:getmessage(120)}<span class="mandatory">*</span></td>
+     </tr><tr>
+		<td align="left"  class="mobile_advanced_feildtd"><select name="question" id="question"  >
+			<option value="" selected="selected">{cfn:getmessage(140)}</option>
+			<option value="{cfn:getmessage(141)}" {if($qst==$f1)} selected="selected" {endif}>{cfn:getmessage(141)}</option>
+			<option value="{cfn:getmessage(142)}" {if($qst==$f2)} selected="selected" {endif}>{cfn:getmessage(142)}</option>
+			<option value="{cfn:getmessage(143)}" {if($qst==$f3)} selected="selected" {endif}>{cfn:getmessage(143)}</option>
+			<option value="{cfn:getmessage(144)}" {if($qst==$f4)} selected="selected" {endif}>{cfn:getmessage(144)}</option>
+			<option value="{cfn:getmessage(145)}" {if($qst==$f5)} selected="selected" {endif}>{cfn:getmessage(145)}</option>
+			
+		</select></td>
+	</tr>
+<tr><td colspan="2">
+	
+	<tr >
+		<td align="left"  class="mobile_advanced_texttd"><div id="answerfield1"><br>{cfn:getmessage(121)}<span
+			class="mandatory">*</span></div></td>
+        </tr><tr>
+		<td align="left"  class="mobile_advanced_feildtd"><div id="answerfield2" ><br><input type="text" name="answer" id="answer" value="{$answer}" autocomplete="off"></div></td>
+	</tr>
+
+<tr >
+
+		<td align="left"  class="mobile_advanced_texttd">{cfn:getmessage(272)}</td>
+    </tr><tr>
+		<td align="left"  class="mobile_advanced_feildtd"><input type="text" name="alternatemail" value="{$alternateemail}" id="alternatemail" autocomplete="off"></td>
+	</tr>
+
+<tr >
+
+		<td align="left"  class="mobile_advanced_texttd">{cfn:getmessage(783)}<span
+			class="mandatory">*</span></td>
+    </tr><tr>
+		<td align="left"  class="mobile_advanced_feildtd" valign="middle">
+			<!-- <input type="text" name="image" id="image" autocomplete="off">
+			<iframe src="{url:(index/captcha)}" marginheight="0" width="190" marginwidth="0" height="35" align="middle" frameborder="0" scrolling="no"></iframe> -->
+			<div class="g-recaptcha" data-sitekey="{$captcha_sitekey}"></div>
+		</td>
+	</tr>
+<tr><td >&nbsp;</td></tr>
+<tr >
+		<td>&nbsp;</td>
+    </tr><tr>
+		<td align="left"  class=""><button type="submit" name="submit" value="{cfn:getmessage(106)}" class="blue_button cursor_select" >{cfn:getmessage(106)}<span><i class="fa fa-check"></i></span></button>
+		
+		 <a  href="{url:(index/index)}" class="darkSignup cancel_btn" >{cfn:getmessage(267)}</a>
+		</td>
+	</tr>
+
+
+</table>	
+</div>
+{formend:registration}
+</div>
+<!--
+</table>
+<table width="100%" border="0" align="center"  >
+  <tr >
+    <td><div align="center"><span class="copyright">{$footer}</span></div></td>
+  </tr>
+</table>
+</div>
+</div>
+-->
+</div>
+<div class="ftr">{$footer}</div>
+</div>
+</body>
+</html>

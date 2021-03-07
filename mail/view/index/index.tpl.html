@@ -1,0 +1,275 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>{$servicename}</title>
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="PUBLIC">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" type="image/x-icon" href="/mail/favicon.ico">
+<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+
+<!-- <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'> --> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"> 
+<!--
+<link rel="stylesheet" href="css/slider/sangarSlider.css" type="text/css">
+<link rel="stylesheet" href="css/slider/default.css" type="text/css">
+    -->
+<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="css/home_slider/home_slider.css" type="text/css">
+<link rel="stylesheet" href="new_style.css" type="text/css">
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="ie.css" type="text/css" media="screen" />
+
+
+<style>
+.ieplaceholder{
+display:block;
+}
+.loginstitle{
+margin-bottom:50px;
+}
+</style>
+<![endif]--> 
+<!--[if IE 9]>
+<style>
+.ieplaceholder{
+display:block;
+}
+.loginstitle{
+margin-bottom:55px;
+}
+</style>
+
+<![endif]--> 
+<script type="text/javascript">
+if (parent.frames.length > 0) {
+   parent.location.href = self.document.location
+}
+function langdisplayfn()
+{
+document.getElementById("langdisplay").style.display="";
+}
+
+function langhidefn()
+{
+
+document.getElementById("langdisplay").style.display="none";
+}
+function setlangcookiefn(lang)
+{
+ SetCookie("lang_mail",lang,1);
+ window.location.reload();
+   } 
+  function SetCookie(name,value,days)
+ {
+
+ if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+
+}
+var ddmenuitem	= 0;
+var timeout	= 300;
+var closetimer	= 0;
+function mcancelclosetime()
+{
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+
+function mopen(id)
+{	
+	
+	// cancel close timer
+	mcancelclosetime();
+	// close old layer
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+	 ddmenuitem = document.getElementById(id);
+	 //alert(ddmenuitem);
+	 ddmenuitem.style.visibility = 'visible';
+}
+
+function mclose()
+{
+	if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+	
+}
+
+function mclosetime()
+{
+	closetimer = window.setTimeout(mclose, timeout);
+}
+</script> 
+
+<!-- Slider starts --> 
+    
+<script type="text/javascript" src="js/slider/jquery.min.js"></script> 
+<script type="text/javascript" src="js/slider/jquery.touchSwipe.min.js"></script> 
+<script type="text/javascript" src="js/slider/imagesloaded.min.js"></script> 
+<!-- <script type="text/javascript" src="js/slider/sangarSlider.min.js"></script> --> 
+<script type="text/javascript" src="js/home_slider/home_slider.js"></script> 
+<!-- <script type='text/javascript'>
+			jQuery(document).ready(function($) {
+				/**
+				 * identifier variable must be unique ID
+				 */
+				var sangar = $('.mainslider').sangarSlider({
+					pagination : 'none',
+					pauseOnHover: false,
+					fullWidth : true,
+                                        directionalNav: 'none',
+                                         
+					disableLoading: true,
+					animation : 'fade', // horizontal-slide, vertical-slide, fade
+					animationSpeed : 1000, // how fast animtions are
+					timer : true, // true or false to have the timer
+					//width : 850, // slideshow width
+        			fullHeight : true // slideshow height				
+				});
+			})		
+		</script> --> 
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+    
+<script>
+ 
+
+
+	    
+   
+   
+   
+   $(document).ready(function(e) {
+	   
+	   // centering div
+	   
+var loheight =  $('.loginindexform').outerHeight(true);
+var loHmargin = -(loheight /2);
+
+var lowidth =  $('.loginindexform').outerWidth(true);
+var loWmargin = -(lowidth /2);
+ //$('.loginindexform').css({"margin-left" : loWmargin, "margin-top": loHmargin});
+ //$('.loginindexform').css({"margin-top": loHmargin});
+
+ // centering main div ends
+ 
+ // centering error msg
+ var msgwidth = $('.errorindex').outerWidth();
+ var msgmargin = -(msgwidth /2);
+ $('.errorindex').css({"margin-left" : msgmargin});
+ 
+ 
+  var msgwidthsu = $('.succesindex').outerWidth();
+ var msgmarginsu = -(msgwidthsu /2);
+ $('.succesindex').css({"margin-left" : msgmarginsu});
+  // centering error msg ends
+ 
+}); 
+	     
+    </script>
+<body onLoad="document.login.username.focus();" class="bodyy">
+
+<!-- Slider starts --> 
+<!-- <div class="slider">
+ <div class='mainslider'>
+ <div class='sangar-content'>
+        <img src='images/slider/slide_3.jpg' />
+    </div>
+<div class='sangar-content'>
+        <img src='images/slider/slide_2.jpg' />
+    </div>
+<div class='sangar-content'>
+        <img src='images/slider/slide_1.jpg' />
+    </div>
+    </div>
+ </div> --> 
+<!-- Slider ends -->
+    <div class="page_wraper">
+<div class="loheader"></div>
+  <div class="loheaderinnew">
+    <div class="indexlogo left"> <a href="{url:(index/index)}"><img src="{$imgpath}"  border="0" ></a> </div>
+    <div class="right"> {if($signupvalue==1)} <a href="{url:(user/registration)}" title="{cfn:getmessage(350)}"  class="indexbtn radious5 indexbtnbg indexregisterbtn">{cfn:getmessage(350)}<span><i class="fa fa-user"></i></span></a> {endif}
+      <div class="selectLanguage right" style="margin-right:10px; margin-top:5px;">
+        <ul class="main_engines">
+          <li><a href="#"   onMouseOver="mopen('langdisplay')" onMouseOut="mclosetime()" style="text-decoration: none;" class="homepagelink">{cfn:getmessage(328)}</a>
+            <div style="clear:both;"></div>
+            <div id="langdisplay" class="roundDropdown" style="visibility:hidden;position:absolute;" onMouseOver="mcancelclosetime()" onMouseOut="mclosetime()" >
+              <div class="in"> <a  class="inactivetablink"  href="javascript:setlangcookiefn('{$defaultlang}')">{cfn:getmessage(329)}</a> {loopstart:lang:100} <a  class="inactivetablink" href="javascript:setlangcookiefn('{$lang[0]}')">{$lang[1]}</a> {loopend:lang} </div>
+            </div>
+              <span class="drop_down_icon"><i class="fa fa-sort-down"></i></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<div class="clear"></div>
+<div class="loginindexform">
+  <h3 class="lofinftilte robotothin">{cfn:getmessage(342)}</h3>
+  <div class="clear"></div>
+  <h4 class="loginstitle robotothin">{cfn:getmessage(343)}</h4>
+  <div class="indexfrmstart"> {formstart:login:{url:(index/logincheck)}:POST}
+    <div class="loginboxesindex">
+      <div class="loginbox_title">User Login</div>
+      {if($msg_type=="errlog")} <span class="messageerrdisplay errorindex msglogins " >{fn:nl2br($msg)}</span> {elseif($msg_type=="logout")} <span class="messageerrdisplay succesindex msglogins " >{fn:nl2br($msg)}</span> {endif}
+      <div class="lgbox radious5"><span class="input_icon"><i class="fa fa-user"></i></span><span class="ieplaceholder">{cfn:getmessage(6)}</span>
+        <input type="text" class="indexlogininput radious5" name="username" id="username" value="{$user}" required autocomplete="off" placeholder="{cfn:getmessage(6)}">
+      </div>
+      <div class="lgbox radious5"><span class="input_icon"><i class="fa fa-lock"></i></span><span class="ieplaceholder">{cfn:getmessage(7)}</span>
+        <input type="password" class="indexlogininput radious5" name="password" value="{$pass}" id="password"  required autocomplete="off" placeholder="{cfn:getmessage(7)}">
+      </div>
+         <a href="{url:(index/forgotpassword)}"  class="homepagelink fropaswrdend" title="{cfn:getmessage(264)}"> {cfn:getmessage(263)}</a>
+        <button type="submit" class="login_btn indexbtn radious5 indexbtnbg indexloginbtn" name="submit" value="{cfn:getmessage(9)}">{cfn:getmessage(9)}<span><i class="fa fa-envelope"></i></span></button>
+      <!--<input type="submit"  >-->
+    </div>
+    {formend:login} </div>
+</div>
+<div class="clear"></div>
+<div class="webmailWraplogn">
+  <div class="webmailWraplognpadin">
+     
+    {validate:login:isNotNull("username","{cfn:getmessage(103)}")}
+    {validate:login:isNotNull("password","{cfn:getmessage(104)}")} </div>
+</div>
+        <div class="footer_bottom ">
+    <span class="copyright">{$footer}</span>
+    </div>
+    </div><!-- page_wraper-->
+ <div class="home_slider_cover">
+     <ul class="home_slider">
+         <li class="home_slider_item">
+             <div class="home_slider_one">
+                 <img src="images/slider/webmail_home_1.png" alt="webmail">
+                 <div class="slider_bg_one"></div>
+             </div>             
+         </li>
+         <li class="home_slider_item">
+             <div class="home_slider_two">
+                 <img src="images/slider/webmail_home_2.png" alt="webmail">
+                 
+             </div>             
+         </li> 
+         <li class="home_slider_item">
+             <div class="home_slider_two">
+                 <img src="images/slider/webmail_home_3.png" alt="webmail">                  
+             </div>             
+         </li>
+     </ul>
+     <ul class="home_slider_nav">
+         <li class="slider_dots"></li>
+         <li class="slider_dots"></li>
+         <li class="slider_dots"></li>
+     </ul>
+</div>
+<div class="page_bg_bottom"></div>
+</body>
+</html>
