@@ -1,5 +1,9 @@
+.idea/
 f_data/data_sessions
 f_data/data_cache
+
 oasis/.idea
 oasis/.htaccess
 oasis/.htpasswd
+
+.htaccess
