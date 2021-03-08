@@ -14,18 +14,13 @@
 	<div class="sp-wrap bottom-border">
 	    <div class="sp-headings">
 		<ul>
-            <li><h1><a href="https://yiaap.com/videos" target="_blank">Yiaap</a></h1></li>
-            <li><h1><a href="https://yiaap.com/yo" target="_blank">Yo</a></h1></li>
-		    <li><h1><a href="https://yiaap.com/analyze" target="_blank">Analyze</a></h1></li>
-		    <li><h1><a href="https://yiaap.com/livestream" target="_blank">LiveStream</a></h1></li>
-            <li><h1><a href="https://vipleyo.com/live" target="_blank">livechat</a></h1></li>
-            <li><h1><a href="https://yiaap.com/go" target="_blank">Go</a></h1></li>
-		    <li><h1><a href="https://yiaap.com/mail" target="_blank">yMail</a></h1></li>
+            <li><h1><a href="https://yiaap.com/analyze" target="_blank">Analyze</a></h1></li>
+            <li><h1><a href="https://yiaap.com/mail" target="_blank">yMail</a></h1></li>
             <li><h1><a href="https://mydrive.yiaap.com/" target="_blank">yDrive</a></h1></li>
 		    <li><h1><a href="https://kali.yiaap.com/" target="_blank">Kali</a></h1></li>
-            <li><h1><a href="">Maps</a></h1></li>
-		   
-		  
+            <li><h1><a href="https://musica.yiaap.com/" target="_blank">Musica</a></h1></li>
+            <li><h1><a href="https://vipleyo.com/live" target="_blank">livechat</a></h1></li>
+            <li><h1><a href="https://chat.yiaap.com/" target="_blank">Start Yiaaping</a></h1></li>
 		</ul>
 	    </div>
       <br>
@@ -35,11 +30,8 @@
 	<div class="sp-wrap bottom-border">
 	    <div class="sp-headings">
 		<ul>
-		    <li><h1><a href="https://mega.vipleyo.com/" target="_blank">Mega</a></h1></li>
-            <li><h1><a href="https://vipleyo.com/eforce" target="_blank">eforce</a></h1></li>
-		    <li><h1><a href="https://vipleyo.com/efluencer" target="_blank">eFluencer</a></h1></li>
-		    
-		  
+		    <li><h1><a href="https://vipleyo.com/eforce" target="_blank">eforce</a></h1></li>
+		    		  
 		</ul>
 	    </div>
   </div>
