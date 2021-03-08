@@ -66,72 +66,7 @@ class FooterElement extends Element
             $data["HEAD"]['page_type'] == 'presentation') {
             return;
         }
-        $subsearch = "";
-        if (!empty($data['SUBSEARCH'])) {
-            $subsearch = "subsearch";
-        }
         ?>
-        <div class="<?=$subsearch ?> footer-element">
-        <?php
-        if (tl('footer_element_blog') != 'footer_element_blog') {
-            $output_flag = true;
-            ?>
-            - <a href="<?=B\directUrl('blog') ?>"><?=
-            tl('footer_element_blog') ?></a><?php
-        }
-        ?>
-        <?php
-        if (tl('footer_element_privacy') != 'footer_element_privacy') {
-            $output_flag = true;
-            ?>
-            - <a href="<?=B\directUrl('privacy') ?>"><?=
-            tl('footer_element_privacy') ?></a><?php
-        }
-        ?>
-        <?php
-        if (tl('footer_element_terms') != 'footer_element_terms') {
-            $output_flag = true;
-            ?>
-            - <a href="<?=B\directUrl('terms') ?>"><?=
-            tl('footer_element_terms') ?></a><?php
-        }
-        ?>
-        <?php
-        if (tl('footer_element_bot') != 'footer_element_bot') {
-            $output_flag = true;
-            ?>
-            - <a href="<?=B\directUrl('bot') ?>"><?=
-            tl('footer_element_bot') ?></a> <?php if ($_SERVER["MOBILE"]) {
-                e('<br /> ');
-            }
-        }
-        if (tl('footer_element_developed_seek_quarry') !=
-            'footer_element_developed_seek_quarry') {
-            $output_flag = true;
-            ?>
-            - <a href="https://www.seekquarry.com/"><?=
-            tl('footer_element_developed_seek_quarry') ?></a><?php
-        }
-        if (!empty($data["LOCALE_TAG"]) && $data["LOCALE_TAG"] != 'en-US') { ?>
-            - <a href="https://translate.yandex.com/"><?=
-            tl('footer_element_translations_yandex') ?></a><?php
-        }
-        if ($output_flag) {
-            e(' -');
-        }
-        ?>
-        </div>
-        <div class="<?=$subsearch ?> copyright center">
-        <?php
-        if (tl('footer_element_copyright_site') !=
-            'footer_element_copyright_site') {
-            e(tl('footer_element_copyright_site'));
-            ?> - <a href="<?=C\SHORT_BASE_URL ?>"><?=
-            tl('footer_element_this_search_engine')
-            ?></a><?php
-        }
-        ?>
-        </div>
         <?php
     }
 }
