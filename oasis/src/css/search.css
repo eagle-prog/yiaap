@@ -636,7 +636,6 @@ body.mobile
     margin: 0;
     min-width:9.5in; /* making width values larger will
                 affect help visibility */
-    max-width:11in;
     padding: 0;
 }
 .mobile .body-container
@@ -1811,6 +1810,10 @@ div.group-result
     margin:auto;
     min-width: 8.1in;
     width: 8.1in;
+    padding: 0px;
+}
+.landing .search-box #search-form {
+    display: flex;
 }
 .subsearch.search-box,
 .subsearch.footer-element,
@@ -2386,28 +2389,35 @@ div.group-result
 }
 .html-ltr .button-box
 {
-    color: black;
+    color: #fff;
+    background: #489bf8;
     font-size: 16pt;
     height:.4in;
-    left: -0.05in;
     margin-left: 0;
     position: relative;
     text-align: center;
     text-decoration: none;
-    top: 0.015in;
+    flex: 1;
+    border: 0px;
 }
-
+.html-ltr .button-box:focus {
+    border: 0px;
+}
 .html-rtl .button-box
 {
-    color: black;
+    color: #fff;
+    background: #489bf8;
     font-size: 16pt;
     height:.4in;
     margin-right: 0;
     position: relative;
-    right: -0.05in;
     text-align: center;
     text-decoration: none;
-    top: 0.015in;
+    flex: 1;
+    border: 0px;
+}
+.html-rtl .button-box:focus {
+    border: 0px;
 }
 .mobile .button-box
 {

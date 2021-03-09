@@ -447,10 +447,10 @@ class SearchElement extends Element implements CrawlConstants
             if (isset($data['QUERY']) && !isset($data['NO_QUERY'])) {
                 e(urldecode($data['QUERY']));} ?>"
             placeholder="<?= tl('search_element_input_placeholder') ?>"/>
+        </p>
         <button class="button-box" type="submit"><img
             src='<?=C\SHORT_BASE_URL ?>resources/search-button.png'
             alt='<?= tl('search_element_search') ?>'/></button>
-        </p>
         </form>
         </div>
         <div id="suggest-dropdown">
